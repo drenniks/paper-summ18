@@ -28,25 +28,6 @@
 % See each file for a detailed author list and change log.
 %
 % This package consists of the following files:
-
-readme.txt          This file
-
-mnras.cls           MNRAS LaTeX document class
-mnras.bst           MNRAS BibTeX style
-
-mnras_guide.tex     User guide, LaTeX format
-mnras_guide.pdf     User guide, PDF format
-mnras_template.tex  A simple template paper
-
-example.eps         An example image used in the guide
-example.png         An example image used in the guide
-example.ps          An example image used in the guide
-
-legacy\legacy.txt   Description of the legacy releases
-legacy\mn2e.cls     v2.2 of mn2e.cls (deprecated)
-legacy\mn2e.bst     v1.1b of mn2e.bst (deprecated)
-
-
 % Disclaimer:
 %
 % This LaTeX package is provided free to the community in the hope that it
