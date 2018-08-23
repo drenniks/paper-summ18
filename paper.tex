@@ -104,9 +104,10 @@ keyword1 -- keyword2 -- keyword3
 
 \section{Introduction}
 
-\li Here are some relevant papers that studied the minimum halo mass
-with simulations or ones that developed an analytical model of the
-halo mass.  We will probably cite most of these in the introduction.
+\noindent Here are some relevant papers that studied the minimum halo
+mass with simulations or ones that developed an analytical model of
+the halo mass.  We will probably cite most of these in the
+introduction.
 
 \lli Semi-analytic papers: \citep{Tegmark97, Trenti09, Visbal18,
   Mebane18, Griffen18}
@@ -118,17 +119,76 @@ halo mass.  We will probably cite most of these in the introduction.
 paper to look for recent papers.  I didn't find any in the past five
 years that used simulations to study the minimum halo mass.
 
+\medskip
+\noindent Here are some bullet points to guide the intro's narrative.
 
+\li The first generation of stars transformed a cold and dark universe
+by illuminating and enriching up their neighborhoods with radiation
+and heavy elements.
+
+\li They are metal-free (Population III; Pop III) and are thought to
+be generally massive and thus a substantial fraction will generate
+prodigious amounts of ionizing photons and will end their lives in
+supernovae \citep[e.g.][]{Schaerer02, Heger02}.
+
+\li Once a halo becomes chemically enriched, by definition, it cannot
+form Pop III stars anymore, marking the end of metal-free star
+formation in that pregalactic object.  Numerical studies have shown
+that turbulence within halos can mix metals well down to their
+resolution limit \citep[][and more]{Wise08_Gal, Greif10}.
+
+\li Given the paradigm of hierarchical structure formation, halos grow
+through smooth accretion and successive mergers of smaller halos.  But
+in which halos do these first generations of stars form?  Their
+formation rates and locations are important to constrain because they
+influence the very beginnings of galaxy formation and cosmic
+reionization.
+
+\li Without metals and dust to facilitate efficient radiative cooling,
+Pop III stars rely on \hh{} formation to cool the gas.  These
+molecules are however fragile to dissociation from Lyman-Werner
+(LW) radiation in the energy range 11.2--13.6~eV.
+
+\li Diffuse gas is optically thin to LW radiation, thus a background
+builds over time and can suppress \hh{} formation and thus Pop III
+star formation.  Furthermore, nearby sources of LW radiation can
+dissociate \hh{} in minihalos.
+
+\li Other sources of the suppression of Pop III star formation are
+streaming baryonic velocities, arising from recombination, and
+dynamical heating, occuring during the virialization of halos.
+
+\li Previous work have mainly investigated and established the lower
+limit for a halo to host Pop III stars.  However, subsequent
+simulations have shown that they don't necessarily form at this
+minimum, whereas other physical processes (mentioned above) play a
+role.
+
+\li In this paper, we focus on the distribution of host halo masses,
+not just the minimum, and its dependence on redshift and the LW
+background, augmenting the results from prior work.
+
+\medskip
+\noindent Include the ``typical'' overview of the paper's sections
+last in the introduction.
 
 \section{Methods}
 
 \subsection{Simulation setup}
 
-We used Enzo \citep{Enzo}.
+We used \enzo{} \citep{Enzo} and \yt{} \citep{yt_full_paper}.
 
 \subsection{Star formation and feedback}
 
+See \citet{Wise14}.
+
 \section{Results}
+
+Temporary list of figures:
+\begin{enumerate}
+\item One
+\item Two
+\end{enumerate}
 
 \subsection{Population III host halo masses}
 
@@ -172,6 +232,15 @@ high ($z \ga 20$) redshifts \citep{Tselia11, Greif11_Delay, Naoz12, OLeary12}
 
 \section*{Acknowledgements}
 
+JHW is supported by National Science Foundation grants AST-1614333 and
+OAC-1835213, NASA grant NNX17AG23G, and Hubble theory grant
+HST-AR-14326.  We thank the support staff at Georgia Tech's PACE,
+where we ran this simulation.  The freely available plotting library
+{\sc matplotlib} \citep{matplotlib} was used to construct numerous
+plots within this paper. Computations and analysis described in this
+work were performed using the publicly-available \enzo{} and \yt{}
+codes, which is the product of a collaborative effort of many
+independent scientists from numerous institutions around the world.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
