@@ -48,6 +48,8 @@
 
 %%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
 
+\input{macros.tex}
+
 % Please keep new commands to a minimum, and use \newcommand not \def to avoid
 % overwriting existing commands. Example:
 %\newcommand{\pcm}{\,cm$^{-2}$}	% per cm-squared
@@ -71,7 +73,7 @@ $^{1}$Center for Relativistic Astrophysics, Georgia Institute of Technology, Atl
 }
 
 % These dates will be filled out by the publisher
-\date{Accepted XXX. Received YYY; in original form ZZZ}
+%\date{Accepted XXX. Received YYY; in original form ZZZ}
 
 % Enter the current year, for the copyright statements etc.
 \pubyear{2018}
@@ -102,15 +104,68 @@ keyword1 -- keyword2 -- keyword3
 
 \section{Introduction}
 
+\li Here are some relevant papers that studied the minimum halo mass
+with simulations or ones that developed an analytical model of the
+halo mass.  We will probably cite most of these in the introduction.
 
-\section{Methods/Cosmological Simulations}
+\lli Semi-analytic papers: \citep{Tegmark97, Trenti09, Visbal18,
+  Mebane18, Griffen18}
 
+\lli Simulation papers: \citep{Machacek01, Yoshida03, Wise07_UVB,
+  OShea08, Muratov13}
+
+\lli {\it Note:} I looked at which papers cited the \citet{Machacek01}
+paper to look for recent papers.  I didn't find any in the past five
+years that used simulations to study the minimum halo mass.
+
+
+
+\section{Methods}
+
+\subsection{Simulation setup}
+
+We used Enzo \citep{Enzo}.
+
+\subsection{Star formation and feedback}
 
 \section{Results}
 
+\subsection{Population III host halo masses}
+
+\subsection{Multiple stellar systems}
+
+\subsection{Population III stars in atomic cooling halos}
 
 \section{Discussion}
 
+\subsection{Variations in the halo masses at collapse}
+
+\li Halos can form metal-free stars again if their progenitors had
+only formed stars that did not go supernova
+
+\li Dynamical heating \citep{Yoshida03}
+
+\li Temporal fluctuations in the local Lyman-Werner radiation
+
+\subsection{Comparison to previous work}
+
+\li Semi-analytic papers: \citep{Tegmark97, Trenti09, Visbal18,
+  Mebane18, Griffen18}
+
+\li Simulation papers: \citep{Machacek01, Yoshida03, Wise07_UVB,
+  OShea08, Muratov13}
+
+\li We don't have to compare with all of the semi-analytic papers, but
+it will be good to compare with all of the simulation papers.
+
+\subsection{Caveats}
+
+\li Optically-thin Lyman-Werner radiation field from point sources \citep{Schauer17}
+
+\li No streaming velocities that suppresses star formation at very
+high ($z \ga 20$) redshifts \citep{Tselia11, Greif11_Delay, Naoz12, OLeary12}
+
+\li Uncertainties from the assumed Pop III initial mass function 
 
 \section{Conclusions}
 
@@ -124,15 +179,14 @@ keyword1 -- keyword2 -- keyword3
 
 % The best way to enter references is to use BibTeX:
 
-%\bibliographystyle{mnras}
-%\bibliography{example} % if your bibtex file is called example.bib
+\bibliographystyle{mnras}
+\bibliography{jwise} % if your bibtex file is called example.bib
 
 
 % Alternatively you could enter them by hand, like this:
 % This method is tedious and prone to error if you have lots of references
-\begin{thebibliography}{99}
-
-\end{thebibliography}
+%\begin{thebibliography}{99}
+%\end{thebibliography}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
