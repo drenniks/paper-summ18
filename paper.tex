@@ -27,7 +27,8 @@
 % installations will be fine) or prefer the old Computer Modern fonts, comment
 % out the following line
 \usepackage{newtxtext,newtxmath}
-% Depending on your LaTeX fonts installation, you might get better results with one of these:
+% Depending on your LaTeX fonts installation, you might get better results with 
+% one of these:
 %\usepackage{mathptmx}
 %\usepackage{txfonts}
 
@@ -43,12 +44,16 @@
 \usepackage{graphicx}	% Including figure files
 \usepackage{amsmath}	% Advanced maths commands
 \usepackage{amssymb}	% Extra maths symbols
+\usepackage{mathtools}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
 
 \input{macros.tex}
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
 
 % Please keep new commands to a minimum, and use \newcommand not \def to avoid
 % overwriting existing commands. Example:
@@ -60,7 +65,7 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Short title, max. 45 characters]{MNRAS \LaTeXe\ template -- title goes here}
+\title[Where Do Pop III Stars Form?]{Where Do Population III Stars Form?}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -69,7 +74,8 @@ Danielle Skinner,$^{1}$\thanks{E-mail: drenniks@gatech.edu}
 John H. Wise,$^{1}$
 \\
 % List of institutions
-$^{1}$Center for Relativistic Astrophysics, Georgia Institute of Technology, Atlanta, GA 30332, USA\\
+$^{1}$Center for Relativistic Astrophysics, Georgia Institute of Technology, 
+Atlanta, GA 30332, USA\\
 }
 
 % These dates will be filled out by the publisher
@@ -87,7 +93,8 @@ $^{1}$Center for Relativistic Astrophysics, Georgia Institute of Technology, Atl
 % Abstract of the paper
 \begin{abstract}
 This is a simple template for authors to write new MNRAS papers.
-The abstract should briefly describe the aims, methods, and main results of the paper.
+The abstract should briefly describe the aims, methods, and main results of the 
+paper.
 It should be a single paragraph not more than 250 words (200 words for Letters).
 No references should appear in the abstract.
 \end{abstract}
@@ -172,40 +179,129 @@ background, augmenting the results from prior work.
 \noindent Include the ``typical'' overview of the paper's sections
 last in the introduction.
 
+%====================================================================
 \section{Methods}
-
+%====================================================================
 \subsection{Simulation setup}
+%====================================================================
+This simulation is an expansion of the analysis done on the 
+simulations from Wise et al. (2014, hereafter W14) and Wise et al. 
+(2012b, hereafter W12). W12 focused on the role of radiation pressure in simulated halos and W14 was an extension of the W12 paper, specifically looking at the simulation including radiation pressure. While the cosmological parameters are updated to the 2013 Planck release \citet{Planck13_Cosmo} for this simulation, much of the physics is the same as W12 and W14. For more detailed descriptions, refer to W12 and W14.
 
-We used \enzo{} \citep{Enzo} and \yt{} \citep{yt_full_paper}.
+This simulation was run with an adaptive mesh refinement (AMR) code 
+\enzo{} \citep{Enzo} and \yt{} \citep{yt_full_paper} for visualization. \enzo{} uses an N-body adaptive particle-mesh solver \citep{Efstathiou85, Couchman91, BryanNorman1997} to follow the dark matter (DM) dynamics. We use the nine-species (H \rom{1}, H \rom{2}, He \rom{1}, He \rom{2}, He \rom{3}, e$^{-}$, H$_{2}$, H$_{2}^{+}$, H$^{-}$) non-equilibrium chemistry model \citep{Abel97, Anninos97}. 
 
-\subsection{Star formation and feedback}
+We simulate a 1 Mpc$^{3}$ comoving box with a 256$^{3}$ base grid 
+resolution. We have a maximum refinement level of 12 which provides a maximal comoving resolution of $\sim$1 pc. The simulation is 
+initialized with \music{} \citep{Hahn11_MUSIC} at z = 130 and use the cosmological parameters from the Planck collaboration best fit 
+\citet{Planck13_Cosmo}: $\Omega_{M}$ = 0.3175, $\Omega_{\Lambda}$ = 
+0.6825, $\Omega_{DM}$ = 0.2685, and h = 0.6711, with the variables 
+having their usual definitions. The simulation is run until z = 9.32. In this paper, we focus only on outputs where new Pop III stars are born, from z = 27.23 to 9.39. 
 
-See \citet{Wise14}.
+A time-dependent Lyman-Werner (LW) optically thin radiation background is applied in the simulation. This was fit in W12 (see Eqn. 16) and is consistent with the values in \citet{Trenti09_SFR}. The background evolution of the specific intensity takes the following form:
+\begin{equation}
+	log_{10}(J_{21}) = A + Bz - Cz^{2} + Dz^{3} - Ez^{4}
+\end{equation}
+where (A, B, C, D, E) = (-2.567, 0.4562, - 0.02680, 5.882 $\times$ 10$^{-4}$, - 5.056 $\times$ 10$^{-6}$) and J$_{21}$ is the specific intensity in units of 10$^{-21}$ erg s$^{-1}$ cm$^{-2}$ Hz$^{-1}$ sr$^{-1}$. 
 
+Adaptive ray tracing \citep{Abel02_RT, Wise11_Moray} is used to evolve the radiation field. Centered on each Pop II and Pop III star, we model the H$_{2}$ dissociating radiation field with an optically thin, inverse square profile. These LW sources are added on top of the background intensity described above. (When to describe how we caculate the total Lyman-Werner flux of the halos?)
+%====================================================================
+\subsection{Star formation}
+%====================================================================
+In this section, we will discuss how we implement Pop III and Pop II 
+star formation. No other types of stars are considered. For further 
+details, refer to W14 and W12. 
+
+%====================================================================
+\subsubsection{Pop III Star Formation and Feedback }
+%====================================================================
+The implemented Pop III star formation model is the same as in Wise \& Abel (2008). Each star particle represents a single star, and is formed in a cell when the following criteria are met: 
+\begin{enumerate}
+	\item Z $\leq$ 6.85 $\times$ 10$^{-8}$
+
+	\item particle overdensity of 1 $\times$ 10$^{6}$ 
+		particles/cm$^{3}$
+
+	\item converging gas flow, $\nabla \cdot \mathbf{v_{gas}}$ < 0 
+
+	\item molecular hydrogen fraction, f$_{H2}$ > 0.001
+\end{enumerate}
+
+If within 1 pc, multiple cells meet this criteria, then a single Pop III star forms at the center of mass of these cells. The mass of the Pop III star is randomly sampled from an initial mass function (IMF) of the form:
+\begin{equation}
+	f(log_{M})dM = M^{-1.3}exp \Big[-\left( \frac{M_{char}}{M}\right)^{1.6} \Big]dM
+\end{equation}
+where M$_{char}$ = 20 M$_{\odot}$. This characteristic mass is different from W12 and W14 (would like to find a citation for this number, having a hard time tracking down some John had suggested). This results in an exponential cutoff before M$_{char}$ and a Salpeter IMF after. Once the cell meets the above criteria and the mass of the star is randomly determined, an equal amount of gas is removed from the grid in a sphere which contains twice the stellar mass that is centered on the new star particle. The new Pop III star then gains the mass-weighted velocity of the gas contained within that sphere.  
+
+We use the mass-dependent hydrogen ionising Lyman-Werner (LW) luminosities and lifetimes from Schaerer (2002) and a mass-independent photon energy of E$_{ph}$ = 29.6 ev, which is appropriate for the approximately constant surface temperature of Pop III stars, at 10$^{5}$ K. A Type II supernova results if the Pop III star dies with a mass between $\leq$ M$_{\ast}$/M$_{\odot}$ $\leq$ 40 M$_{\odot}$. A pair instability supernova (PISNe) results if the star dies with a mass between 140 $\leq$ M$_{\ast}$/M$_{\odot}$ $\leq$ 260 M$_{\odot}$. Outside of these mass ranges, the Pop III star dies as a black hole. In this simulation, no black hole physics are implemented, so the Pop III star simply turns into a dark matter particle. 
+From 11 $\leq$ M$_{\ast}$/M$_{\odot}$ < 20 M$_{\odot}$, the star dies as a normal Type II supernova with an energy of 10$^{51}$ erg. From 20 $\leq$ M$_{\ast}$/M$_{\odot}$ $\leq$ 40 M$_{\odot}$, the star dies as a hypernova with energies taken from \citet{Nomoto06}.
+The PISNe have explosion energies from \citet{2002ApJ...567..532H}, of which the analytic function fit to their models can be seen in Eq. 12 of W12. 
+
+%====================================================================
+\subsubsection{Pop II  Star Formation and Feedback}
+%====================================================================
+The Pop II star formation model is the same as Wise \& Cen (2009), which is equivalent to the above criteria for Pop III star formation but without the molecular hydrogen fraction requirement, and with a metallicity greater than the above value. Star formation is only allowed for gas with temperatures T < 1000 K, to ensure that the volume is cooling. Contrary to Pop III stars representing single star particles, Pop II star particles are modelled as clusters of Pop II stars. The mass of these clusters is determined from a Salpeter IMF with a minimum mass of M$_{min}$ = 1000 M$_{\odot}$. 
+
+The lifetime of these particles is 20 Myr, during which they radiate 6000 hydrogen ionizing photons per stellar baryon. The photons exhibit a monochromatic spectrum with an energy of 21.6 eV. After living for 4 Myr, the Pop II stars generate supernova energies of 6.8 $\times$ 10$^{48}$ erg s$^{-1}$ M$_{\odot}^{-1}$.
+
+%====================================================================
+\subsection{H2 Shielding}
+%====================================================================
+We use the Sobolev-like approximation from \citet{Wolcott11} to model H2 self-shielding. To determine the H2 shielding factor, the column density of H2 needs to be calculated:
+\begin{equation}
+	N_{H_{2}} = n_{H_{2}}L_{char}
+\end{equation}
+Where n$_{H_{2}}$ is the number density of H2 and L$_{char}$ is a characteristic length over which n$_{H_{2}}$ is assumed to be constant. The method employed in this simulation is to define the characteristic length as:
+\begin{equation}
+	L_{char} = \frac{\rho}{|\nabla \rho|}
+\end{equation}
+This Sobolev-like method determines the length over which gas with density $\rho$ is diminished. The most accurate, non-ray tracing, method is to use a single Sobolev-like length determined from the mean Sobolev-like length over all directions. 
+
+Upon numerically calculating the shielding factor of H2 for simulated protogalaxies, Wolcott-Green et al. determine that a slight adjustment to the shielding factor from \citet{Draine96} is sufficient to account for inaccuracies at higher temperatures. The implemented shielding factor is then (see Eqn. 10 in \citet{Wolcott11}):
+\begin{equation}
+	\begin{multlined}
+	f_{sh}(N_{H2}, T) = \frac{0.965}{(1+x/b_{5})^{1.1}} + \frac{0.035}{(1+x)^{0.5}}  \times \\ \exp [-8.5 \times 10^{-4} (1+x)^{0.5}]
+	\end{multlined}
+\end{equation}
+Here, x $\equiv$ N$_{H_{2}}$/5 $\times$ 10$^{14}$ cm$^{-2}$, b$_{5}$ $\equiv$ b/10$^{5}$ cm s$^{-1}$, and b is the Doppler broadening parameter. N$_{H_{2}}$ is then calculated as described above.
+
+
+%====================================================================
 \section{Results}
-
+%====================================================================
 Temporary list of figures:
 \begin{enumerate}
+\item hmf.png
 \item Mean Halo Mass vs. Redshift - plotted with Machacek relation - mean\_mass\_errorb\_fix.png
 \item Jlw/J21 total vs. Halo Mass colored by redshift - plotted with Machacek relation - jlw\_mass\_machacek\_total.png
 \item Percentage of Halos Below Machacek - percent\_below\_dz1.png 
 \item Jlw/J21 vs. Halo Mass colored by redshift - plotted with Machacek relation ??  - jlw\_mass\_machacek.png
 \item Halo mass vs. redshift colored by total Jlw - plotted with background Machacek relation ?? - mass\_redshift\_machacek\_clocal.png
 \item SFRD of PopIII Stars - pop3\_SFR\_bar.png
-\item Total # of PopIII Stars vs. Halo mass 2d histogram - tot\#p3\_halomass\_sidehist.png
+\item Total \# of PopIII Stars vs. Halo mass 2d histogram - tot\#p3\_halomass\_sidehist.png
 \item Total mass of PopIII stars vs. halo mass 2d histogram - plotted with SFE - totp3mass\_halomass\_sidehist.png
 
 \end{enumerate}
 
+%====================================================================
 \subsection{Population III host halo masses}
+%====================================================================
 
+%====================================================================
 \subsection{Multiple stellar systems}
+%====================================================================
 
+%====================================================================
 \subsection{Population III stars in atomic cooling halos}
+%====================================================================
 
+%====================================================================
 \section{Discussion}
+%====================================================================
 
+%====================================================================
 \subsection{Variations in the halo masses at collapse}
+%====================================================================
 
 \li Halos can form metal-free stars again if their progenitors had
 only formed stars that did not go supernova
@@ -214,7 +310,9 @@ only formed stars that did not go supernova
 
 \li Temporal fluctuations in the local Lyman-Werner radiation
 
+%====================================================================
 \subsection{Comparison to previous work}
+%====================================================================
 
 \li Semi-analytic papers: \citep{Tegmark97, Trenti09, Visbal18,
   Mebane18, Griffen18}
@@ -225,7 +323,9 @@ only formed stars that did not go supernova
 \li We don't have to compare with all of the semi-analytic papers, but
 it will be good to compare with all of the simulation papers.
 
+%====================================================================
 \subsection{Caveats}
+%====================================================================
 
 \li Optically-thin Lyman-Werner radiation field from point sources \citep{Schauer17}
 
@@ -234,10 +334,13 @@ high ($z \ga 20$) redshifts \citep{Tselia11, Greif11_Delay, Naoz12, OLeary12}
 
 \li Uncertainties from the assumed Pop III initial mass function 
 
+%====================================================================
 \section{Conclusions}
+%====================================================================
 
-
+%====================================================================
 \section*{Acknowledgements}
+%====================================================================
 
 JHW is supported by National Science Foundation grants AST-1614333 and
 OAC-1835213, NASA grant NNX17AG23G, and Hubble theory grant
