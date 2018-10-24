@@ -45,7 +45,7 @@
 \usepackage{amsmath}	% Advanced maths commands
 \usepackage{amssymb}	% Extra maths symbols
 \usepackage{mathtools}
-
+\usepackage{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
@@ -92,17 +92,13 @@ Atlanta, GA 30332, USA\\
 
 % Abstract of the paper
 \begin{abstract}
-This is a simple template for authors to write new MNRAS papers.
-The abstract should briefly describe the aims, methods, and main results of the 
-paper.
-It should be a single paragraph not more than 250 words (200 words for Letters).
-No references should appear in the abstract.
+We perform a cosmological simulation with a comoving volume of 1 Mpc$^{3}$ to study the birthplaces of Population III stars, using the adaptive mesh refinement code \enzo{}. We investigate the distribution of host halo masses and its relationship to the Lyman-Werner background intensity.  In our sample of 697 host halos, we find that 84\% of them have masses below the Machacek et al. (2001) relation because of the inclusion of \hh{} self-shielding.  In our simulation above a redshift of 12.5, the mean halo mass is time-independent and ~10$^{5.8}$ M$_{\odot}$. Afterwards, it steadily rises above the Machacek et al. relation to a mean value of ~10$^{6.6}$ M$_{\odot}$. Most of these halos form multiple Population III stars, with a median number of four, up to a maximum of 16. We also find that a few halos do form stars below the Machacek et al. relation but in a high Lyman-Werner radiation field with values up to ~50 J$_{21}$. Our results suggest that Population III star formation may be less affected by Lyman-Werner radiation feedback than previously thought and that Population III multiple systems are common.
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
 % Don't make up new ones.
 \begin{keywords}
-keyword1 -- keyword2 -- keyword3
+star formation -- methods:numerical -- cosmology
 \end{keywords}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -116,7 +112,7 @@ The first generation of stars transformed a cold and dark universe
 by illuminating and enriching up their neighborhoods with radiation
 and heavy elements. The formation of these first stars is a crucial step in the cosmological evolution of the universe because the metals and feedback they deliver to their local environments is necessary for further star production and chemical enrichment. Without these initial stars, heavier metals would not have been produced, and a different universe would be observed than what is observed today. These stars are, by definition, metal-free (Population III; Pop III) and are thought to be generally massive. A substantial fraction of these stars will generate prodigious amounts of ionizing photons and will end their lives in some form of a supernova \citep[e.g.][]{Schaerer02, Heger02}. The supernova will spread the enriched guts of the Pop III star out across its local environment, providing the area with elements the universe has not yet seen. 
 
-Once a halo becomes chemically enriched by the death of its Pop III stars, then by definition, it can no longer form more Pop III stars. This marks the end of metal-free star formation in that pregalactic object. Understanding the mixing of metals into the environment of these halos is necessary to constrain the reach of these metals and the effects they have for future star formation. Numerical studies have shown that turbulence within halos can mix metals well down to their resolution limit \citep[][and more]{Wise08_Gal, Greif10}. Stars will continue to form in halos, but with an increased metal abundance, these stars are now labelled as metal-enriched stars. These stars still are considered metal-poor, relative to the solar abundance, and are observable in the universe. Understanding the formation and chemical abundance of second generation stars can provide more evidence and insight for the earlier generation of Pop III stars.
+Once a halo becomes chemically enriched by the death of its Pop III stars, then by definition, it can no longer form more Pop III stars. This marks the end of metal-free star formation in that pregalactic object. Understanding the mixing of metals into the environment of these halos is necessary to constrain the reach of these metals and the effects they have for future star formation. Numerical studies have shown that turbulence within halos can mix metals well down to their resolution limit \citep[][and more]{Wise08_Gal, Greif10}. Stars will continue to form in halos, but with an increased metal abundance, these stars are now labeled as metal-enriched stars. These stars still are considered metal-poor, relative to the solar abundance, and are observable in the universe. Understanding the formation and chemical abundance of second generation stars can provide more evidence and insight for the earlier generation of Pop III stars.
 
 Given the paradigm of hierarchical structure formation, halos grow through smooth accretion and successive mergers of smaller halos. But in which halos do these first generations of stars form? Their formation rates and locations are important to constrain because they influence the very beginnings of galaxy formation and cosmic reionization. Learning about their host halos can also guide future telescopic surveys to observe Pop III galaxies which may lead to direct observational evidence for Pop III stars. Previous studies have investigated the possibility of finding Pop III systems. \citet{Trenti09} found that metal-free halos may still be able to form at $z \approx$ 6, which offer the best chance at observing such primordial systems. Given a certain rate of Pop III supernova per year, large sky surveys, such as the Large Synoptic Survey Telescope (LSST), should be able to detect the very luminous supernova. Unless the metal-free systems are particularly efficient at forming Pop III stars (star formation efficiences > 10$^{-2}$), the upcoming James Webb Space Telescope (JWST) will not be able to detect such systems.
 
@@ -135,7 +131,11 @@ Diffuse gas is optically thin to LW radiation, thus a background builds over tim
 
 Previous work have mainly investigated and established the lower limit for a halo to host Pop III stars, or for a halo to collapse. However, subsequent simulations have shown that they do not necessarily form at this minimum due to the aforementioned physical processes playing a role. \citet{Mebane18} used a semi-analytic model of early star formation and found that the LW background coming from the rapidly increasing supply of Pop III stars becomes responsible for suppressing Pop III star formation. Pop III supernova feedback is another key process which can allow Pop III stars to continue to form, as long as the metals are ejected from the host halo. \citet{Griffen18} also find that the LW background can significantly suppress the amount of potential sites for Pop III star formation. 
 
-Numerical simulations have also been employed to investigate collapse thresholds and Pop III star formation. \citet{Machacek01} found similar results to those mentioned previously, in that the LW feedback can suppress the collapse of small mass halos. They derive a simple analytic expression for the mass threshold of halos given a particular LW flux. We will compare our results with this relation in future sections. \citet{yoshida03} also finds that cooling is inefficient in halos with a LW background > 0.01, although with sufficient \hh{} shielding, halos are able cool in the given LW background radiation. In fact, \citet{Wise07_UVB} found that central shocks drive \hh{} formation, allowing the halo to cool in a LW background flux of 10$^{-20}$. They find that \hh{} cooling is always a dominant process, even in large LW background fluxes. Assisting this result, \citet{OShea08} find that Pop III star formation can occur in relatively high LW backgrounds, implying that the LW background may not be a complete indicator of whether or not Pop III stars will form in a given halo.  
+Numerical simulations have also been employed to investigate collapse thresholds and Pop III star formation. \citet[hereafter M01]{Machacek01} found similar results to those mentioned previously, in that the LW feedback can suppress the collapse of small mass halos. They derive a simple analytic expression for the mass threshold of halos given a particular LW flux:
+\begin{equation} \label{mthresh}
+	M_{TH} ( M_{\odot} ) = 1.25 \times 10^{5} + 8.7  \times 10^{5} \left( \frac{4 \pi J_{LW}}{10^{-21}} \right)^{.47}
+\end{equation}
+We will compare our results with this relation in future sections. \citet{yoshida03} also finds that cooling is inefficient in halos with a LW background > 0.01, although with sufficient \hh{} shielding, halos are able cool in the given LW background radiation. In fact, \citet{Wise07_UVB} found that central shocks drive \hh{} formation, allowing the halo to cool in a LW background flux of 10$^{-20}$. They find that \hh{} cooling is always a dominant process, even in large LW background fluxes. Assisting this result, \citet{OShea08} find that Pop III star formation can occur in relatively high LW backgrounds, implying that the LW background may not be a complete indicator of whether or not Pop III stars will form in a given halo.  
 
 In this paper, we focus on the distribution of host halo masses, not just the minimum, and its dependence on redshift and the LW background, augmenting results from prior work. We aim to provide further insight into the host halos of Pop III stars. In \S 2 the methods of the simulation, implementation of star formation, feedback, and \hh{} self-shielding is described. In \S 3 we present the results of our analysis. In \S 4 we discuss the results in more detail and compare with previous work. In \S 5 we conclude our discussion with a summary of our results and the implications therein.
 
@@ -170,7 +170,7 @@ In this section, we will discuss how we implement Pop III and metal-enriched sta
 %====================================================================
 \subsubsection{Pop III Star Formation and Feedback }
 %====================================================================
-The implemented Pop III star formation model is the same as in Wise \& Abel (2008). Each star particle represents a single star, and is formed in a cell when the following criteria are met: 
+The implemented Pop III star formation model is the same as in \citet{Wise08_Gal}. Each star particle represents a single star, and is formed in a cell when the following criteria are met: 
 \begin{enumerate}
 	\item a metallicity Z $\leq$ 5 $\times$ 10$^{-6}$ Z$_{\odot}$
 
@@ -185,7 +185,7 @@ If within 1 pc, multiple cells meet this criteria, then a single Pop III star fo
 \begin{equation} \label{IMF}
 	f(\log M)dM = M^{-1.3} \exp \Big[-\left( \frac{M_{\rm char}}{M}\right)^{1.6} \Big]dM
 \end{equation}
-where M$_{\rm char}$ = 20 M$_{\odot}$. This characteristic mass is different from W12 and W14 (would like to find a citation for this number, having a hard time tracking down some John had suggested). This results in an exponential cutoff before M$_{char}$ and a Salpeter IMF after. Once the cell meets the above criteria and the mass of the star is randomly determined from Eq. 3, an equal amount of gas is removed from the grid in a sphere which contains twice the stellar mass that is centered on the new star particle. The new Pop III star then gains the mass-weighted velocity of the gas contained within that sphere.  
+where M$_{\rm char}$ = 20 M$_{\odot}$ \citep{Hirano17}. This characteristic mass is different from W12 and W14 (would like to find a citation for this number, having a hard time tracking down some John had suggested). This results in an exponential cutoff before M$_{char}$ and a Salpeter IMF after. Once the cell meets the above criteria and the mass of the star is randomly determined from Eq. 3, an equal amount of gas is removed from the grid in a sphere which contains twice the stellar mass that is centered on the new star particle. The new Pop III star then gains the mass-weighted velocity of the gas contained within that sphere.  
 
 We use the mass-dependent hydrogen ionising LW luminosities and lifetimes from \citet{Schaerer02} and a mass-independent photon energy of E$_{ph}$ = 29.6 eV, which is appropriate for the nearly mass-independent surface temperature of Pop III stars, at 10$^{5}$ K. A Type II supernova results if the Pop III star dies with a mass between 11 $\leq$ M$_{\ast}$/M$_{\odot}$ $\leq$ 40 M$_{\odot}$. A pair instability supernova (PISNe) results if the star dies with a mass between 140 $\leq$ M$_{\star}$/M$_{\odot}$ $\leq$ 260 M$_{\odot}$. Outside of these mass ranges, the Pop III star dies as a black hole. In this simulation, no black hole physics are implemented, so the Pop III star simply turns into a collisionless particle. From 11 $\leq$ M$_{\star}$/M$_{\odot}$ < 20 M$_{\odot}$, the star dies as a normal Type II supernova with an energy of 10$^{51}$ erg. From 20 $\leq$ M$_{\star}$/M$_{\odot}$ $\leq$ 40 M$_{\odot}$, the star dies as a hypernova with energies taken from \citet{Nomoto06}.The PISNe have explosion energies from \citet{2002ApJ...567..532H}, of which the analytic function fit to their models can be seen in Eq. 12 of W12. 
 
@@ -221,35 +221,20 @@ Here, x $\equiv$ N$_{H_{2}}$/5 $\times$ 10$^{14}$ cm$^{-2}$, b$_{5}$ $\equiv$ b/
 %====================================================================
 \section{Results}
 %====================================================================
-Possible other figures:
-\begin{enumerate}
-\item Jlw/J21 vs. Halo Mass colored by redshift - plotted with Machacek relation ??  - jlw\_mass\_machacek.png
-\item Halo mass vs. redshift colored by total Jlw - plotted with background Machacek relation ?? - mass\_redshift\_machacek\_clocal.png
-\end{enumerate}
+In this section, we will present the distribution of host halo masses of Pop III stars, the relation between the mass distribution and the LW background radiation, and the distribution of various Pop III properties.
+
+%====================================================================
+\subsection{Population III host halo masses}
+%====================================================================
+To ensure that our box is representative of a typical piece of the universe, the numerical halo mass function is plotted along with the analytic Sheth-Tormen mass function at $z$ = 9.3 in Fig. \ref{fig:hmf}. The analytic function closely matches our simulation until the mass resolution of our simulation is unable to resolve lower mass halos. 
 
 \begin{figure}
-	\includegraphics[width=\columnwidth]{images/hmf.png}
-    \caption{Halo mass function of the last output of the simulation at $z$ = 9.3. The thick line is the analytic Sheth-Tormen mass function. The distribution of halo masses matches well with Sheth-Tormen until about 10$^{5}$ M$_{\odot}$.}
+	\includegraphics[width=\columnwidth]{images/hmf.pdf}
+    \caption{Halo mass function of the last output of the simulation at $z$ = 9.3. The thick, black line is the analytic Sheth-Tormen mass function. The distribution of halo masses matches well with Sheth-Tormen until about 10$^{5}$ M$_{\odot}$.}
     \label{fig:hmf}
 \end{figure}
 
-\begin{figure}
-	\includegraphics[width=\columnwidth]{images/mean_mass_errorb_fix.png}
-    \caption{For halos hosting new Pop III stars, the mean halo mass is plotted versus redshift, in bins of $\Delta z$ = 1. The Machacek et al. minimum mass threshold is plotted for the constant LW background given in Eq. \ref{LWbg}. The mean halo masses fall below the relation until a redshift of 12.5, at which point the mean halo masses rise above the relation.}
-    \label{fig:mean_mass}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=\columnwidth]{images/jlw_mass_machacek_total.png}
-    \caption{The average LW background for host halos of new Pop III stars is plotted versus the host halo mass, colored by redshift. The Machacek et al. relation is plotted given the background LW in Eq. \ref{LWbg}. Almost all halos fall below the relation, across a range of redshifts. A few halos (or possibly a single halo) allow Pop III stars to form at a low halo mass in a very high LW background. There are a few halos that have Pop III stars forming at later times and at high halo masses.}
-    \label{fig:jlw_mass_machacek}{}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=\columnwidth]{images/percent_below_dz1.png}
-    \caption{The percentage of halos that form Pop III stars below the minimum mass threshold from \citet{Machacek01}, in bins of $\Delta z$ = 1. As seen in \ref{fig:jlw_mass_machacek}, almost all halos form below the mass threshold.}
-    \label{fig:percent_below_dz1}
-\end{figure}
+As mentioned previously, Pop III stars form in our simulation only between 27.23 $\leq z \geq$ 9.39. During this time frame, a total of 697 Pop III stars form. The corresponding star formation rate density can be seen in Figure \ref{fig:pop3_SFR_bar}. To determine the host halos of new Pop III stars, the halo finding code, \rockstar{} \citep{rockstar}, is used. The mass determined by \rockstar{} is the dark matter mass, so to get the baryonic mass of the halos, we multiply the masses by $\Omega_{M}$/$\Omega_{DM}$. The baryonic mass is subsequently used in our analysis. The center and virial radius of each halo is also pulled from \rockstar{}. A small percentage of Pop III stars do not form in a halo found by \rockstar{}. Assuming that Pop III stars should be forming in collapsed halos, we calculate the virial mass and radius of a halo centered on the Pop III star as an approximation. The LW background intensity is calculated by summing up the LW intensity coming from each radiating star particle outside the virial radius of the host halo. This is then added to the constant LW background implemented in the simulation (Eq. \ref{LWbg}). 
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{images/pop3_SFR_bar.png}
@@ -257,27 +242,41 @@ Possible other figures:
     \label{fig:pop3_SFR_bar}
 \end{figure}
 
+Binning the data in $\Delta z$ = 1, the mean halo mass hosting Pop III stars is determined, and plotted against the redshift bins in Figure \ref{fig:mean_mass}. Equation \ref{mthresh} is plotted using the LW background intensity in Eq. \ref{LWbg}. Notably, the mean halo mass falls well below the relation until $z$ = 12.5. Below the mass threshold, the mean halo mass is 10$^{5.89}$ M$_{\odot}$, and rises to 10$^{6.6}$ M$_{\odot}$ after $z$ = 12.5. The large discrepancy between our data and the mass threshold from M01 is indicative of the \hh{} shielding which is included in our simulation. \hh{} shielding allows for halos to form at much lower masses, and therefore, Pop III stars are forming in these halos at early times. In the analysis done in M01, \hh{} shielding is neglected in their calculations for a variety of reasons, including the Doppler broadening of LW bands and large column densities of \hh{} only beginning to form at late times. Interestingly, a full radiative transfer simulation, such as ours, does not produce identical results as M01 predicts. Throughout the literature, there appears to be a consensus that \hh{} self-shielding will help smaller mass halos collapse in the presence of a LW background radiation \citep[e.g.]{yoshida03, Ricotti01, Glover01, Hartwig15}.
+
 \begin{figure}
-	\includegraphics[width=\columnwidth]{images/totnump3_halomass_sidehist.png}
+	\includegraphics[width=\columnwidth]{images/mean_mass_errorb_fix.pdf}
+    \caption{For halos hosting new Pop III stars, the mean halo mass for redshift bins of $\Delta z$ = 1 is plotted along the left hand side versus redshift. The black scatter points indicate the mean halo mass for that redshift bin and the x indicate the median halo mass. The error bars indicate the 15.1\% and 84.1\% percentiles. Plotted along the right hand side is the percentage of halos that fall below the M01 mass threshold, also plotted along redshift. The M01 mass threshold (Eq. \ref{mthresh}), is plotted for the constant LW background in Eq. \ref{LWbg}. Almost all halos fall below the M01 relation, until $z$ = 12.5, when the mean halo mass rises above the relation.}
+    \label{fig:mean_mass}
+\end{figure},
+
+The LW background intensity is plotted versus the halo mass for each host Pop III halo in our dataset in Figure \ref{fig:jlw_mass_machacek}. Each point is colored by the redshift where the Pop III star forms and the mass threshold from M01 (Eq. \ref{mthresh}) for the given LW background (Eq. \ref{LWbg}) is also plotted. We see that almost all halos form below the M01 threshold. There are also a few halos that form in very high J$_{LW}$, below the relation. It should be noted that there may be duplicate halos within this plot, since halos are allowed to form multiple Pop III stars if the conditions are sufficient. The grouped points in the higher end of J$_{LW}$ may be representative of such halos. We find that 84\% of the halos forming new Pop III stars lie below the M01 mass threshold. 
+
+%====================================================================
+\subsection{Multiple stellar systems}
+%====================================================================
+
+We can also look at the number of Pop III stars and the total mass of Pop III stars per halo. The number of Pop III stars per halo is plotted against the halo mass in Figure \ref{fig:totnump3_halomass_sidehist} as a 2D-histogram. The histogram of the number of Pop III stars is projected on the right. We find that a median number of four Pop III stars form per halo, with a maximum of 16 Pop III stars forming per halo. Since we did not restrict the number of Pop III stars that can form in a halo, we find that the conditions are often sufficient for multi-Pop III stars to form in a single system. The total mass of Pop III stars per halo is plotted against halo mass in \autoref{fig:totp3mass_halomass_sidehist}. The histogram of the total Pop III mass is projected on the right. Lines of constant star formation efficiency are overplotted. We find that most of our Pop III stars are forming between 10$^{-4}$ < f$_\star$ < 10$^{-3}$. 
+
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{images/jlw_mass_machacek_total.pdf}
+    \caption{The average LW background for host halos of new Pop III stars is plotted versus the host halo mass, colored by redshift. The Machacek et al. relation is plotted given the background LW in Eq. \ref{LWbg}. Almost all halos fall below the relation, across a range of redshifts. A few halos (or possibly a single halo) allow Pop III stars to form at a low halo mass in a very high LW background. There are a few halos that have Pop III stars forming at later times and at high halo masses.}
+    \label{fig:jlw_mass_machacek}{}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{images/totnump3_halomass_sidehist.pdf}
     \caption{Total number of Pop III stars in halos hosting new Pop III stars versus halo mass. A median number of four Pop III stars form in a single halo, with some forming as many as 16 Pop III stars.}
     \label{fig:totnump3_halomass_sidehist}
 \end{figure}
 
 \begin{figure}
-	\includegraphics[width=\columnwidth]{images/totp3mass_halomass_sidehist.png}
+	\includegraphics[width=\columnwidth]{images/totp3mass_halomass_sidehist.pdf}
     \caption{Total mass of Pop III stars in halos hosting new Pop III stars versus halo mass. Lines of constant star formation efficiencies are overplotted. Most halos form Pop III stars at efficiencies between 10$^{-3}$ and 10$^{-4}$.}
     \label{fig:totp3mass_halomass_sidehist}
 \end{figure}
 
-
-
-%====================================================================
-\subsection{Population III host halo masses}
-%====================================================================
-
-%====================================================================
-\subsection{Multiple stellar systems}
-%====================================================================
 
 %====================================================================
 \subsection{Population III stars in atomic cooling halos}
