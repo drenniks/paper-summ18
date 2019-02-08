@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex paper"] 1549308970 "paper.aux" "paper.bbl" "paper" 1549308971
+["bibtex paper"] 1549641074 "paper.aux" "paper.bbl" "paper" 1549641242
   "./mnras.bst" 1431634402 43377 4db2f843e4986670b152898ac35c448e ""
-  "jwise.bib" 1541454821 401431 c27ff8916d572a9f7b96688c2109cc78 ""
-  "paper.aux" 1549308970 13981 9149e2a4feab72c60fe32f6be91425a8 ""
+  "jwise.bib" 1549640823 402269 c69e30761fcf3fef2d0b41e98782df33 ""
+  "paper.aux" 1549641242 14090 1aa9c6d05e657dede59386ca71c2fb79 ""
   (generated)
   "paper.bbl"
   "paper.blg"
-["pdflatex"] 1549308970 "paper.tex" "paper.pdf" "paper" 1549308971
+["pdflatex"] 1549641241 "paper.tex" "paper.pdf" "paper" 1549641242
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc" 1480098668 3096 d5cbf7aaa5d98173845186200e5ccea8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
@@ -177,12 +177,12 @@
   "images/totp3mass_halomass_sidehist.pdf" 1541695484 40664 d12eaa06ea85289968067fb50c27578f ""
   "macros.tex" 1539353641 4193 0e6c2c5fc8a18e7095936db05e4b242f ""
   "mnras.cls" 1432328464 62178 771897fe06ecb20a6e140bd3b990ffc5 ""
-  "paper.aux" 1549308970 13981 9149e2a4feab72c60fe32f6be91425a8 ""
-  "paper.bbl" 1549308970 17128 d098433156f3171869c7cd7eb4397bb0 "bibtex paper"
-  "paper.out" 1549308970 889 16a292f3bf7eeb6899fe8dcaa068bc73 ""
-  "paper.tex" 1549308968 48196 61e9e35e04e76c064bf97061ff9dcaa0 ""
+  "paper.aux" 1549641242 14090 1aa9c6d05e657dede59386ca71c2fb79 ""
+  "paper.bbl" 1549641074 17458 87ca37c90ef2e0995d9ef176e8ab16e8 "bibtex paper"
+  "paper.out" 1549641242 889 16a292f3bf7eeb6899fe8dcaa068bc73 ""
+  "paper.tex" 1549641241 48230 36b151b0e2a0cc58489df85302dbbf32 ""
   (generated)
-  "paper.out"
-  "paper.log"
-  "paper.aux"
   "paper.pdf"
+  "paper.aux"
+  "paper.log"
+  "paper.out"
