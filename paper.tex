@@ -282,255 +282,46 @@ We now inspect the number of Pop III stars and the total mass of Pop III stars p
 %====================================================================
 \subsection{Variations in the halo masses at collapse}
 %====================================================================
-The collapse of gas that goes on to form Pop III stars occurs in a wide range of host halo masses across time. There are three main reasons why the host halo masses may vary significantly. First, a generation of metal-free stars can form if their progenitors had only formed stars that did not go supernova. This prevents metals from enriching the environment which would stop metal-free star formation and begin metal-enriched star formation. Second, dynamical heating from mergers and accretion can heat the gas within halos and prevent \hh{} regions from cooling. This would delay star formation in halos with a large dynamic range at early times (not sure if dynamic range is the right way to say this) \citep{Yoshida03}. Finally, temporal fluctuations in the local Lyman-Werner radiation field can greatly affect the amount of \hh{} within a halo and thus, how efficiently the halo can cool. While this may only be a small affect in some halos where the local Lyman-Werner radiation is relatively low, Pop III star formation may be significantly delayed or completely prevented in halos that are close to active Pop III star formation sites. The combination of these three processes will determine which halos will be able to form Pop III stars, and thus results in a wide range of host halo masses. 
+The collapse of gas that goes on to form Pop III stars occurs in a wide range of host halo masses across time. There are three main reasons why the host halo masses may vary significantly. First, a generation of metal-free stars can form if their progenitors had only formed stars that did not go supernova. This prevents metals from enriching the environment which would stop metal-free star formation and begin metal-enriched star formation. Second, dynamical heating from mergers and accretion can heat the gas within halos and prevent \hh{} regions from cooling. This would delay star formation in halos at early times \citep{Yoshida03}. Finally, temporal fluctuations in the local Lyman-Werner radiation field can greatly affect the amount of \hh{} within a halo and thus, how efficiently the halo can cool. While this may only be a small affect in some halos where the local Lyman-Werner radiation is relatively low, Pop III star formation may be significantly delayed or completely prevented in halos that are close to active Pop III star formation sites. The combination of these three processes will determine which halos will be able to form Pop III stars, and thus results in a wide range of host halo masses. 
 
 
 %====================================================================
 \subsection{Comparison to previous work}
 %====================================================================
 
-\li Semi-analytic papers: \citep{Tegmark97, Trenti09, Visbal18,
-  Mebane18, Griffen18}
+There has been a large amount of work done throughout the literature investigating the relationship between the LW background intensity and halo masses. \citet{Tegmark97} numerically integrates a set of chemical equations to calculate the minimum mass a halo must have in order to cool, by considering \hh{} production and cooling rates. They conclude that cooling by \hh{} is efficient and leads to the first formation of structures. They find a minimum halo mass needed to collapse which depends on the virial temperature of the halo and the virial redshift. \citet{Trenti09} uses a similar argument as \citet{Tegmark97}, and find that metal-free halos can exist until z $\approx$ 6 using cosmological simulations and analytical calculations for metal enrichment. They also provide some insight into whether or not Pop III supernova rates are high enough within these metal-free halos to allow for the Large Synoptic Survey Telescope to see these regions of the universe. They use the minimum halo mass capable of cooling from \citet{Trenti09_SFR} as their halo mass model (see the blue solid line in Figure \ref{fig:compare_JLW_mass}, given our LW background). Neither \citet{Trenti09} nor \citet{Tegmark97} include the effects of \hh{} self-shielding, which results in the discrepancy between our data and their mass threshold relationship (Figure \ref{fig:compare_JLW_mass}). \citet{Mebane18} use a semi-analytic model of star formation, including a variety of feeback processes, to see for how long Pop III stars will survive for and find that Pop III stars can continue to form until z $\approx$ 6. They find a minimum halo mass for hosting Pop III star formation, but with the caveat that they do not include \hh{} self-shielding. The results from \citet{Trenti09} and \citet{Mebane18} have higher halo masses in comparison with M01, although this more closely matches results from simulations (Wise+ \& O'Shea -- put references here). It should be noted that because our box is fairly small, we cannot capture the cosmic variance, therefore our star formation models have large uncertainties, and we cannot directly compare these results with previous work.
 
-\noindent\textbf{JHW summary:} In all of these papers, we shouldn't be focusing on the redshift dependence because that relies on the galaxy/star formation model that has large uncertainties.  We should focus on the relationship between the LW background intensity and the halo masses.  This is the best thing to do because our cosmological volume is small and cannot capture the cosmic variance.  The Tegmark+ result is the absolute lowest halo mass for H2 cooling.  Trenti+ uses a similar argument as them to calculate the minimum mass that is dependent on the LW background that they calculate from their semi-analytic model.  In this discussion, I wouldn't put emphasis (e.g. in comparison with Mebane+) on our Pop III SFRD decreasing at a particular redshift because it's a small box.  In other studies (like the Renaissance and Wise12+), the Pop III SFRD is pretty flat until some later time.  None of these semi-analytic models include self-shielding.  I think it would be worthwhile to make a plot of (minimum) host halo mass and J\_LW, comparining our work with others.
+\citet{Yoshida03} uses cosmological simulations to study the formations of primordial star-forming clouds. They follow the growth of structure to find where cold gas forms to say something about the formation of the first stars, and how the effects of LW radiation may affect these gas clouds. Importantly, they include self-shielding within halos. In their series of simulations, they find a minimum halo mass for those halos hosting gas clouds which may result in active star formation (see their Figure 12). They find that in the presence of a LW background of J$_{21}$ = 0.01, the minimum halo mass does increase compared to their runs where no LW background is applied. When self-shielding is taken into account, they see these halo masses decrease, falling closer to what the minimum halo masses were in the case where there was no LW background. They find that self-shielding does appear to be an efficient mechanism for primordial gas cooling. In comparison with our work, we find similar minimum halo masses for each redshift, although we do see a wider range of halo masses across redshifts, ranging from 10$^{5.4}$ M$_{\odot}$ to 10$^{7.1}$ M$_{\odot}$. While our halos never experience a LW intensity as low as 0.01, we find that their minimum mass for this LW intensity lies in the same mass range as our halos (see red X in Figure \ref{fig:compare_JLW_mass}). \citet{Wise07_UVB} uses cosmological simulations to investigate \hh{} cooling in a LW background. They find that \hh{} cooling is dominant even when there is a large LW background present. They do not include self-shielding, and subsequently find halo masses at their collapse that closely match M01 (see pink stars in Figure \ref{fig:compare_JLW_mass}). Their J$_{LW}$ = 0 control is plotted in Figure \ref{fig:compare_JLW_mass} at J$_{LW}$/J$_{21}$ = 10$^{-4}$. \citet{OShea08} uses cosmological simulations to investivate Pop III star formation in various LW backgrounds. They find that due to an increased LW background, there is a delay in star formation, and thus there is an increase in the halo masses at collapse. They also ignore self-shielding in their calculations, which can again account for the increased halo masses they are finding compared to this work, as can be seen in Figure \ref{fig:compare_JLW_mass}. Their control of J$_{21}$ = 0 control is plotted at J$_{LW}$/J$_{21}$ = 10$^{-4}$.
 
-\li Tegmark97
-\begin{enumerate}
-	\item They are numerically integrating a set of chemical equations given a model for halo profiles
-	\item Figure 5 shows the minimum virial temperature needed to collapse as a function of 1 + the virial redshift. I have plotted the virial temperature of my halos as a function of the redshift (this redshift is not the virial redshift, rather it is the redshift at which the Pop III star forms for that halo). I could make a comparison here but I'm not really comparing the same thing. It looks some of our halos form in their forbidden shaded regions.
-	\item I could calculate what zvir would be given Tvir
-	\item Figure 6 is similar to the item above
-	\item They find that "\hh{} formation triggers cooling in virialized clouds and allows early formation of low mass objects" (pg. 18)
-	\item They find that ~10$^{5}$ M$_{\odot}$ (baryonic mass) clouds can be virialzed at redshift 30
-\end{enumerate}
-
-\li Trenti09
-\begin{enumerate}
-	\item Individual observation of Pop III stars will likely not happen with upcoming telescopes, although detection of pair instability supernovae may happen with all sky surveys.
-	\item They are investigating the number density of pockets of metal free gas that survive below z = 10
-	\item They use the particle mesh tree code Gadget-2 
-	\item They begin their simulation at a higher redshift, in a larger box (7 h$^{-1}$ Mpc), with a higher mass resolution (3.4 $
-	\times$ 10$^{4}$ M$_{\odot}$) and a higher spatial resolution (0.16 h$^{-1}$ kpc).
-	\item They look between z = 30 and z = 4 and use a friend-of-friend halo finder
-	\item They assume a minimum halo mass that is capable of cooling from Trenti and Stiavelli 2009, this includes LW 
-	\item They also consider metal enrichment coming from nearby supernovaes. They find that even with relativly high wind bubble expansion velocities, metal-free halos can exist until z=5
-	\item Observing Pop III stars with JWST may be possible if their star formation efficiencies were greater than 10$^{-2}$ -- we are not seeing these types of efficiences --> JWST will likely not be able to see these stars
-	\item They say that "the best-case scenario for supernovae detection would be if multiple, very massive Pop III stars formed per halo" -- we are finding that having multiple Pop III stars in a single halo is actually more likely than having only one Pop III star
-	\item They are assuming only a single Pop III star per halo
-	\item Figure 1 shows the minimum halo mass required for cooling and collapse of a metal-free halo in the presence of a LW background. 
-	\item Upon comparing our halo masses with their mass criteria, none of our halos follow their mass trend (see jupyter notebook and https://arxiv.org/pdf/0901.0711.pdf)
-	\item 
-\end{enumerate}
-
-\li Visbal18
-\begin{enumerate}
-	\item They develop a semi-analytic technique to study evolution of Pop III to metal-enriched star formation, using n-body simulations and applying a prescription for Pop III and metal-enriched star formation
-	\item They include LW feedback and metal enrichment from supernovae winds
-	\item They use Gadget-2
-	\item First stars star forming at z=40
-	\item Our Pop III stars are forming in halos that fall below their critical mass value 
-	\item Self-consistent LW background, although does not take into account density fluctuations on scales larger than the box
-	\item They assume a single mass for all Pop III stars (40 msol)
-	\item As they only measure between z=40 and z=20, we can really only compare our peak SFRD with theirs, which does occur at about the same time. Our SFRD peaks around z=20 at a value of ~2$\times$10$^{-4}$ and decreases before and after z = 20. It looks like we are getting a similar peak value at z=20 for a Pop III SFE of 0.005 (also similar to our SFE). Other parameters they consider aren't hitting the same peak value as us at the end of their simulation. I think comparing with SFRD here is one of the only things we can directly compare, since they are looking at higher redshifts than we are. 
-	\item Streaming velocities have not been included
-\end{enumerate}
-
-\li Mebane 18
-\begin{enumerate}
-	\item Focus only on neutral primordial gas accreting onto a halo and cooling via \hh{} line emission.
-	\item They try to understand how the first generation of Pop III stars persists
-	\item They are looking between z=50 and z=6
-	\item They use the Trac et al. (2015) halo mass function
-	\item They assume star formation occurs once the \hh{} fraction within a halo exceeds a critical value found in Tegmark et al. (1997). This occurs in small mass halos of about 10$^{5}$ M$_{\odot}$ at z=50
-	\item They self-consistently calculate the LW background which controls the minimum halo mass once stars begint to form
-	\item They make the Pop III IMF a variable
-	\item They have an interesting discussion about whether or not a Pop III star would be able to ionize the surrounding gas in it's birth halo, implying that Pop III stars likely form in isolation (pg. 5)
-	\item Similar to their findings of the SFRD, our SFRD rapidly increases, then flattens out and decreases. Comparing with their Figure 7, our SFRD density seems to approximately match their peak values for particular variables. While we have a distinguished peak in our SFRD, they don't have as much of a peak. We seem to approximately match their mid mass and high mass Pop III IMF with energy-regulated Pop II star formation.
-	\item Our halo masses for Pop III stars appear to be quite a bit lower than their minimum masses
-	\item It may be worth including the SFRD for Pop II stars so we can compare with this paper further?
-	\item They conclude that the increasing LW background coming from Pop II stars is what halts Pop III star formation
-	\item They say that supernova feedback is one of the most important processes for a single halo: if enough metals are expelled from the halo, Pop III star formation can persist for several generations
-\end{enumerate}
-
-\li Griffen18
-\begin{enumerate}
-	\item They are using the Caterpillar simulations to do their work, specifically looking at Milky Way mass halos - rather large compared to our work
-	\item Looking at their Figure 1, our halos are forming Pop III stars below their minimum halo mass criteria
-	\item They identify Pop III star formation sites beginning at z=26, very similar to when we start seeing Pop III stars
-	\item This paper seems to be focusing on progenitors of Milky Way sized halos. As far as Pop III star formation goes, they seem to be getting a somewhat similiar number of potential star forming sites as we have number of Pop III stars (see their Table 2)
-\end{enumerate}
-
-\li Simulation papers: \citep{Machacek01, Yoshida03, Wise07_UVB,
-  OShea08, Muratov13}
-
-\noindent\textbf{JHW summary:} Mention that the Trenti+ and Mebane+ results have higher halo masses than the Machacek+ paper, but this is more in-line with the masses found in simulations (e.g. Wise+ \& O'Shea).  We should focus our comparison with Yoshida+ because it includes self-shielding and includes many different halos, whereas Wise+ and O'Shea+ only look at one halo.  Also, we need to figure out why the Muratov+ results have much higher halo masses even though they include self-shielding.  Is it a resolution issue or something else?
-
-\li Machacek01
-\begin{enumerate}
-	\item
-\end{enumerate}
-
-\li Yoshida03
-\begin{enumerate}
-	\item They are investigating primoridal star forming sites between redshifts 25 and 30 using Gadget
-	\item They take 64 snapshots from z = 100 to z = 14
-	\item Their Figure 2 and our halo mass vs. redshift plot are fairly similar, although we see a wider range of min halo masses for each redshift. We also see a bit more of a trend. At higher redshifts, our minimum halo mass is sitting at about 4 $\times$ 10$^{6}$ M$_{\odot}$, and steadily rises, although with a fairly large amount of scatter
-	\item I may be able to make a plot similar to Figure 3 once I get YT working properly on Comet (also for Figure 4)
-	\item They do investigate the effects of radiative feedback to various degrees, including the effects of self-shielding
-	\item They start by considering a constand Lyman-Werner background radiation with values J$_{21}$ = 0.01, and 0.1. 
-	\item They find that the mean molecular hydrogen fraction drops by an order of magnitude for J$_{21}$ = 0.01, making primordial gas cooling very inefficient
-	\item When they begin discussing the effects of self-shielding, they note that their prescription for self-shielding assumes a stationary gas, so their results show the maximum effect of self-shielding
-	\item Figure 12 shows that including a LW background does increase the minimum halo mass of halos that host gas clouds compared to the runs where there was no LW background applied. When self-shielding is taken into account, the minimum halo mass is lowered compared to the run without self-shielding. This figure shows that self-shielding does appear to be an important factor in determining the minimum halo mass that can host Pop III stars
-	\item Once they begin determining early star formation (section 8), they assume a single massive Pop III star for each cold dense gas cloud. They also assume the mass of the star to be at least greater than 100 solar masses, but leave this as a parameter.
-	\item They do find that just assuming a minimum-mass model for star-forming clouds over-predicts the values by up to a factor of three
-	\item The first star-forming regions appear at z=32
-	\item Top panel of Figure 15 shows that star-formation is quenched more strongly in the optically thin case than in the self-shielding case
-	\item Figure 16 shows the SFRD including self-shielding for a Pop III star with mass of 100 M$_{\odot}$ and with a mass of 600 M$_{\odot}$. This is a somehwat different redshift range than we are looking at, but we can compare peak values. Our peak value at z=20 is about 2 $\times$ 10$^{-4}$, whereas their peak value at $\approx$z=21 is 4 $\times$ 10$^{-4}$ for the Pop III star with 100 M$_{\odot}$, and 10$^{-3}$ for the Pop III star with 600 M$_{\odot}$. Our peak value matches fairly well with their 100 M$_{\odot}$. We also have a much faster rise in star formation than they do. I have plotted their function (Eqn. 23) vs. our SFRD
-	\item Coming to their discussion section, they do state that while gas cooling is suppresed for J$_{21}$ > 0.01, when self-shielding is included, primoridial gas efficiently cools for J$_{21}$ = 0.01.
-\end{enumerate}
-
-\li Wise07UVB
-\begin{enumerate}
-	\item Using Enzo to investigate \hh{} cooling
-	\item One of their box sizes matches our box size of 1 comoving MPC
-	\item Self-shielding of LW photons is not included, and they state that they don't expect their results to change significantly by the effect of self-shielding
-	\item There are 14 simulations in this paper, with various LW fluxes, with and without \hh{} cooling. 
-	\item Their Figure 3a shows the halo masses of the most massive halos versus redshift when the halo starts to collapse. This figure shows higher masses than what we are seeing during similar redshift ranges
-	\item They find that \hh{} cooling is dominant even when there is a large LW background
-	\item They give a discussion about the effect of local LW sources on Pop III formation and say that these local sources should only affect the timing of nearby star formation instead of the global star formation rate. This appears to be similar to what we are finding as we see only a couple instances where Pop III stars are born within close proximity to one another. 
-	\item \hh{} formation is possible in the center of high redshift halos with a relatively high LW intensity due to free electrons created in central shocks.
-\end{enumerate}
-
-\li OShea08
-\begin{enumerate}
-	\item They are investigating Pop III formation by varying the strength of the LW background using Enzo
-	\item They find that the LW background does delay collapse of high density gas of the most massive halo, and increases the virial mass. They also find that star formation can occur in LW backgrounds as high as J$_{21}$ = 1. 
-	\item Their simulation is similar to ours, with a smaller boxseze (0.6 h$^{-1}$ Mpc comoving) and run from z = 99 to when gas collapses in the center of the most massive halo. They assume an unevolving LW background with 8 different values, ranging from J$_{LW}$ = 0 to 10$^{-21}$. 
-	\item Figures 1 and 2 show the most massive halo when it begins to collapse for J$_{21}$ = 0 and 1. For J$_{21}$ = 0, collapse begins at z = 24, and for J$_{21}$ = 1, collapse begins at z = 17. 
-	\item Figure 3 shows mean halo quantities for the simulations. We can compare with the bottom left panel, showing the halo virial mass versus J$_{LW}$, which also has the Machacek relation plotted on it. Their halos all lie well above the Machacek relation.
-	\item I may be able to make a figure similar to the top panels of Figure 4 once I get the trace halos to work
-	\item Overall results relevant to our work (I think) are that as the LW background increases, Pop III star formation is delayed and will thus occur in halos with higher masses. They also find that Pop III star formation is never suppressed, given the LW values they investigate.
-\end{enumerate}
-
-\li Muratov13
-\begin{enumerate}
-	\item They are using the simulation code ART to investigate how Pop III stars affect their host galaxies. 
-	\item Their simulations include \hh{} formation and dissociation by LW feedback, including self-shielding. They have a 1 h$^{-1}$ Mpc comoving box, and two smaller boxes to see the effect of mass resolution. They end their simulations at z=9, similar to us.
-	\item They have a similar criteria for Pop III star formation. For our Pop III stars, we require a lower metallicity, and the same molecular hydrogen fraction. 
-	\item They assume the mass of the Pop III star to randomly be either 170 M$_{\odot}$ (PISN) or 100 M$_{\odot}$. 
-	\item They find Pop III stars forming in halos with masses $\geq$ 10$^{6}$ M$_{\odot}$ beginning at z $\approx$ 21.2. 
-	\item Their host halo masses are much larger than our host halo masses. 
-\end{enumerate}
-
-
-\li We don't have to compare with all of the semi-analytic papers, but
-it will be good to compare with all of the simulation papers.
+\begin{figure}
+	\includegraphics[width=\columnwidth]{images/compare_JLW_mass.pdf}
+    \caption{The average LW intensity normalized by J21 versus the halo mass for this work and a variety of other works. The black solid line is from M01, blue solid line from \citet{Trenti09_SFR}, red x from \citet{Yoshida03}, brown plus from \citet{OShea08}, pink stars from \citet{Wise07_UVB}. J$_{LW}$ = 0 for the various sources is plotted here at J$_{LW}$/J$_{21}$ = 10$^{-4}$}
+    \label{fig:compare_JLW_mass}
+\end{figure}
 
 %====================================================================
 \subsection{Caveats}
 %====================================================================
 
-\li Optically-thin Lyman-Werner radiation field from point sources \citep{Schauer17}
+There are a few caveats to this work that should be noted. Work done by \citet{Schauer17} investigated the escape fraction of LW photons in the near and far-field and found that the LW escape fraction of atomic cooling halos can vary significantly depending on the ionisation front within the halo. In our work, we allow all LW photons to escape the halo. Since we are not accounting for the reduced escape fraction within our halos, we are overestimatng the LW radiation coming from point sources in our simulation. We could account for this by decreasing the intensity of the stars, since the overall LW radiation would be reduced, although this should not significantly affect our results. We also do not include streaming velocities between baryons and dark matter within our simulation \citep{Tselia11, Greif11_Delay, Naoz12, OLeary12}. Streaming velocities can suppress star formation at very high ($z \ga 20$) redshifts only, because the streaming velocities decrease with redshift. Pop III star formation is delayed by increasing the halo  mass needed to overcome the bulk velocity. Often in the literature, streaming velocities are only studied for a few halos. But \citep{Naoz13} estimates the minimum mass needed to retain the bulk of the baryons within the dark matter halo using a series of cosmological simulations, the results of which can be see in Figure \ref{fig:compare_JLW_mass}. These halos only reach up to about $2 - 3 \times 10^5 M_\odot$ when the streaming velocity is about $1\sigma_{\rm vbc}$, which is smaller than the halos in our simulation. \citep{Naoz13} mention that at the largest streaming velocity, their simulations don't match expected value due to a small sample size of high mass halos. If we included streaming velocities, the gas would've already fallen into the dark matter potential well when the halo exceeds this characteristic mass. Because of this, streaming velocities would likely not affect our results. Finally, there is the obvious caveat of the unknown Pop III initial mass function (IMF). Like with any work done trying to model Pop III star formation, an IMF must be chosen. Therefore, we have uncertainties coming from the assumed Pop III IMF.
+
+\
+\
+\
+\
+
+\noindent\textbf{JHW summary:} In all of these papers, we shouldn't be focusing on the redshift dependence because that relies on the galaxy/star formation model that has large uncertainties.  We should focus on the relationship between the LW background intensity and the halo masses.  This is the best thing to do because our cosmological volume is small and cannot capture the cosmic variance.  The Tegmark+ result is the absolute lowest halo mass for H2 cooling.  Trenti+ uses a similar argument as them to calculate the minimum mass that is dependent on the LW background that they calculate from their semi-analytic model.  In this discussion, I wouldn't put emphasis (e.g. in comparison with Mebane+) on our Pop III SFRD decreasing at a particular redshift because it's a small box.  In other studies (like the Renaissance and Wise12+), the Pop III SFRD is pretty flat until some later time.  None of these semi-analytic models include self-shielding.  I think it would be worthwhile to make a plot of (minimum) host halo mass and J\_LW, comparining our work with others.
+
+\noindent\textbf{JHW summary:} Mention that the Trenti+ and Mebane+ results have higher halo masses than the Machacek+ paper, but this is more in-line with the masses found in simulations (e.g. Wise+ \& O'Shea).  We should focus our comparison with Yoshida+ because it includes self-shielding and includes many different halos, whereas Wise+ and O'Shea+ only look at one halo.  Also, we need to figure out why the Muratov+ results have much higher halo masses even though they include self-shielding.  Is it a resolution issue or something else?
 
 \noindent\textbf{JHW summary:} We should emphasize your last point for Schauer+ -- that we are overestimating the LW flux in the box.
 
-\li Schauer17
-\begin{enumerate}
-	\item Interested in the LW escape fraction from atomic cooling halos and whether or not shielding due to neutral hydrogen is important to prevent the build up of LW background
-	\item They use radiation-hydrodynamical simulations of the growth of H II regions in the first galaxies using the code ZEUS-MP. Their simulations are one dimensional. 
-	\item Their code follows the same nine chemical species as ours, and follows the growth of cosmological ionisation fronts
-	\item They calculate escape fractions in the near-field (an observer close to at rest with respect to the halo, it is within this range that \hh{} can provide shielding of the LW photons), and the far-field (an observer faraway from the halo, moving with a large velocity with respect to the halo)
-	\item They are looking at two halos with masses 10$^{7}$ and 10$^{8}$ solar masses, so already much higher than the halos hosting Pop III stars in our simulation. Their halos have stellar populations at the center. They vary different parameters of the stellar population, including SFEs and their IMF.
-	\item They find that the LW escape fraction depends on the ionisation front. If a halo is fully ionised, all photons escape.
-	\item In the near-field, for SFEs greater than 0.5\% and with a Salpeter IMF ranging from 50 to 500 Msol, the ionisation front overwhelms the halo and the gas remains ioinsed
-	\item If the spectrum weakens over time, recombination starts from the outside in and the halo becomes optically-thick.
-	\item If the ionisation front is slowly moving, the LW escape fraction can vary over a wide range. Molecular hydrogen abundance is enhanced and suppresses the LW background.
-	\item In the far-field, LW escape fractions are larger than in the near-field. Neutral hydrogen can shield here since "Lyman lines of Hbeta and higher, that lie in side the LW range, become very broad". 
-	\item In general, they find that the LW escape fraction in these early halos is high. They say that unless a protogalaxy forms stars with a low 0.1\% SFE, most LW radiation will escape the halo. Our halos have SFEs at a much lower rate than this.
-	\item They say that "the gas present in the host halo of a stellar cluster with 10$^{4}$ to 10$^{6}$ Msol in stars cannot prevent the build-up of the LW background."
-	\item These results inform us that we are overestimating the LW radiation coming from point sources in our simulation. If we wanted to account for the reduced escape fraction, we could lower the intensity of our stars, and this would result in more star formation, since the overall LW radiation would be reduced. Although this should not significantly change our results.
-\end{enumerate}
-
-\li No streaming velocities that suppresses star formation at very
-high ($z \ga 20$) redshifts \citep{Tselia11, Greif11_Delay, Naoz12, OLeary12} (schauer18 belongs here as well)
-
-\noindent\textbf{JHW summary:} Streaming velocities impact the very earliest Pop III host halos because they decrease with the scale factor.  They delay the formation by increasing the necessary halo mass to overcome the bulk velocity.  Just like the studies on LW radiation feedback, the simulations only focus on a handful of halos, whereas, Naoz+ gives a good estimate of the minimum mass (their filtering mass; equations 16-18).  These masses are $2-3 \times 10^5 M_\odot$ and should only be important when the LW flux is small and not suppressing cooling.  All of the halos in our simulation are more massive than this filtering mass.  Even if we included streaming velocities, the gas would've fallen into the potential well when the halo exceeds the filtering mass.  But then it couldn't cool because of the LW background.  Thus I don't think streaming velocities would affect our results much at all.
-
-\li Tselia11
-\begin{enumerate}
-	\item Looking at the effect of streaming velocities on the evolution of the first bound objects in the early universe.
-	\item It was previously found that the effect of streaming velocities leads to power suppression on scales corresponding to the first bound halos and delays formation of the first bound objects
-	\item Their include the relative velocities between dark matter and baryons after recombination as well as a treatment of the variation of the sound speed between recombination and z=200. 
-	\item After applying these new prescriptions, they look at how the characteristic mass scale changes between gas-rich and gas-poor halos
-	\item They find an equation for the filtering mass which provides a boundary between gas-rich and gas-poor halos.
-	\item When there is a high streaming velocity, baryons may not fall into collapsing dark matter halos, and the filtering mass would increase (figure 2)
-	\item The gas fraction in halos significantly decreases in regions where there is a high streaming velocity relative to no streaming velocity (figure 5)
-	\item Relative velocites have a large affect on minihalos
-	\item Streaming velocities significantly suppress gas accretion during halo formation and thus increases the characteristic mass of gas-rich halos at redshifts greater than 10. They find the characteristic mass should be around 2 $\times$ 10$^{5}$ M$_{\odot}$ at z=20. 
-	\item Streaming velocities also will delay star formation and cause spatial fluctuations, although the suppression affect is about a factor of 1.6 at z=20 since the minimum mass of \hh{} cooling is larger than the chracteristic mass they found. There is a factor of 3.3 effect on the gas fraction in starless minihalos. These effects grow with redshift
-	\item Streaming velocities is what determines the gas content of halos at high redshifts
-\end{enumerate}
-
-\li Greif11\_Delay
-\begin{enumerate}
-	\item Using high resolution moving mesh simulations to show the effects of streaming velocities on the virialization of the first halo and first star formation
-	\item They focus on minihalos where they expect a more pronounced effect
-	\item Using AREPO, three different simulations with a side length of 500 kpc.
-	\item They identify the first minihalos which exceed a virial mass of 5 $\times$ 10$^{5}$ M$_{\odot}$.
-	\item They apply a relative velocity of 3 km s$^{-1}$ at z = 99.
-	\item When a streaming velocity is applied, the gas fractions in their halos are reduced by about 50\%
-	\item Figure 3 shows how the virial mass is increased when a streaming velocity is applied. The factor the virial mass is increased by is about 3, which results in a delay of Pop III star formation by $\delta$z $\approx$ 4
-	\item With a streaming velocity, the gas temperature at the virial radius is higher
-	\item The velocity dispersion is also higher with streaming velocities, which means the gas is more turbulent. They say that this could lead to a lower mass for Pop III stars than expected since fragmentation is increased
-	\item The nubmer of minihalos that can cool and form stars is reduced in the case of streaming velocities. 
-	\item Overall, gravitational collapse in minihalos is delayed, which means Pop III star formation is delayed, and the increased fragmentation may affect the mass function of the first stars. 
-\end{enumerate}
-
-\li Naoz12
-\begin{enumerate}
-	\item They use simulations to systematically understand the suppression of structure formation due to streaming velocities
-	\item They are using GADGET-2
-	\item They model the streaming velocities as constant throughout their boxes
-	\item They find that the halo number density is a function of the stream velcity. The halo mass function is suppressed for typical streaming velocity values
-	\item There is a 50\% suppression of the total number density of halos for 10$^{6}$ M$_{\odot}$ at z=19 for large streaming velocities
-	\item Where the streaming velocity is high the formation of the first stars and galaxies is delayed
-	\item There appears to be a delay in the formation epoch of gas rich halos
-	\item The position shift of baryons relative to dark matter appears to be erased by z=15
-	\item Streaming velocity will suppress the clumping factor of baryons at lower redshift 
-	\item Overall, the total halo mass function is significantly suppressed. This suppression appears to diminsh at different rates by z=15 for different streaming velocities
-	\item Significantly, they find that for the largest values of their streaming velocity, gas does not accrete onto the dark matter halo sand thus almost all halos below 10$^{6}$ M$_{\odot}$ are empty. Formation of the first generation of galaxies should be delayed
-	\item They also find that the reionization process may proceed differently in regions of the universe with different streaming velocities
-\end{enumerate}
-
-\li OLeary12
-\begin{enumerate}
-	\item They are simulating the formation of the first structures between z = 15 and z=200
-	\item They use a different method to model the streaming velocities, namely they use a consistent linear theory to initialize these flows, instead of simply changing the velocity of the gas at the beginning of the simulation
-	\item They are using both GADGET3 and Enzo
-	\item They are spending a fair amount of time in their paper actually comparing the results from GADGET and Enzo
-	\item They initialize their simulations including "the impact of pressure growth and rate of growth modes, temperature fluctuations, correct baryonic and dark matter velocities, and transfer functions that account for the dark matter-baryon velocity differential"
-	\item With some non-zero streaming velicities, halo gas is off center and with lower densities, which delay formation of the first stars
-	\item Maximum gas density can be suppresed by an order of magnitude for halos between 10$^{4}$ and 10$^{6}$ M$_{\odot}$
-	\item Interestingly, they find that the orientation of the filaments to the streaming velocity can tell you something about whether or not a halo has gas
-\end{enumerate}
-
-\li Schauer18
-\begin{enumerate}
-	\item They are looking at streaming velocity effects using the AREPO code
-	\item They run simulations with three different streaming velocities and without the effect of the position shift of the baryons with respect to the dark matter
-	\item A non-zero streaming velocity makes it hard for baryons to fall into dark matter halos. Figure 8 shows that for increasing streaming velocities, they baryon fraction in halos is significantly decreased.
-	\item This also means that the halo mass function decreases with increasing streaming velocities as can be seen in Figure 9
-	\item Figure 13 nicely shows that with increasing streaming velocities the halo mass of the first halo to contain cold gas increases. 
-	\item Overall, they find that where the streaming velocity is increased, the minimum halo mass and the average halo mass to include cold, dense gas increases significantly compared to the zero streaming velocity case.
-	\item They find that where the streaming velocity is the highest, star formation occurs in atomic cooling halos
-	\item Increasing the mass threshold for cold gas results in a suppressed star formation rate
-\end{enumerate}
-
-\li Uncertainties from the assumed Pop III initial mass function 
+\noindent\textbf{JHW summary:} Streaming velocities impact the very earliest Pop III host halos because they decrease with the scale factor.  They delay the formation by increasing the necessary halo mass to overcome the bulk velocity.  Just like the studies on LW radiation feedback, the simulations only focus on a handful of halos, whereas, Naoz+ gives a good estimate of the minimum mass (their filtering mass; equations 16-18).  These masses are $2-3 \times 10^5 M_\odot$ and should only be important when the LW flux is small and not suppressing cooling.  All of the halos in our simulation are more massive than {}this filtering mass.  Even if we included streaming velocities, the gas would've fallen into the potential well when the halo exceeds the filtering mass.  But then it couldn't cool because of the LW background.  Thus I don't think streaming velocities would affect our results much at all.
 
 %====================================================================
 \section{Conclusions}
 %====================================================================
+In this work, we presented the analysis of the host halo mass distribution of Pop III stars and how it relates to the LW background radiation. We find that Pop III stars are forming in halos with a mean mass of $10^{5.9} M_\odot$ until $z = 11.5$, which falls well below the M01 relation due to \hh{} self-shielding. The mean halo mass then rises above the M01 to a mean value of $10^{6.6} M_\odot$ due to the domination of LW radiation throughout our simulation box produced by metal-enriched stars. As we compare with the literature, we appear to have much lower halo masses than those that do not include \hh{} self-shielding, so it appears that this is an important process that is often ignored in calculations. We also see that there doesn't appear to be a correlation between the average LW intensity with a halo and the halo mass. Therefore, the LW intensity may not be as indicative of which halos may form Pop III stars as previously thought. Pop III stars are often assumed to form in isolation, but we are finding that most of our halos are forming multiple Pop III stars, with a median number of four Pop III stars in a single halo, up to a maximum of 16 Pop III stars. 
 
 %====================================================================
 \section*{Acknowledgements}

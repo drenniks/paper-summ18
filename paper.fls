@@ -385,6 +385,9 @@ INPUT ./images/totnump3_halomass_sidehist.pdf
 INPUT images/totp3mass_halomass_sidehist.pdf
 INPUT ./images/totp3mass_halomass_sidehist.pdf
 INPUT ./images/totp3mass_halomass_sidehist.pdf
+INPUT images/compare_JLW_mass.pdf
+INPUT ./images/compare_JLW_mass.pdf
+INPUT ./images/compare_JLW_mass.pdf
 INPUT paper.bbl
 INPUT paper.bbl
 INPUT paper.aux
@@ -398,7 +401,7 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/rntxmi5.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/rtxmi5.pfb
