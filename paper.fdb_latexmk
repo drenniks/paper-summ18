@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex paper"] 1555515118 "paper.aux" "paper.bbl" "paper" 1555515120
+["bibtex paper"] 1557168596 "paper.aux" "paper.bbl" "paper" 1557168597
   "./mnras.bst" 1431634402 43377 4db2f843e4986670b152898ac35c448e ""
-  "jwise.bib" 1555086662 403827 0c75e412ecc83f4b879ffcb7ba6de014 ""
-  "paper.aux" 1555515119 16541 3db98263520abd8c5c9bedd65a2b61ed ""
+  "jwise.bib" 1555608027 403827 0c75e412ecc83f4b879ffcb7ba6de014 ""
+  "paper.aux" 1557168596 19141 d2e0cf1733fcc9e13c5d13c477195cff ""
   (generated)
   "paper.bbl"
   "paper.blg"
-["pdflatex"] 1555515118 "paper.tex" "paper.pdf" "paper" 1555515120
+["pdflatex"] 1557168596 "paper.tex" "paper.pdf" "paper" 1557168597
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc" 1480098668 3096 d5cbf7aaa5d98173845186200e5ccea8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
@@ -72,6 +72,7 @@
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/txfonts/txr.tfm" 1480098718 2408 aec793a3c45e495f7ad15b227c91f508 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/txfonts/txsyb.tfm" 1480098718 988 098ca7e8cc5647b9ac21b82dbdce1f01 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/txfonts/txsyc.tfm" 1480098718 1084 75e807e9e71f7a312e4e1187dce5e93b ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb" 1480098744 15631 448f78efb347f46fd4a9f1a1f41c1b29 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/rntxmi5.pfb" 1480098744 16585 57150b5391b6405d6eb34c2c8a4a7588 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb" 1480098744 15929 f4ad36d9b7ab28e7323976b6fab0ef97 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/rtxmi5.pfb" 1480098744 21290 748cdd09d8acda0ef36c6f1e9fa40df2 ""
@@ -170,7 +171,10 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "images/compare_JLW_mass.pdf" 1554490752 34593 10bac4d6dd443fffd5c30bc738a4fe87 ""
+  "images/H2_column_mass.pdf" 1557166105 17869 59f207037001b9bdff46d0bf372e608f ""
+  "images/JLW_xe_mass.pdf" 1557160741 1567224 2a8638d142e071574ccc031a552931a5 ""
+  "images/compare_JLW_mass.pdf" 1555949278 35043 ef3785bc749ce918f9f161b9b8618adc ""
+  "images/final_redshift_Np3_mass.pdf" 1556899930 19193 04d71379edeeede1f30e1329ff5abd32 ""
   "images/hmf.pdf" 1552060123 23171 6aa8d4df220c17d7a231222d4fe587da ""
   "images/jlw_mass_machacek_total.pdf" 1554480885 33844 4d4933f6f23edd96ef09c1c139041ed9 ""
   "images/mean_mass_errorb_fix.pdf" 1552060036 20454 1bdc79e7ee4e71414c06f392afbe9784 ""
@@ -179,12 +183,12 @@
   "images/totp3mass_halomass_sidehist.pdf" 1552064759 17842 cd33da20ebf823d683153e2216f86a43 ""
   "macros.tex" 1539353641 4193 0e6c2c5fc8a18e7095936db05e4b242f ""
   "mnras.cls" 1432328464 62178 771897fe06ecb20a6e140bd3b990ffc5 ""
-  "paper.aux" 1555515119 16541 3db98263520abd8c5c9bedd65a2b61ed ""
-  "paper.bbl" 1555515118 18705 0dfd1a926fef8eb2e11675478db7b6a8 "bibtex paper"
-  "paper.out" 1555515119 795 7de432c57302769418fa17fb501329fa ""
-  "paper.tex" 1555445412 47288 34a5d9abe19c93a169294adb5d7a4917 ""
+  "paper.aux" 1557168596 19141 d2e0cf1733fcc9e13c5d13c477195cff ""
+  "paper.bbl" 1557168596 19130 7b392c78e82189f61690b2c17a3dbda6 "bibtex paper"
+  "paper.out" 1557168596 907 39c48c5f86f5d4d5f006b6d9c02ad44c ""
+  "paper.tex" 1557168594 51303 5f03ae44a1d7824e663d4c8fbd76c96c ""
   (generated)
-  "paper.pdf"
-  "paper.log"
   "paper.out"
+  "paper.log"
   "paper.aux"
+  "paper.pdf"
