@@ -46,6 +46,8 @@
 \usepackage{amssymb}	% Extra maths symbols
 \usepackage{mathtools}
 \usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{caption}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
@@ -226,19 +228,13 @@ where $\mu = 1.22$ is the mean molecular weight, $\rho_{0} = 200 \rho_{c} / 3$ i
 \begin{equation} \label{columnh2}
 	N_{\rm H2} = f_{\rm H2} R_{\rm vir} \frac{200 \rho_{c}}{3 \mu m_{\rm H}} \left(\frac{1}{f_{c}} - 1 \right)
 \end{equation}
-For $z = 15$ and $\rm{H}_{0} = 70 \rm{km} \rm{s}^{-1} \rm{Mpc}^{-1}$, Figure \ref{fig:H2_column_mass} shows the \hh{} column density as a function of halo mass. Here, the shielding factor is simply $f = 10^{\rm x} / f_{\rm H2}$, and is multiplied to the column density, effectively adjusting the \hh{} fraction within the halo. As the shielding factor increases, the column density can effectively increase by an order of magnitude. The effect of the shielding factor on the column density of \hh{} within a halo is critical in understanding how LW feedback might affect these halos. (More needs to be said here. I'd like to make it more clear about why the shielding factor changes, one way or the other, and the effects of that change. I don't think the plot shows exactly what we want.)
-
-\begin{figure}
-	\includegraphics[width=\columnwidth]{images/H2_column_mass.pdf}
-    \caption{\hh{} column density versus halo mass for varying shielding factors. At f$_{\rm H2}$ = $10^{-4}$, the shielding factor is equal to one and thus acts as the case where shielding is not applied to the halo.}
-    \label{fig:H2_column_mass}
-\end{figure}
+For $z = 15$ and $\rm{H}_{0} = 70 \rm{km} \rm{s}^{-1} \rm{Mpc}^{-1}$, ... 
 %====================================================================
 \section{Results}
 %====================================================================
 In this section, we will present the distribution of host halo masses of Pop III stars, the relation between the mass distribution and the LW background radiation, and the distribution of various Pop III properties.
 
-To ensure that our box is representative of a typical piece of the universe, Figure \ref{fig:hmf} shows the simulated halo mass function along with the analytic Sheth-Tormen mass function at $z$ = 9.3. The analytic function closely matches our simulation until the mass resolution of our simulation is unable to resolve below 10$^{5}$ M$_{\odot}$ halos that contain $\approx$ 50 particles. 
+To ensure that our box is representative of a typical piece of the universe, Figure \ref{fig:hmf} shows the simulated halo mass function along with the analytic Sheth-Tormen mass function at $z$ = 9.3. The analytic function closely matches our simulation until the mass resolution of our simulation is unable to resolve below 10$^{5}$ M$_{\odot}$ halos that contain $\approx$ 50 particles. By the end of the simulation, over 10\% of the box is ionized over 10\%, as can be seen in Figure \ref{fig:JLW_xe_mass}, which also shows the mass weighted LW intensity as a function of time, and temperature projections of the box at certain points in time. 
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{images/hmf.pdf}
@@ -246,12 +242,13 @@ To ensure that our box is representative of a typical piece of the universe, Fig
     \label{fig:hmf}
 \end{figure}
 
-As mentioned previously, Pop III stars form in our simulation only between 27.23 $\geq z \geq$ 9.39. During this time frame, a total of 688 Pop III stars form. The corresponding star formation rate density can be seen in Figure \ref{fig:pop3_SFR_bar}. Pop III star formation peaks at a redshift of 20 and slowly decreases. The star formation rate density does not fall to zero at the end of the simulation, since Pop III stars were still being produced when the simulation was cut off. The SFRD plotted here is particular for our box. Due to the small size of our box, we are unable to capture all of the cosmic variance. Therefore the SFRD is likely to change depending on the size and initial conditions of the box.
+\begin{figure}
+	\includegraphics[width=\columnwidth]{images/JLW_xe_mass.pdf}
+    \caption{For the entire box, the average mass weighted LW background and the fraction of the volume ionized above 10\% versus time. Temperature projections are shown at the points indicated by the arrows.}
+    \label{fig:JLW_xe_mass}
+\end{figure}
 
-%====================================================================
-\subsection{Population III host halo masses}
-%====================================================================
- To determine the host halos of new Pop III stars, we use the halo finding code, \rockstar{} \citep{rockstar}. The mass determined by \rockstar{} is the dark matter mass, so to determine the total mass of the halos, we multiply the masses by $\Omega_{\rm M}$/$\Omega_{\rm DM}$. The total mass is subsequently used in our analysis. We also take the center and virial radius from the \rockstar{} halo catalog. A small percentage of Pop III stars do not form in a halo identified by \rockstar{}. Assuming that Pop III stars must form in collapsed halos, we calculate the virial mass and radius of a halo centered on the Pop III star directly from the simulation data. We calculate the LW intensity impinging on each halo by summing up the contribution coming from each radiating star particle outside the virial radius of the host halo. This is then added to the constant LW background implemented in the simulation (Eq. \ref{LWbg}). 
+As mentioned previously, Pop III stars form in our simulation only between 27.23 $\geq z \geq$ 9.39. During this time frame, a total of 688 Pop III stars form. The corresponding star formation rate density can be seen in Figure \ref{fig:pop3_SFR_bar}. Pop III star formation peaks at a redshift of 20 and slowly decreases. The star formation rate density does not fall to zero at the end of the simulation, since Pop III stars were still being produced when the simulation was cut off. The SFRD plotted here is particular for our box. Due to the small size of our box, we are unable to capture all of the cosmic variance. Therefore the SFRD is likely to change depending on the size and initial conditions of the box.
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{images/pop3_SFR_bar.pdf}
@@ -259,18 +256,17 @@ As mentioned previously, Pop III stars form in our simulation only between 27.23
     \label{fig:pop3_SFR_bar}
 \end{figure}
 
-In redshift bins of $\Delta z$ = 1, the mean halo mass hosting Pop III stars is determined, and plotted as black dots against the redshift bins in Figure \ref{fig:mean_mass}. The median for each bin is represented by an x, and the 15.9 and 84.1 percentiles are plotted below and above the mean, respectively. The M01 relation (Equation \ref{mthresh}) for our LW background intensity in Eq. \ref{LWbg} is shown as the black solid line. Notably, the mean halo mass falls well below the relation, at 10$^{5.9}$ M$_{\odot}$ until $z$ = 11.5, at which point, the mean halo mass rises to 10$^{6.6}$ M$_{\odot}$. The large discrepancy between our data and the mass threshold from M01 is indicative of the \hh{} shielding which is included in our simulation. \hh{} shielding allows for halos to form at much lower masses, and therefore, Pop III stars are forming in these halos at earlier times. In the M01 analysis, \hh{} shielding is neglected in their calculations for a variety of reasons, including the Doppler broadening of LW bands and large column densities of \hh{} only beginning to form at late times. Interestingly, a full radiative transfer simulation, such as ours, does not produce identical results as M01 predicts. Throughout the literature, there appears to be a consensus that \hh{} self-shielding will help smaller mass halos collapse in the presence of a LW background radiation \citep[E.g.][]{Yoshida03, Ricotti01, Glover01, Hartwig15}. As can be seen by the red solid line in \ref{fig:mean_mass}, nearly 100\% of the halos hosting Pop III stars fall below the M01 relation, until around a redshift of 15, at which point, the mean halo mass begins to rise above the relation. The increase in the mean halo mass above the M01 relation is indicative of the increased LW intensity permeating the box due to a galaxy that becomes very active in star formation at late times. This galaxy has a halo mass of $10^{8.5} M_{\odot}$, a total stellar mass of $10^{6.5} M_{\odot}$, and has a peak Pop III SFR of $10^{-3.5} M_{\odot} yr^{-1}$ at $\approx$ 250 Myr and a peak metal enriched SFR of $10^{-1.3}$ at $\approx$ 500 Myr. This galaxy produces a large amount of LW radiation which dominates the box, and drives up the minimum halo mass required for the formation of Pop III stars. This increase in the LW background can also be seen in Figure \ref{fig:JLW_xe_mass}, where by the end of the simulation, the LW background rises to greater than 1 $J_{21}$.
+%====================================================================
+\subsection{Population III host halo masses}
+%====================================================================
+ To determine the host halos of new Pop III stars, we use the halo finding code, \rockstar{} \citep{rockstar}. The mass determined by \rockstar{} is the dark matter mass, so to determine the total mass of the halos, we multiply the masses by $\Omega_{\rm M}$/$\Omega_{\rm DM}$. The total mass is subsequently used in our analysis. We also take the center and virial radius from the \rockstar{} halo catalog. A small percentage of Pop III stars do not form in a halo identified by \rockstar{}. Assuming that Pop III stars must form in collapsed halos, we calculate the virial mass and radius of a halo centered on the Pop III star directly from the simulation data. We calculate the LW intensity impinging on each halo by summing up the contribution coming from each radiating star particle outside the virial radius of the host halo. This is then added to the constant LW background implemented in the simulation (Eq. \ref{LWbg}). 
+
+In redshift bins of $\Delta z$ = 1, the mean halo mass hosting Pop III stars is determined, and plotted as black dots against the redshift bins in Figure \ref{fig:mean_mass}. The median for each bin is represented by an x, and the 15.9 and 84.1 percentiles are plotted below and above the mean, respectively. The M01 relation (Equation \ref{mthresh}) for our LW background intensity in Eq. \ref{LWbg} is shown as the black solid line. Notably, the mean halo mass falls well below the relation, at $7.7 \times 10^{5}$ M$_{\odot}$ until $z$ = 11.5, at which point, the mean halo mass rises to $3.7 \times 10^{6}$ M$_{\odot}$. The large discrepancy between our data and the mass threshold from M01 is indicative of the \hh{} shielding which is included in our simulation. \hh{} shielding allows for halos to form at much lower masses, and therefore, Pop III stars are forming in these halos at earlier times. In the M01 analysis, \hh{} shielding is neglected in their calculations for a variety of reasons, including the Doppler broadening of LW bands and large column densities of \hh{} only beginning to form at late times. Interestingly, a full radiative transfer simulation, such as ours, does not produce identical results as M01 predicts. Throughout the literature, there appears to be a consensus that \hh{} self-shielding will help smaller mass halos collapse in the presence of a LW background radiation \citep[E.g.][]{Yoshida03, Ricotti01, Glover01, Hartwig15}. As can be seen by the red solid line in \ref{fig:mean_mass}, nearly 100\% of the halos hosting Pop III stars fall below the M01 relation, until around a redshift of 15, at which point, the mean halo mass begins to rise above the relation. The increase in the mean halo mass above the M01 relation is indicative of the increased LW intensity permeating the box due to a galaxy that becomes very active in star formation at late times. This galaxy has a halo mass of $3.6 \times 10^{8} M_{\odot}$, a total stellar mass of $3.1 \times 10^{6} M_{\odot}$, and has a peak Pop III SFR of $2.7 \times 10^{-4} M_{\odot} yr^{-1}$ at $\approx$ 250 Myr and a peak metal enriched SFR of $5.4 \ times 10^{-2}$ at $\approx$ 500 Myr. This galaxy produces a large amount of LW radiation which dominates the box, and drives up the minimum halo mass required for the formation of Pop III stars. This increase in the LW background can also be seen in Figure \ref{fig:JLW_xe_mass}, where by the end of the simulation, the LW background rises to greater than 1 $J_{21}$.
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{images/mean_mass_errorb_fix.pdf}
-    \caption{For halos hosting new Pop III stars, the mean halo mass for redshift bins of $\Delta z$ = 1 is plotted along the left hand side versus redshift. The black scatter points indicate the mean halo mass for that redshift bin and the x indicate the median halo mass. The error bars indicate the 15.9 and 84.1 percentiles. The right hand side shows the percentage of halos that fall below the M01 mass threshold as a function of redshift. The M01 mass threshold (Eq. \ref{mthresh}), is plotted for the constant LW background in Eq. \ref{LWbg}. Almost all halos fall below the M01 relation, until $z$ = 11.5, when the mean halo mass rises above the relation.}
+    \caption{For halos hosting new Pop III stars, the mean halo mass for redshift bins of $\Delta z$ = 1 is plotted along the left hand side versus time. The black scatter points indicate the mean halo mass for that redshift bin and the x indicate the median halo mass. The error bars indicate the 15.9 and 84.1 percentiles. The right hand side shows the percentage of halos that fall below the M01 mass threshold as a function of redshift. The M01 mass threshold (Eq. \ref{mthresh}), is plotted for the constant LW background in Eq. \ref{LWbg}. Almost all halos fall below the M01 relation, until $\approx$ 380 Myr, when the mean halo mass rises above the relation.}
     \label{fig:mean_mass}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=\columnwidth]{images/JLW_xe_mass.pdf}
-    \caption{For the entire box, the average mass weighted LW background and the fraction of the volume ionized above 10\% versus time. Temperature projections are shown at the points indicated by the arrows.}
-    \label{fig:JLW_xe_mass}
 \end{figure}
 
 The LW background intensity versus the host halo mass for each Pop III halo in our dataset is shown in Figure \ref{fig:jlw_mass_machacek}. Each point is colored by the redshift where the Pop III star forms and the mass threshold from M01 (Eq. \ref{mthresh}) for the given LW background (Eq. \ref{LWbg}) is the solid black line. We see again that almost all halos form Pop III stars below the M01 threshold. There are also a few halos that form Pop III stars in very high J$_{\rm LW}$, below the relation. This situation arises when there are multiple Pop III stars forming at about the same time, within $\approx$ 100 pc of each other. Star formation can occur in a neighboring halo of a Pop III star whose LW radiation does not have ample time to photodissociate enough \hh{} to completely suppress star formation. The high J$_{\rm LW}$ is generally an indicator that the halos will likely have their star formation suppressed, but in cases where Pop III star formation occurs synchronically, star formation will not be suppressed, so long as they are a suitable distance away from each other. As there are only a few data points in this region, this situation is rare. It should be noted that there are duplicate halos within this plot, since halos are allowed to form multiple Pop III stars if the conditions are sufficient and each point represents an instance of Pop III formation. The grouped points in the higher end of J$_{\rm LW}$ are representative of such halos. We find that a total of 84\% of the halos forming Pop III stars lie below the M01 mass threshold over the entire simulation redshift range. We also do not see a clear relationship between the LW intensity and the host halo mass. This may be showing that the LW intensity is not as great an indicator of which halo will be allowed to form a Pop III star as previously thought. 
@@ -281,7 +277,7 @@ The LW background intensity versus the host halo mass for each Pop III halo in o
 
 We now inspect the number of Pop III stars and the total mass of Pop III stars per halo. Again, we are only tracking massive stars, not any stars that may form out of fragmented gas with masses < $1 M_{\odot}$. Figure \ref{fig:totnump3_halomass_sidehist} shows the number of Pop III stars per halo for a given halo mass, just after star formation. The histogram of the number of Pop III stars for all masses is projected on the right hand side. We find that a median number of four Pop III stars form per halo, with a maximum of 16 Pop III stars forming per halo. Since we did not restrict the number of Pop III stars that can form in a halo, we find that the conditions are often sufficient for multiple Pop III stars to form in a single halo. Out of the halos forming Pop III stars, only 16\% of them form single Pop III stars, whereas 54\% form between two and five Pop III stars. It should be noted that these halos aren't necessarily forming all of the Pop III stars at once. For example, a halo can form stars again if it din't host a supernova. The number of Pop III stars that form within a halo is indicative of the star formation history of that halo. Figure \ref{fig:totp3mass_halomass_sidehist} shows the total mass of Pop III stars per halo for a given halo mass, where the histogram of the total Pop III mass for all halos is projected on the right hand side. Lines of constant star formation efficiency are overplotted. We find that most of our Pop III stars are forming between 10$^{-4}$ < f$_\star$ < 10$^{-3}$. The mean total mass of Pop III stars for all halos is 195 M$_{\odot}$.  
 
-At the end of the simulation, Figure \ref{fig:final_redshift_Np3_mass} shows the distribution of the number of Pop III stars per halo for a given halo mass, for all halos in the simulation that host either a living or a remnant Pop III star. The red line shows the median number of Pop III stars for each halo mass bin. At low masses, the number of Pop III stars per halo sits around 2 Pop III stars, and quickly rises once the halo mass reaches $10^{7} M_{\odot}$. We can also look at the spread in creation times of these Pop III stars per halo, shown in Figure \ref{fig:p3spread_mass}. The halos that have a zero spread in their Pop III creation time, meaning the Pop III stars formed at the same time, lie at $10^{-3}$ Myr. The red line indicates the median spread in creation times for each halo mass bin. There are two groups within this plot. The first group contains halos that form their Pop III stars in a spread of < 10 Myr, with a median spread of about $10^{-1}$ Myr. The second group contains halos that form their Pop III stars in a spread of > 10 Myr, with a median spread of about 100 Myr. The second group represents typically larger mass halos that have acquired older Pop III stars by the end of the simulation through their long merger history. These halos have acquired these Pop III stars from outside halos, accounting for the large spread in Pop III creation time as well as the increased number of Pop III stars, as seen in Figure \ref{fig:final_redshift_Np3_mass}.  
+At the end of the simulation, Figure \ref{fig:final_redshift_Np3_mass} shows the distribution of the number of Pop III stars per halo for a given halo mass, for all halos in the simulation that host either a living or a remnant Pop III star. The red line shows the median number of Pop III stars for each halo mass bin. At low masses, the number of Pop III stars per halo sits around 2 Pop III stars, and quickly rises once the halo mass reaches $10^{7} M_{\odot}$. We can also look at the spread in creation times of these Pop III stars per halo, shown in Figure \ref{fig:p3spread_mass}. The halos that have a zero spread in their Pop III creation time, meaning the Pop III stars formed at the same time, lie at $10^{-2}$ Myr. The red line indicates the median spread in creation times for each halo mass bin. There are two groups within this plot. The first group contains halos that form their Pop III stars in a spread of < 10 Myr, with a median spread of about $10^{-1}$ Myr. The second group contains halos that form their Pop III stars in a spread of > 10 Myr, with a median spread of about 100 Myr. The second group represents typically larger mass halos that have acquired older Pop III stars by the end of the simulation through their long merger history. These halos have acquired these Pop III stars from outside halos, accounting for the large spread in Pop III creation time as well as the increased number of Pop III stars, as seen in Figure \ref{fig:final_redshift_Np3_mass}. 
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{images/jlw_mass_machacek_total.pdf}
@@ -289,22 +285,27 @@ At the end of the simulation, Figure \ref{fig:final_redshift_Np3_mass} shows the
     \label{fig:jlw_mass_machacek}{}
 \end{figure}
 
-\begin{figure}
-	\includegraphics[width=\columnwidth]{images/totnump3_halomass_sidehist.pdf}
-    \caption{Total number of Pop III stars in halos hosting new Pop III stars versus halo mass. A median number of four Pop III stars form in a single halo, with some forming as many as 16 Pop III stars.}
-    \label{fig:totnump3_halomass_sidehist}
-\end{figure}
+\begin{figure*}
+	\centering
+	\begin{subfigure}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=\columnwidth]{images/totnump3_halomass_sidehist.pdf}
+  		\caption{Total number of Pop III stars in halos hosting new Pop III stars versus halo mass at the instance of star formation.}
+  		\label{fig:totnump3_halomass_sidehist}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=\columnwidth]{images/final_redshift_Np3_mass.pdf}
+  		\caption{Total number of Pop III stars in all halos versus halo mass at the end of the simulation, at $z \approx 9$.}
+  		\label{fig:final_redshift_Np3_mass}
+	\end{subfigure}
+	\caption{The number of Pop III stars per halo versus halo mass at the instance of Pop III star formation and the final redshift. On the left, a Pop III star will form in a halo which contains a median number of four Pop III stars, with some containing as many as 16 Pop III stars. On the right, the red line indicates the median number of Pop III stars in each halo mass bin.}
+\end{figure*}
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{images/totp3mass_halomass_sidehist.pdf}
     \caption{Total mass of Pop III stars in halos hosting new Pop III stars versus halo mass. Lines of constant star formation efficiencies are overplotted. Most halos form Pop III stars at efficiencies between 10$^{-3}$ and 10$^{-4}$.}
     \label{fig:totp3mass_halomass_sidehist}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=\columnwidth]{images/final_redshift_Np3_mass.pdf}
-    \caption{Total number of Pop III stars in all halos versus halo mass at the end of the simulation, at $z = 9$. The red line indicates the median number of Pop III stars in each halo mass bin.}
-    \label{fig:final_redshift_Np3_mass}
 \end{figure}
 
 \begin{figure}
