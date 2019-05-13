@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex paper"] 1557356183 "paper.aux" "paper.bbl" "paper" 1557356184
+["bibtex paper"] 1557770165 "paper.aux" "paper.bbl" "paper" 1557770166
   "./mnras.bst" 1431634402 43377 4db2f843e4986670b152898ac35c448e ""
   "jwise.bib" 1555608027 403827 0c75e412ecc83f4b879ffcb7ba6de014 ""
-  "paper.aux" 1557356183 20509 c7f4adbdc70f449700d87293e37b1e4a ""
+  "paper.aux" 1557770166 20945 651bd6eb28f0b496d3d219947c7f77ed ""
   (generated)
-  "paper.bbl"
   "paper.blg"
-["pdflatex"] 1557356183 "paper.tex" "paper.pdf" "paper" 1557356184
+  "paper.bbl"
+["pdflatex"] 1557770165 "paper.tex" "paper.pdf" "paper" 1557770166
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc" 1480098668 3096 d5cbf7aaa5d98173845186200e5ccea8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
@@ -182,16 +182,17 @@
   "images/mean_mass_errorb_fix.pdf" 1557344382 21575 8d9fee67470c853cd81bc5692a5498d7 ""
   "images/p3spread_mass.pdf" 1557346354 19819 85a26647fecd08bd4f71ea550e0c7273 ""
   "images/pop3_SFR_bar.pdf" 1541695714 12872 7a4d7ce54129489332b87299ef5ffa75 ""
+  "images/shield_mass.pdf" 1557767460 16129 55d56fd69b7a2771a11be0c306c6be47 ""
   "images/totnump3_halomass_sidehist.pdf" 1557346748 18114 c87b853153651a6b842e2450c34ec50d ""
   "images/totp3mass_halomass_sidehist.pdf" 1552064759 17842 cd33da20ebf823d683153e2216f86a43 ""
   "macros.tex" 1539353641 4193 0e6c2c5fc8a18e7095936db05e4b242f ""
   "mnras.cls" 1432328464 62178 771897fe06ecb20a6e140bd3b990ffc5 ""
-  "paper.aux" 1557356183 20509 c7f4adbdc70f449700d87293e37b1e4a ""
-  "paper.bbl" 1557356183 19130 7b392c78e82189f61690b2c17a3dbda6 "bibtex paper"
-  "paper.out" 1557356183 907 39c48c5f86f5d4d5f006b6d9c02ad44c ""
-  "paper.tex" 1557356003 53220 4c1d09111b9047127ce3191b29af46f7 ""
+  "paper.aux" 1557770166 20945 651bd6eb28f0b496d3d219947c7f77ed ""
+  "paper.bbl" 1557770165 19130 7b392c78e82189f61690b2c17a3dbda6 "bibtex paper"
+  "paper.out" 1557770166 907 39c48c5f86f5d4d5f006b6d9c02ad44c ""
+  "paper.tex" 1557770164 56398 2c3a94c30d1d3f9616b65a37b26a9bdd ""
   (generated)
+  "paper.out"
+  "paper.aux"
   "paper.log"
   "paper.pdf"
-  "paper.aux"
-  "paper.out"
