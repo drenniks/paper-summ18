@@ -400,6 +400,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
 INPUT images/mean_mass_errorb_fix.pdf
 INPUT ./images/mean_mass_errorb_fix.pdf
 INPUT ./images/mean_mass_errorb_fix.pdf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxsy7.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
 INPUT images/jlw_mass_machacek_total.pdf
 INPUT ./images/jlw_mass_machacek_total.pdf
 INPUT ./images/jlw_mass_machacek_total.pdf
@@ -415,9 +418,6 @@ INPUT ./images/totp3mass_halomass_sidehist.pdf
 INPUT images/p3spread_mass.pdf
 INPUT ./images/p3spread_mass.pdf
 INPUT ./images/p3spread_mass.pdf
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxsy7.vf
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
 INPUT images/compare_JLW_mass.pdf
 INPUT ./images/compare_JLW_mass.pdf
 INPUT ./images/compare_JLW_mass.pdf
