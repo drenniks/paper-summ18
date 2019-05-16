@@ -117,12 +117,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/mathtools/mhsetup.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/subcaption.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/subcaption.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
 INPUT macros.tex
 INPUT macros.tex
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newtx/t1ntxtlf.fd

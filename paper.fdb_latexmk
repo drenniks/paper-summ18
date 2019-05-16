@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex paper"] 1558048402 "paper.aux" "paper.bbl" "paper" 1558048405
+["bibtex paper"] 1558049742 "paper.aux" "paper.bbl" "paper" 1558049745
   "./mnras.bst" 1431634402 43377 4db2f843e4986670b152898ac35c448e ""
   "jwise.bib" 1555608027 403827 0c75e412ecc83f4b879ffcb7ba6de014 ""
-  "paper.aux" 1558048405 20945 8123207b72aadc0ab78e4df240f0cf5c ""
+  "paper.aux" 1558049745 20881 eeb655fed450251eb89fa17489f35a1d ""
   (generated)
-  "paper.bbl"
   "paper.blg"
-["pdflatex"] 1558048404 "paper.tex" "paper.pdf" "paper" 1558048405
+  "paper.bbl"
+["pdflatex"] 1558049745 "paper.tex" "paper.pdf" "paper" 1558049745
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc" 1480098668 3096 d5cbf7aaa5d98173845186200e5ccea8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
@@ -125,9 +125,6 @@
   "/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd" 1523050425 2433 cdefd2509a12ba58001f2024f63aae9a ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1enc.def" 1523050425 7769 97b639552068544f7c98d557abb19f41 ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1enc.dfu" 1523050425 4973 a0ebe45f171b33c2df4e84416140511f ""
-  "/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty" 1480098823 66233 8b81cfab95a1f8fc2f0f6c89415b087a ""
-  "/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty" 1480098823 64866 1ea74c5f2d1685881497f021b8f186b2 ""
-  "/usr/local/texlive/2018/texmf-dist/tex/latex/caption/subcaption.sty" 1480098823 5038 413302044f9700cf65465d590c2f4ad1 ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1518389458 43862 d90315ae4a46ef887a38b4ccba021f91 ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/fontaxes/fontaxes.sty" 1480098829 14170 4202cf11062745283a9a5fdc97c16c48 ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty" 1522012985 41366 3ed245b911039f45436c2cb62a4d1e62 ""
@@ -187,12 +184,12 @@
   "images/totp3mass_halomass_sidehist.pdf" 1557948320 20024 af311a31fa714b15f6204fa05745950a ""
   "macros.tex" 1539353641 4193 0e6c2c5fc8a18e7095936db05e4b242f ""
   "mnras.cls" 1432328464 62178 771897fe06ecb20a6e140bd3b990ffc5 ""
-  "paper.aux" 1558048404 1564 fb84174da963ab16a7a890fc0f0c354c ""
-  "paper.bbl" 1558048402 19130 7b392c78e82189f61690b2c17a3dbda6 "bibtex paper"
-  "paper.out" 1558048404 47 a02d95553e30b97ff125b1aa17cf9044 ""
-  "paper.tex" 1558048317 57083 2d016c1ed3e6ac5ce8356dbd81bd6799 ""
+  "paper.aux" 1558049744 1564 fb84174da963ab16a7a890fc0f0c354c ""
+  "paper.bbl" 1558049742 19130 7b392c78e82189f61690b2c17a3dbda6 "bibtex paper"
+  "paper.out" 1558049744 47 a02d95553e30b97ff125b1aa17cf9044 ""
+  "paper.tex" 1558049680 57085 99e311822871ed1ee10f43a39711fa91 ""
   (generated)
-  "paper.log"
-  "paper.aux"
   "paper.pdf"
   "paper.out"
+  "paper.log"
+  "paper.aux"
