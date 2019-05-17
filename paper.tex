@@ -110,7 +110,7 @@ star formation -- methods:numerical -- cosmology
 \section{Introduction}
 %====================================================================
 
-The first generation of stars transformed a cold and dark universe
+%The first generation of stars transformed a cold and dark universe
 by illuminating and enriching up their neighborhoods with radiation
 and heavy elements. The formation of these first stars is a crucial step in the cosmological evolution of the universe because the metals and feedback they deliver to their local environments are necessary for further star production and chemical enrichment. Without these initial stars, heavier metals would not have been produced, and a different universe would be observed than what is observed today. These stars are, by definition, metal-free (Population III; Pop III) and are thought to be generally massive \citep{ABN02, Bromm02_P3, Turk09, Hosokawa11, Hosokawa16, Hirano15}. A substantial fraction of these stars will generate prodigious amounts of ionizing photons and will end their lives in some form of a supernova \citep[e.g.][]{Schaerer02, Heger02}. The supernova will spread the enriched guts of the Pop III star out across its local environment, providing the area with elements the universe has not yet seen. 
 
@@ -229,11 +229,11 @@ where $\mu = 1.22$ is the mean molecular weight, $\rho_{0} = 200 \rho_{c} / 3$ i
 	N_{\rm H2} = f_{\rm H2} R_{\rm vir} \frac{200 \rho_{c}}{3 \mu m_{\rm H}} \left(\frac{1}{f_{c}} - 1 \right)
 \end{equation}
 
-For $\rm{H}_{0} = 70 \ \rm{km} \ \rm{s}^{-1} \ \rm{Mpc}^{-1}$, a typical \hh{} fraction of $f_{\rm H2} = 10^{-4}$, and assuming the Doppler broadening parameter, $b$, is equal to the circular velocity of the halo, Equation \ref{columnh2} and Equation \ref{shield} will give the shielding factor for a given core radius, $f_{c}$, and redshift. Figure \ref{fig:shield_mass} shows the shielding factor as a function of halo mass, for redshifts $z = 9$, $15$, and $25$ in red, blue and black, respectively. The solid lines indicate a core radius of $f_{c} = 10^{-2}$ and the dashed lines a core radius of $f_{c} = 10^{-4}$. At each redshift, all halo masses, and each core radius, we see the shielding factor is significantly smaller than one, implying that \hh{} shielding for these halos is almost at a maximum. The shielding factor will then significantly decrease the dissociation rate of \hh{}, allowing for the presence of \hh{} within a LW background. Smaller mass halos can then form Pop III stars since \hh{} will stick around in the halo for a longer amount of time. 
+For $\rm{H}_{0} = 70 \ \rm{km} \ \rm{s}^{-1} \ \rm{Mpc}^{-1}$, a typical \hh{} fraction of $f_{\rm H2} = 10^{-4}$, and assuming the Doppler broadening parameter, $b$, is equal to the circular velocity of the halo, Equation \ref{columnh2} and Equation \ref{shield} will give the shielding factor for a given core radius, $f_{c}$, and redshift. Figure \ref{fig:shield_mass} shows the shielding factor as a function of halo mass, for redshifts $z = 9$, $15$, and $25$ in red, blue and black, respectively. The solid lines indicate a core radius of $f_{c} = 10^{-2}$ and the dashed lines a core radius of $f_{c} = 10^{-4}$. Across the top axis and plotted as a green line, the shielding factor as a function of \hh{} column density is shown for a circular velocity of 10 km/s. At each redshift, all halo masses, and for each core radius, we see the shielding factor is significantly smaller than one, implying that \hh{} shielding for these halos is almost at a maximum. The shielding factor will then significantly decrease the dissociation rate of \hh{}, allowing for the presence of \hh{} within a LW background. Smaller mass halos can then form Pop III stars since \hh{} will stick around in the halo for a longer amount of time. We also see that for column densities at just under $10^{17} cm^{-2}$, the shielding factor quickly drops to 0.1 for a halo with this particular circular velocity, showing that \hh{} shielding can affect the dissociation rate of \hh{} at relatively low column densities.
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{images/shield_mass.pdf}
-    \caption{Shielding factor as a function of halo mass. Solid lines indicate a core radius of $f_{c} = 10^{-2}$ and the dashed lines indicate a core radius of $f_{c} = 10^{-4}$. For these parameters, and assuming the Doppler broadening parameter equals the circular velocity, the shielding factor is almost zero, implying maximum shielding.}
+    \caption{Shielding factor as a function of halo mass. Solid lines indicate a core radius of $f_{c} = 10^{-2}$ and the dashed lines indicate a core radius of $f_{c} = 10^{-4}$. For these parameters, and assuming the Doppler broadening parameter equals the circular velocity, the shielding factor is almost zero, implying maximum shielding. The green line shows the shielding factor as a function of \hh{} column density for a circular velocity of 10 km/s. }
     \label{fig:shield_mass}
 \end{figure}
 %====================================================================
@@ -289,7 +289,7 @@ At the end of the simulation, the right panel of Figure \ref{fig:num_p3} shows t
 \begin{figure}
 	\includegraphics[width=\columnwidth]{images/jlw_mass_machacek_total.pdf}
     \caption{The average LW background for host halos of new Pop III stars is plotted versus the host halo mass, colored by redshift. The Machacek et al. relation is plotted given the background LW in Eq. \ref{LWbg}. Almost all halos fall below the relation, across a range of redshifts. A few halos (or possibly a single halo) allow Pop III stars to form at a low halo mass in a very high LW background. There are a few halos that have Pop III stars forming at later times and at high halo masses.}
-    \label{fig:jlw_mass_machacek}{}
+    \label{fig:jlw_mass_machacek}
 \end{figure}
 
 \begin{figure*}

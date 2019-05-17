@@ -299,6 +299,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/rntxmi5.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxsy7.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-sc-t1.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Italic-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxmi.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/txfonts/txmi.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/rntxmi.tfm
@@ -308,9 +311,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/txfonts/rtxptmri.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxsy.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-sc-t1.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Italic-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxmia.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/txfonts/txmia.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxsyralt.tfm
@@ -359,9 +359,6 @@ INPUT ./images/hmf.pdf
 INPUT images/JLW_xe_mass.pdf
 INPUT ./images/JLW_xe_mass.pdf
 INPUT ./images/JLW_xe_mass.pdf
-INPUT images/pop3_SFR_bar.pdf
-INPUT ./images/pop3_SFR_bar.pdf
-INPUT ./images/pop3_SFR_bar.pdf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxmi7.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/rtxmi7.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/rntxmi7.tfm
@@ -382,6 +379,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/txfonts/rtxr.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxsy5.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
+INPUT images/pop3_SFR_bar.pdf
+INPUT ./images/pop3_SFR_bar.pdf
+INPUT ./images/pop3_SFR_bar.pdf
 INPUT images/mean_mass_errorb_fix.pdf
 INPUT ./images/mean_mass_errorb_fix.pdf
 INPUT ./images/mean_mass_errorb_fix.pdf
@@ -412,8 +412,8 @@ INPUT paper.aux
 INPUT ./paper.out
 INPUT ./paper.out
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb
