@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex paper"] 1558111620 "paper.aux" "paper.bbl" "paper" 1558114881
+["bibtex paper"] 1558111620 "paper.aux" "paper.bbl" "paper" 1558115326
   "./mnras.bst" 1431634402 43377 4db2f843e4986670b152898ac35c448e ""
   "jwise.bib" 1555608027 403827 0c75e412ecc83f4b879ffcb7ba6de014 ""
-  "paper.aux" 1558114881 21117 dcd28e8d59d0db37b60c0e64c106f80c ""
+  "paper.aux" 1558115325 21117 dcd28e8d59d0db37b60c0e64c106f80c ""
   (generated)
-  "paper.blg"
   "paper.bbl"
-["pdflatex"] 1558114880 "paper.tex" "paper.pdf" "paper" 1558114881
+  "paper.blg"
+["pdflatex"] 1558115325 "paper.tex" "paper.pdf" "paper" 1558115326
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc" 1480098668 3096 d5cbf7aaa5d98173845186200e5ccea8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
@@ -176,7 +176,7 @@
   "images/final_redshift_Np3_mass.pdf" 1557948384 24653 4277632258b7c307e1695319cec837fc ""
   "images/hmf.pdf" 1552060123 23171 6aa8d4df220c17d7a231222d4fe587da ""
   "images/jlw_mass_machacek_total.pdf" 1554480885 33844 4d4933f6f23edd96ef09c1c139041ed9 ""
-  "images/mean_mass_errorb_fix.pdf" 1558112753 22886 c4ebdfc8f15d49eed854ea6a1399a1d2 ""
+  "images/mean_mass_errorb_fix.pdf" 1558115306 22353 d05c105b1ee5d042849554ebffd8c2f5 ""
   "images/p3spread_mass.pdf" 1557948421 20892 282caf6c8cdb0fb4bdc5f5feb91859f2 ""
   "images/pop3_SFR_bar.pdf" 1541695714 12872 7a4d7ce54129489332b87299ef5ffa75 ""
   "images/shield_mass.pdf" 1558111632 19953 8d717329474a6bc229965ddc04e3a6b6 ""
@@ -184,12 +184,12 @@
   "images/totp3mass_halomass_sidehist.pdf" 1557948320 20024 af311a31fa714b15f6204fa05745950a ""
   "macros.tex" 1539353641 4193 0e6c2c5fc8a18e7095936db05e4b242f ""
   "mnras.cls" 1432328464 62178 771897fe06ecb20a6e140bd3b990ffc5 ""
-  "paper.aux" 1558114881 21117 dcd28e8d59d0db37b60c0e64c106f80c ""
+  "paper.aux" 1558115325 21117 dcd28e8d59d0db37b60c0e64c106f80c ""
   "paper.bbl" 1558111620 19130 7b392c78e82189f61690b2c17a3dbda6 "bibtex paper"
-  "paper.out" 1558114881 907 39c48c5f86f5d4d5f006b6d9c02ad44c ""
+  "paper.out" 1558115325 907 39c48c5f86f5d4d5f006b6d9c02ad44c ""
   "paper.tex" 1558111656 57628 bccc2e6c2b5f10a1b273a957dacfa8a9 ""
   (generated)
-  "paper.out"
   "paper.log"
   "paper.pdf"
+  "paper.out"
   "paper.aux"
