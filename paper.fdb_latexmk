@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex paper"] 1559870222 "paper.aux" "paper.bbl" "paper" 1559917883
+["bibtex paper"] 1559870222 "paper.aux" "paper.bbl" "paper" 1559918575
   "./mnras.bst" 1431634402 43377 4db2f843e4986670b152898ac35c448e ""
   "jwise.bib" 1559337113 412750 cf2d47ab816df4a4bcc5c5bcec3cb983 ""
-  "paper.aux" 1559917883 21764 5bc25fc631768680b619150c4dd127c4 ""
+  "paper.aux" 1559918574 21764 5bc25fc631768680b619150c4dd127c4 ""
   (generated)
-  "paper.blg"
   "paper.bbl"
-["pdflatex"] 1559917882 "paper.tex" "paper.pdf" "paper" 1559917883
+  "paper.blg"
+["pdflatex"] 1559918574 "paper.tex" "paper.pdf" "paper" 1559918575
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc" 1480098668 3096 d5cbf7aaa5d98173845186200e5ccea8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
@@ -183,12 +183,12 @@
   "images/totp3mass_halomass_sidehist.pdf" 1557948320 20024 af311a31fa714b15f6204fa05745950a ""
   "macros.tex" 1559336962 4242 b6c32fcfa127636a1ead6c907c9fb872 ""
   "mnras.cls" 1432328464 62178 771897fe06ecb20a6e140bd3b990ffc5 ""
-  "paper.aux" 1559917883 21764 5bc25fc631768680b619150c4dd127c4 ""
+  "paper.aux" 1559918574 21764 5bc25fc631768680b619150c4dd127c4 ""
   "paper.bbl" 1559870223 20814 51070b3a53d028c10b6d0b4cf45e49d7 "bibtex paper"
-  "paper.out" 1559917883 1004 524afb56c2d2c442bdc989f3aef949d3 ""
-  "paper.tex" 1559917882 60124 db98fa2a3b5f27a2014185d42e5cef71 ""
+  "paper.out" 1559918574 1004 524afb56c2d2c442bdc989f3aef949d3 ""
+  "paper.tex" 1559918574 60128 f2e483f9e171d8759a640f0fa9a2ab3a ""
   (generated)
+  "paper.aux"
+  "paper.pdf"
   "paper.out"
   "paper.log"
-  "paper.pdf"
-  "paper.aux"
