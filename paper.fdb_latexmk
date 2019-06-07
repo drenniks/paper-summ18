@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex paper"] 1559337117 "paper.aux" "paper.bbl" "paper" 1559337119
+["bibtex paper"] 1559870222 "paper.aux" "paper.bbl" "paper" 1559917883
   "./mnras.bst" 1431634402 43377 4db2f843e4986670b152898ac35c448e ""
   "jwise.bib" 1559337113 412750 cf2d47ab816df4a4bcc5c5bcec3cb983 ""
-  "paper.aux" 1559337118 21658 d39425b6783ac2725198b8bdbfc5a3e5 ""
+  "paper.aux" 1559917883 21764 5bc25fc631768680b619150c4dd127c4 ""
   (generated)
   "paper.blg"
   "paper.bbl"
-["pdflatex"] 1559337118 "paper.tex" "paper.pdf" "paper" 1559337119
+["pdflatex"] 1559917882 "paper.tex" "paper.pdf" "paper" 1559917883
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc" 1480098668 3096 d5cbf7aaa5d98173845186200e5ccea8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
@@ -178,15 +178,15 @@
   "images/mean_mass_errorb_fix.pdf" 1558115306 22353 d05c105b1ee5d042849554ebffd8c2f5 ""
   "images/p3spread_mass.pdf" 1559087160 22707 3203bdeda10bb5ac8818d9094bf3bba2 ""
   "images/pop3_SFR_bar.pdf" 1541695714 12872 7a4d7ce54129489332b87299ef5ffa75 ""
-  "images/shield_mass.pdf" 1558111632 19953 8d717329474a6bc229965ddc04e3a6b6 ""
+  "images/shield_mass.pdf" 1559852653 19971 d52202f29df73d609ab9b8bedddd5de4 ""
   "images/totnump3_halomass_sidehist.pdf" 1557948256 19297 c8f2749d6d38ef2db40c7244f163c47b ""
   "images/totp3mass_halomass_sidehist.pdf" 1557948320 20024 af311a31fa714b15f6204fa05745950a ""
   "macros.tex" 1559336962 4242 b6c32fcfa127636a1ead6c907c9fb872 ""
   "mnras.cls" 1432328464 62178 771897fe06ecb20a6e140bd3b990ffc5 ""
-  "paper.aux" 1559337118 21658 d39425b6783ac2725198b8bdbfc5a3e5 ""
-  "paper.bbl" 1559337118 20345 a024408fa7dcfaaa8f3e6ab14d5d1a7e "bibtex paper"
-  "paper.out" 1559337118 1004 524afb56c2d2c442bdc989f3aef949d3 ""
-  "paper.tex" 1559336962 59692 bfe7f92a948fdb5287ac26b219397a28 ""
+  "paper.aux" 1559917883 21764 5bc25fc631768680b619150c4dd127c4 ""
+  "paper.bbl" 1559870223 20814 51070b3a53d028c10b6d0b4cf45e49d7 "bibtex paper"
+  "paper.out" 1559917883 1004 524afb56c2d2c442bdc989f3aef949d3 ""
+  "paper.tex" 1559917882 60124 db98fa2a3b5f27a2014185d42e5cef71 ""
   (generated)
   "paper.out"
   "paper.log"
