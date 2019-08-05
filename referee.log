@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  22 JUL 2019 11:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  5 AUG 2019 09:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -177,245 +177,37 @@ e
 ))
 \c@lstlisting=\count102
 
-Overfull \hbox (1823.97139pt too wide) in paragraph at lines 30--31
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (3617.56197pt too wide) in paragraph at lines 36--37
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] 
- []
-
-
-Overfull \hbox (1990.68333pt too wide) in paragraph at lines 44--45
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[] 
- []
-
-
-Overfull \hbox (909.93004pt too wide) in paragraph at lines 45--46
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][] 
- []
-
-
-Overfull \hbox (162.60063pt too wide) in paragraph at lines 46--47
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-
-Overfull \hbox (220.08751pt too wide) in paragraph at lines 47--48
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][] 
- []
-
-
-Overfull \hbox (151.10326pt too wide) in paragraph at lines 57--58
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-
-Overfull \hbox (1226.10786pt too wide) in paragraph at lines 63--64
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (409.7942pt too wide) in paragraph at lines 68--69
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (1318.08687pt too wide) in paragraph at lines 73--74
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (570.75746pt too wide) in paragraph at lines 79--80
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (490.27583pt too wide) in paragraph at lines 84--85
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (340.80995pt too wide) in paragraph at lines 89--90
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (41.87819pt too wide) in paragraph at lines 95--96
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (490.27583pt too wide) in paragraph at lines 100--101
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
 [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (955.91954pt too wide) in paragraph at lines 105--106
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (553.5114pt too wide) in paragraph at lines 111--112
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (1093.88805pt too wide) in paragraph at lines 116--117
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (1254.8513pt too wide) in paragraph at lines 121--122
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (967.41692pt too wide) in paragraph at lines 127--128
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][] 
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.129 ... empty. I will add a vertical line at 10^
-                                                  5 Msol to show our resolut...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 129.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 129.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 129.
-! Missing $ inserted.
-<inserted text> 
-                $
-l.130 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (623.55322pt too wide) in paragraph at lines 129--130
-\OT1/cmr/m/n/10.95 -Figure 2 is empty. I will add a ver-ti-cal line at 10$[]\OM
-L/cmm/m/it/10.95 Msoltoshowourresolutionlimit:AsfarastheHMFoftheearliestPopIIIf
-ormationredshift; isthisreferringtotheHMFatthetimewhenPopIIIstarsfirstbegintofo
-rm; soataboutz \OT1/cmr/m/n/10.95 =
- []
-
-
-Overfull \hbox (300.56914pt too wide) in paragraph at lines 132--133
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (927.1761pt too wide) in paragraph at lines 137--138
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (599.5009pt too wide) in paragraph at lines 142--143
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (777.71022pt too wide) in paragraph at lines 148--149
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (547.76271pt too wide) in paragraph at lines 153--154
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (76.37032pt too wide) in paragraph at lines 158--159
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
 [2]
-Overfull \hbox (536.26534pt too wide) in paragraph at lines 163--164
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (1404.31718pt too wide) in paragraph at lines 168--169
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-[3] (./referee.aux) ) 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 194.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 194.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 194.
+ [3] [4] [5] (./referee.aux) ) 
 Here is how much of TeX's memory you used:
  3199 strings out of 492649
  43537 string characters out of 6129622
- 155038 words of memory out of 5000000
+ 135038 words of memory out of 5000000
  7066 multiletter control sequences out of 15000+600000
  7162 words of font info for 26 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 41i,6n,32p,738b,1029s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmtt10.pfb>
-Output written on referee.pdf (3 pages, 89685 bytes).
+ 41i,6n,32p,778b,1031s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmtt10.pfb>
+Output written on referee.pdf (5 pages, 99304 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
+ 48 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

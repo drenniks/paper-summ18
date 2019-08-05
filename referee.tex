@@ -27,146 +27,236 @@
 \end{center}
 
 \begin{referee}
-The paper presented here is very well written and offers important new insights. It studies the dependence of the halo mass for first star formation on a Lyman-Werner background in a large simulation, and goes beyond current literature work by the inclusion of self-shielding and studying the multiplicity of Pop III stars. I generally recommend if for publication after some concerns are addressed.
+The paper presented here is very well written and offers important new insights. 
+It studies the dependence of the halo mass for first star formation on a 
+Lyman-Werner background in a large simulation, and goes beyond current literature
+ work by the inclusion of self-shielding and studying the multiplicity of Pop III 
+ stars. I generally recommend if for publication after some concerns are 
+ addressed.
 \end{referee}
 
 
 \begin{referee}
 Major comments:
-1) One of the main points of the paper is studying the multiplicity of Pop III stars in a halo. This multiplicity might be due to the fact that Pop III stars have collapsed to a BH after their lifetime and a second Pop III star could form in the same halo. This is very plausible. If several Pop III stars are found forming in the same halo at the same time, however, the employed star particle algorithm has a hard-coded length scale of 1pc in which only one star particle can be formed. I am wondering if this is an effect that is resolution dependent - do the same number of stars form if the resolution is increased and the maximum distance is decreased? Which is the motivation for the length scale of 1pc?
+1) One of the main points of the paper is studying the multiplicity of Pop III 
+stars in a halo. This multiplicity might be due to the fact that Pop III stars 
+have collapsed to a BH after their lifetime and a second Pop III star could form
+ in the same halo. This is very plausible. If several Pop III stars are found 
+ forming in the same halo at the same time, however, the employed star particle 
+ algorithm has a hard-coded length scale of 1pc in which only one star particle 
+ can be formed. I am wondering if this is an effect that is resolution dependent 
+ - do the same number of stars form if the resolution is increased and the 
+ maximum distance is decreased? Which is the motivation for the length scale of 
+ 1pc?
 \end{referee}
 
 -Resolution testing
+-Ran original sim to see if it worked, it did run, but only reached until z=22. The simulation stopped because of a stopping parameter, StopFirstTimeAtLevel. 
 
 
 
 \begin{referee}
-2) The authors select their haloes by the halo finding algorithm Rockstar. They should add a bit of information on that code (is it fof or subfind-like?). Also, one of their main points is to compare their work to Machacek+01. Machacek+01, however, use a different halo definition (spherical around the halo centre going out to a radius of 200 times the mean density of the Universe). How do these different halo masses compare?
-Further, it is not entirely clear why atomic cooling haloes are excluded in this analysis and if they are excluded throughout the whole paper. The exclusion of atomic cooling haloes artificially shifts the average halo mass to lower values.
-In addition, the authors should state the fraction of haloes that have Pop III stars forming outside the halo.
-The baryon fraction varies with redshift. Please give an estimate by how much this influences the halo masses used here.
+2) The authors select their haloes by the halo finding algorithm Rockstar. They 
+should add a bit of information on that code (is it fof or subfind-like?). Also,
+ one of their main points is to compare their work to Machacek+01. Machacek+01, 
+ however, use a different halo definition (spherical around the halo centre 
+ going out to a radius of 200 times the mean density of the Universe). How do 
+ these different halo masses compare?
+
+Further, it is not entirely clear why atomic cooling haloes are excluded in this
+ analysis and if they are excluded throughout the whole paper. The exclusion of 
+ atomic cooling haloes artificially shifts the average halo mass to lower 
+ values.
+
+In addition, the authors should state the fraction of haloes that have Pop III 
+stars forming outside the halo. The baryon fraction varies with redshift. Please
+ give an estimate by how much this influences the halo masses used here.
 \end{referee}
 
--address concern about Rockstar details, and Machacek halo definition
--exclusion of atomic cooling haloes - we excluded these because of a bug in our code... how to explain this without simply saying that?
--fraction of halos that halo Pop III stars forming outside the haloes: I'm not sure I will be able to tell exactly how many are not in halos. I need to look back at the data to see if I will be able to pick out which halos I artificially drew a halo around. 
--shall I look at the baryon fraction as a function of time to see how much it varies? 
+-Added a bit about what Rockstar is. 
+-Machacek halo definition - how should I quantify this difference? 
+
+-Exclusion of atomic cooling haloes - we excluded these because of a bug in our code... how to explain this without simply saying that?
+
+-Fraction of halos that halo Pop III stars forming outside the halos: I'm not sure I will be able to tell exactly how many are not in halos. I need to look back at the data to see if I will be able to pick out which halos I artificially drew a halo around. 
+-Shall I look at the baryon fraction as a function of time to see how much it varies? 
 
 \begin{referee}
 Minor comments:
-The authors should state at one point in the paper for which properties they use comoving or physical units.
+The authors should state at one point in the paper for which properties they use
+ comoving or physical units.
 \end{referee}
--We use physical units throughout the whole paper, apart from when we discuss the boxsize. I will make this more clear. 
+-Clarified this at the end of the second paragraph in the Simulation Setup section.
 
 \begin{referee}
 Introduction:
-The authors write that Pop III star formation is generally more massive. While a fraction of the community agrees with that, there is manifoldly cited work that finds low-mass Pop III progenitors, and the authors should not let that unmentioned, but also cite eg Stacy+16, Greif+11 and Clark+11.
+The authors write that Pop III star formation is generally more massive. While a
+ fraction of the community agrees with that, there is manifoldly cited work that
+  finds low-mass Pop III progenitors, and the authors should not let that 
+  unmentioned, but also cite eg Stacy+16, Greif+11 and Clark+11.
 \end{referee}
 -I will look at and add these citations and detail to the introduction.
 
 \begin{referee}
-The authors name a few processes for suppressing Pop III star formation. For completeness, they should also mention eg X-ray heating (citing eg Jeon+14). 
+The authors name a few processes for suppressing Pop III star formation. For 
+completeness, they should also mention eg X-ray heating (citing eg Jeon+14). 
 \end{referee}
--I will add this detail
+-I will add this detail (https://arxiv.org/pdf/1310.7944.pdf)
+-Jeon+14 seems to show that X-ray heating does not affect star formation, but 
+the clumping factor is reduced, and thus makes it easier to keep the reionized 
+gas ionized. 
 
 \begin{referee}
-The authors cite the well-known study from Machacek+01. However, a more recent result would be from the study by Visbal+14, giving a lower mass limit. Since the authors find a lower mass limit than Machacek+01, it would be interesting to see how this compares to the lower mass limit from the more modern paper.
+The authors cite the well-known study from Machacek+01. However, a more recent 
+result would be from the study by Visbal+14, giving a lower mass limit. Since 
+the authors find a lower mass limit than Machacek+01, it would be interesting to
+ see how this compares to the lower mass limit from the more modern paper.
 \end{referee}
--I will check out Visbal+ 14 (I think I have looked at this paper, will double check)
+-Visbal+14 provides an equation for Mcrit (eqn. 4), I have plotted this previously. This lines up fairly well with our data, with a bit of scatter.  (https://arxiv.org/pdf/1402.0882.pdf) 
 
 \begin{referee}
 Methods:
-In Wise+12, three different environment regions are picked. Please provide more description on the rare peak simulation here and discuss why this one is appropriate in this context.
+In Wise+12, three different environment regions are picked. Please provide more 
+description on the rare peak simulation here and discuss why this one is 
+appropriate in this context.
 \end{referee}
--I will look at that simulation again, if John could provide some insight here that would be nice.
+-RP stands for radiation pressure in Wise+12 (correct?), not rare peak. The simulation is the same size as ours, and contains similar physics, including the radiation pressure and soft UV background, which is why we reference it here. The differences are the inclusion of H2 self-shielding and updated cosmo parameters.
 
 \begin{referee}
-The initialization at z=130 is very late. I am aware that it is impossible to repeat this simulation starting at an earlier redshift, but would advise for future work.
+The initialization at z=130 is very late. I am aware that it is impossible to 
+repeat this simulation starting at an earlier redshift, but would advise for 
+future work.
 \end{referee}
 -Personal question: why is this initialization late?
 
 \begin{referee}
-Why do the authors pick a non-zero metalicity threshold for Pop III star formation? How many Pop III stars form between Z=0 and Z=5e-6 Z_sol?
+Why do the authors pick a non-zero metalicity threshold for Pop III star 
+formation? How many Pop III stars form between Z=0 and Z=5e-6 Z_sol?
 \end{referee}
 -Simulation question
 
 
 \begin{referee}
-What is the physical motivation for a density threshold of 1.e6/cc? Is there convergence? 
+What is the physical motivation for a density threshold of 1.e6/cc? Is there 
+convergence? 
 \end{referee}
 -Simulation question
 
 \begin{referee}
-Similarly, why do the authors chose a H2 fraction of 1.e-3? (Is is a mass fraction or a number fraction?) How many Pop III stars do not form because of this threshold?
+Similarly, why do the authors chose a H2 fraction of 1.e-3? (Is is a mass 
+fraction or a number fraction?) How many Pop III stars do not form because of 
+this threshold?
 \end{referee}
 -Simulation question
 
 \begin{referee}
-Do the authors set fixed mass limits to the IMF and if yes, which are they? If not, which is the highest / lowest mass they find in their random sampling? And which fraction of the Pop III stars in the simulation end up as type II SNe / BHs / PISN?
+Do the authors set fixed mass limits to the IMF and if yes, which are they? 
+If not, which is the highest / lowest mass they find in their random sampling? 
+And which fraction of the Pop III stars in the simulation end up as type II 
+SNe / BHs / PISN?
 \end{referee}
--We do set fixed mass limits, between 1 and 300 Msol. I will add this detail. 
+-We do set fixed mass limits, between 1 and 300 Msol. I added this detail. 
 -What is the best way to get this information? Shall I look at all the Pop III stars at the end of the simulation and look at their masses? I should be able to get a fraction of these endings from that, correct?
 
 \begin{referee}
-One effect than can weaken the shielding is shifting out of the Lyman-Werner resonance lines (see Hartwig+15). I am wondering how much this would affect the study presented here. 
+One effect than can weaken the shielding is shifting out of the Lyman-Werner 
+resonance lines (see Hartwig+15). I am wondering how much this would affect the 
+study presented here. 
 \end{referee}
 -Will have to look at Hartwig+15. 
 
 \begin{referee}
-In Figure 1, please mention in the caption or at the top / bottom of the left axis that a shielding factor of 1 corresponds to no shielding and a shielding factor of 0 corresponds to high shielding, as these nomenclatures are not immediately understandable for the reader.
+In Figure 1, please mention in the caption or at the top / bottom of the left 
+axis that a shielding factor of 1 corresponds to no shielding and a shielding 
+factor of 0 corresponds to high shielding, as these nomenclatures are not 
+immediately understandable for the reader.
 \end{referee}
--This is a good point, that is confusing. I will add this.
+-This detail has been added. 
 
 \begin{referee}
-The analytic calculation of the shielding factor is a nice property of the paper. However, assuming a constant H2 fraction seems not appropriate. Please repeat this exercise for a more realistic halo profile, which could be found in the simulations or in the literature, eg by Machacek+01 themselves.
+The analytic calculation of the shielding factor is a nice property of the 
+paper. However, assuming a constant H2 fraction seems not appropriate. Please 
+repeat this exercise for a more realistic halo profile, which could be found in 
+the simulations or in the literature, eg by Machacek+01 themselves.
 \end{referee}
 -I will check out a more realistic H2 fraction for a halo and try to get a nice plot out of that.
+-Any suggestions from John for a more realistic halo profile?
 
 \begin{referee}
 Results:
-Figure 2 is quite empty, it would be useful to include the halo mass function of the earliest Pop III formation redshift with its analytic prediction. In addition, the authors could provide a line or an arrow to show their halo mass resolution limit.
+Figure 2 is quite empty, it would be useful to include the halo mass function of
+ the earliest Pop III formation redshift with its analytic prediction. In 
+ addition, the authors could provide a line or an arrow to show their halo mass 
+ resolution limit.
 \end{referee}
--Figure 2 is empty. I will add a vertical line at 10^5 Msol to show our resolution limit. As far as the HMF of the earliest Pop III formation redshift, is this referring to the HMF at the time when Pop III stars first begin to form, so at about z=27, what is the HMF at that time and how does it compare with Sheth-Tormen? I will plot this up.
+-As far as the HMF of the earliest Pop III formation redshift, is this referring to the HMF at the time when Pop III stars first begin to form, so at about z=27, what is the HMF at that time and how does it compare with Sheth-Tormen? I will plot this up.
+
+-Added a vertical line at $10^5 M_{\odot}$. Detail also added to caption.
+-Tried plotting the HMF of the earliest Pop III formation redshift, but I need to collect the HMF of that dataset -- having troubles remembering how this was produced 
+
 
 \begin{referee}
-Figure 3 looks very nice. It would be helpful if an additional line that only provides the global LWBG (in units of J21) was included.
+Figure 3 looks very nice. It would be helpful if an additional line that only 
+provides the global LWBG (in units of J21) was included.
 \end{referee}
--Woohoo! Figure 3 does look nice! I will add the global LWBG, hopefully it looks alright. I am fairly certain we did this and for some reason it all didn't seem to add up. I will try this again.
+-Woohoo! Figure 3 does look nice!
+-I tried adding the global LWBG, but this makes our results seem funny, because we are getting the average J21 weighted by cell mass lying below the global LWBG. Thoughts about this?
 
 \begin{referee}
-The authors find no correlation between the host halo mass and the Lyman-Werner background intensity. However, they only look at the LWBG flux at the time of Pop III formation - is there maybe a correlation between the time integrated LW flux?
+The authors find no correlation between the host halo mass and the Lyman-Werner 
+background intensity. However, they only look at the LWBG flux at the time of 
+Pop III formation - is there maybe a correlation between the time integrated LW 
+flux?
 \end{referee}
 -Haven't thought about the time integrated LW flux. Would like some advice on this point. 
 
 \begin{referee}
-Figures 7 and 8 show very nice histograms as an additional panel on the right. I suggest to include a histogram on the spread of the creation time in Figure 9 similar to Figures 7 and 8.
+Figures 7 and 8 show very nice histograms as an additional panel on the right. 
+I suggest to include a histogram on the spread of the creation time in Figure 9 
+similar to Figures 7 and 8.
 \end{referee}
--I will add a histogram on the spread of the creation time in Figure 9.
+-Added the histogram to Figure 9. 
 
 \begin{referee}
 Discussion:
-The authors give three reasons for the halo mass spread. Can they estimate which of the three processes (BH formation, dynamical heating and temporal LWBG fluctuations) is responsible for the spread by which fraction?
+The authors give three reasons for the halo mass spread. Can they estimate which
+ of the three processes (BH formation, dynamical heating and temporal LWBG 
+ fluctuations) is responsible for the spread by which fraction?
 \end{referee}
 -It's not immediately obvious to me how we would be able to estimate this. I would have to look at these processes in more detail to see if there are some mass ranges correlated with them. Any insight from John?
 
 \begin{referee}
-One of the most extensive studies on over 1000 minihaloes was performed by Hirano+15, who also include a Lyman-Werner background. Their work should be put in comparison as well.
+One of the most extensive studies on over 1000 minihaloes was performed by 
+Hirano+15, who also include a Lyman-Werner background. Their work should be put 
+in comparison as well.
 \end{referee}
--I will check out this paper, and see what can be added.
+Hirano+15 is looking at the distribution of stellar masses to calculate the IMF of p3 stars, which is why we quote them in the introduction. 
+-Their Fig. 3 shows the number of halos versus virial mass that host primordial star-forming clouds. 
+-Using their eqn. 6 they find Mvir = $2.1 \times 10^5$ at z=30, and Mvir = $9.9 \times 10^5$ at z=10, which they say is in good agreement with their Fig. 3. 
+(https://arxiv.org/pdf/1501.01630.pdf)
 
 \begin{referee}
-In Figure 10, the result from Yoshida+03 is hard to see, maybe use a different symbol / colour.
+In Figure 10, the result from Yoshida+03 is hard to see, maybe use a different 
+symbol / colour.
 \end{referee}
--I will adjust this symbol.
+-Adjusted. Changed the symbol to a pentagon and the outline color black. Okay?
 
 \begin{referee}
-Since the authors study star formation in minihaloes, it would be appropriate to also mention Kitayama+04 and Schauer+15 for the Lyman-Werner escape fractions from minihaloes.
+Since the authors study star formation in minihaloes, it would be appropriate to
+ also mention Kitayama+04 and Schauer+15 for the Lyman-Werner escape fractions 
+ from minihaloes.
 \end{referee}
--I will check out these papers and add accordingly.
+-Kitayama+04: HII regions are governed by an initial slow and weak D-type ionization front followed by a rapid R-type front. For there to be complete ionization, the transition between the types is critical. They find that in small mass halos, less than $10^6 M_{\odot}$, this critical transition takes place fairly rapidly, allowing for high escape fractions of greater than 80\%. In larger mass halos, the ionization front remains as a D-type, and the escape fraction is essentially zero. They use a simulation to study these HII regions in similar mass halos as ours and within a similar redshift range. Their Fig. 4 shows the ionizing and LW escape fractions as a function of halo mass for different stellar masses. (https://arxiv.org/pdf/astro-ph/0406280.pdf)
+
+-Schauer+15: They run simulations of LW escape fractions from P3 stars in $10^5 - 10^7 M_{\odot}$ halos. They find escape fractions from 0-85\%, and that H2 shielding by neutral hydrogen also decreases escape fractions compared to escape fractions predicted by only H2 self-shielding. Fig.3 shows escape fractions for different models and different P3 stellar masses. When H2 shielding by neutral hydrogen is not included, escape fractions are overpredicted. (https://arxiv.org/pdf/1506.04796.pdf)
 
 \begin{referee}
-The authors mention a few times that streaming velocities are another pathway of suppressing Pop III formation (also in the introduction). While they cite some older work, they however fail to compare to more recent work eg by Hirano+18 or Schauer+19 (who do perform a systematic study not only based on a few, single haloes).
+The authors mention a few times that streaming velocities are another pathway of
+ suppressing Pop III formation (also in the introduction). While they cite some 
+ older work, they however fail to compare to more recent work eg by Hirano+18 or
+  Schauer+19 (who do perform a systematic study not only based on a few, single 
+  haloes).
 \end{referee}
--I will check out these papers as well, and see if I can compare. 
+-Hirano+18: Investigate the collapse of primordial gas to form P3 stars when the energy transfer between baryon and dark matter fluids (due to non-gravitational scattering) is included.
 
 \end{document}
