@@ -1,8 +1,11 @@
 *~
 paper.pdf
-paper.aux
-paper.log
-paper.out
-paper.synctex.gz
-paper.bbl
-paper.blg
+referee.pdf
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
