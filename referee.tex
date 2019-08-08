@@ -121,29 +121,29 @@ Methods:
 In Wise+12, three different environment regions are picked. Please provide more description on the rare peak simulation here and discuss why this one is appropriate in this context.
 \end{referee}
 -RP stands for radiation pressure in Wise+12 (correct?), not rare peak. The simulation is the same size as ours, and contains similar physics, including the radiation pressure and soft UV background, which is why we reference it here. The differences are the inclusion of H2 self-shielding and updated cosmo parameters.
-
+ 
 \begin{referee}
-The initialization at z=130 is very late. I am aware that it is impossible to 
-repeat this simulation starting at an earlier redshift, but would advise for 
-future work.
+The initialization at z=130 is very late. I am aware that it is impossible to repeat this simulation starting at an earlier redshift, but would advise for future work.
 \end{referee}
--Personal question: why is this initialization late?
+
+In hindsight, we agree that we initialized the simulation too late, even with 2nd order Lagrangian perturbation theory.  The maximum baryon overdensity is 1.64$\bar{\rho}_{\rm b}$, and the maximum DM particle displacement is 2.5 $\times$ (cell width).  In future studies, we will start at earlier times when the evolution is solidly in the linear regime.  We thank the referee for pointing this out.
 
 \begin{referee}
 Why do the authors pick a non-zero metalicity threshold for Pop III star formation? How many Pop III stars form between Z=0 and Z=5e-6 Z\_sol?
 \end{referee}
--Simulation question
+
+We chose this metallicity threshold based on the work of Omukai et al. (2005), Schneider et al. (2006) and others, who found that dust cooling was efficient enough above this metallicity to induce low-mass star formation.  Very few stars (\textbf{calculate percentage}) form with metallicities between zero and $5 \times 10^{-6} Z_\odot$ and doesn't affect our results greatly.  Stars only obtain this extremely low (non-zero) metallicity when metal mixing is incomplete.  This usually occurs when a blastwave is mixing into a nearby halo, and the core collapses before it can fully mix.  Because of the randomness of the IMF sampling and errors from numerical diffusion and other solvers, we do not place great emphasis on stars in this metallicity range.  It is unclear what would be the actual stellar metallicity when it reaches main sequence, given our 0.1 proper pc resolution.  Thus we have not changed the manuscript on this topic.
 
 
 \begin{referee}
 What is the physical motivation for a density threshold of 1.e6/cc? Is there convergence?
 \end{referee}
--Simulation question
+
+We chose this threshold to be similar to the density that would trigger another level of AMR past our maximum level of 12.  This density can be calculated as \textbf{(give calculation and density value at level 13)}.
 
 \begin{referee}
 Similarly, why do the authors chose a H2 fraction of 1.e-3? (Is is a mass fraction or a number fraction?) How many Pop III stars do not form because of this threshold?
 \end{referee}
--Simulation question
 
 \begin{referee}
 Do the authors set fixed mass limits to the IMF and if yes, which are they?  If not, which is the highest / lowest mass they find in their random sampling?  And which fraction of the Pop III stars in the simulation end up as type II SNe / BHs / PISN?
@@ -175,7 +175,7 @@ Figure 2 is quite empty, it would be useful to include the halo mass function of
 -As far as the HMF of the earliest Pop III formation redshift, is this referring to the HMF at the time when Pop III stars first begin to form, so at about z=27, what is the HMF at that time and how does it compare with Sheth-Tormen? I will plot this up.
 
 -Added a vertical line at $10^5 M_{\odot}$. Detail also added to caption.
--Tried plotting the HMF of the earliest Pop III formation redshift, but I need to collect the HMF of that dataset -- having troubles remembering how this was produced 
+2-Tried plotting the HMF of the earliest Pop III formation redshift, but I need to collect the HMF of that dataset -- having troubles remembering how this was produced 
 
 
 \begin{referee}
