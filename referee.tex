@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{listings,color}
 \usepackage{mdframed}
+\parskip=10pt
 
 \input macros.tex
 
@@ -127,7 +128,7 @@ The initialization at z=130 is very late. I am aware that it is impossible to re
 \end{referee}
 
 In hindsight, we agree that we initialized the simulation too late, even with 2nd order Lagrangian perturbation theory.  The maximum baryon overdensity is 1.64$\bar{\rho}_{\rm b}$, and the maximum DM particle displacement is 2.5 $\times$ (cell width).  In future studies, we will start at earlier times when the evolution is solidly in the linear regime.  We thank the referee for pointing this out.
-q
+
 \begin{referee}
 Why do the authors pick a non-zero metalicity threshold for Pop III star formation? How many Pop III stars form between Z=0 and Z=5e-6 Z\_sol?
 \end{referee}
@@ -205,7 +206,10 @@ Discussion:
 
 The authors give three reasons for the halo mass spread. Can they estimate which of the three processes (BH formation, dynamical heating and temporal LWBG fluctuations) is responsible for the spread by which fraction?
 \end{referee}
--It's not immediately obvious to me how we would be able to estimate this. I would have to look at these processes in more detail to see if there are some mass ranges correlated with them. Any insight from John?
+
+This is an interesting question, but it is outside the scope of this paper.  It most likely depends on the large-scale environment, halo mass accretion history, and halo star formation history, but how these factors affect each other is unclear.  In practice, it would be difficult to determine the relative importance of dynamical heating and temporal LWBG fluctuations because of the time variations in the heating rate and suppression of H$_2$ cooling.  Because of these reasons, we do not give any estimates in the discussion.
+
+The occurrence of BH formation and no metal enrichment depends on the chosen Pop III IMF, and we have addressed in an earlier answer and made a note in Section 2.2.1.
 
 \begin{referee}
 One of the most extensive studies on over 1000 minihaloes was performed by Hirano+15, who also include a Lyman-Werner background. Their work should be put in comparison as well.
