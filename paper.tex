@@ -45,7 +45,7 @@
 \usepackage{amsmath}	% Advanced maths commands
 \usepackage{amssymb}	% Extra maths symbols
 \usepackage{mathtools}
-\usepackage{hyperref}
+%\usepackage[draft]{hyperref}
 %\usepackage{subcaption}
 %\usepackage{caption}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -146,11 +146,7 @@ In this paper, we focus on the distribution of host halo masses, not just the mi
 We run and analyze a cosmological simulation with the adaptive mesh refinement (AMR) code \textsc{Enzo} \citep{Enzo} and the toolkit \yt{} \citep{yt_full_paper}. \textsc{Enzo} uses an N-body adaptive particle-mesh solver \citep{Efstathiou85, Couchman91} to follow the dark matter (DM) dynamics. We use the nine-species (\hi, \hii, \hei, \heii, \heiii, e$^{-}$, H$_{2}$, H$_{2}^{+}$, H$^{-}$) non-equilibrium chemistry model \citep{Abel97, Anninos97}. This simulation is similar to the RP simulation in \citet[hereafter W12]{Wise12_RP}, but with updated cosmological and Pop III parameters, and the inclusion of \hh{} shielding.
 
 We simulate a 1 Mpc$^{3}$ comoving box with a 256$^{3}$ base grid 
-resolution and a dark matter paticle mass of 2001 M$_{\odot}$. It has a maximum refinement level of 12 which provides a maximal comoving resolution of $\sim$1 pc. \jhw{Add refinement criteria.} The simulation is 
-initialized with \music{} \citep{Hahn11_MUSIC} at $z = 130$ and uses the cosmological parameters from the Planck collaboration best fit 
-\citet{Planck13_Cosmo}: $\Omega_{\rm M}$ = 0.3175, $\Omega_{\Lambda}$ = 
-0.6825, $\Omega_{\rm DM}$ = 0.2685, and $h = 0.6711$, with the variables 
-having their usual definitions. The simulation is run until $z = 9.32$, when it becomes too computationally expensive to continue. At this point, about 20\% of the volume is over 10\% ionized. We output 918 datasets,  roughly 0.5 Myr apart. In this paper, we focus only on outputs where Pop III stars have just formed, from $z$ = 27.23 to 9.39. \textbf{Throughout the rest of the paper, all numbers are in physical units.}
+resolution and a dark matter paticle mass of 2001 M$_{\odot}$. It has a maximum refinement level of 12 which provides a maximal comoving resolution of $\sim$1 pc.  \textbf{We refine the cells one of the following criteria are met: (1) the baryon or dark matter overdensity exceeds $3\bar{\rho}_{\rm b,DM} \times 2^{\ell(3+\epsilon)}$, or (2) the local Jeans length is less than eight cell widths.  Here $\rho_{\rm b,DM}$ is the baryon or dark matter cosmic mean density, $\ell$ is the AMR level, and $\epsilon = -0.2$ invokes super-Lagrangian refinement behavior.} The simulation is initialized with \music{} \citep{Hahn11_MUSIC} at $z = 130$ and uses the cosmological parameters from the Planck collaboration best fit \citet{Planck13_Cosmo}: $\Omega_{\rm M}$ = 0.3175, $\Omega_{\Lambda}$ = 0.6825, $\Omega_{\rm DM}$ = 0.2685, and $h = 0.6711$, with the variables having their usual definitions. The simulation is run until $z = 9.32$, when it becomes too computationally expensive to continue. At this point, about 20\% of the volume is over 10\% ionized. We output 918 datasets,  roughly 0.5 Myr apart. In this paper, we focus only on outputs where Pop III stars have just formed, from $z$ = 27.23 to 9.39. \textbf{Throughout the rest of the paper, all numbers are in physical units.}
 
 A time-dependent LW optically thin radiation background is applied in the simulation. This was fit in W12 (see their Eq. 16) and is consistent with the values in \citet{Trenti09_SFR}. The background evolution of the specific intensity takes the following form:
 \begin{equation} \label{LWbg}
@@ -175,6 +171,8 @@ The utilized Pop III star formation model is the same as in \citet{Wise08_Gal} b
 
 	\item molecular hydrogen fraction, f$_{\rm H2}$ > 10$^{-3}$
 \end{enumerate}
+%
+\textbf{Our chosen threshold density corresponds to a value similar to a density that would trigger another mesh refinement past level 12.  At these scales, Jeans length refinement is the most common because of the cold temperatures in the cloud core.}
 
 If within 1 pc, multiple cells meet this criteria, then a single Pop III star forms at the center of mass of these cells. The mass of the Pop III star is randomly sampled from an initial mass function (IMF) of the form:
 \begin{equation} \label{IMF}
@@ -192,7 +190,7 @@ The Pop II star formation model is the same as \citet{Wise09}, which is equivale
 The lifetime of these particles is 20 Myr, during which they radiate 6000 hydrogen ionising photons per stellar baryon, or 1.13 $\times$ 10$^{46}$ photons s$^{-1}$ M$_{\odot}^{-1}$, which is appropriate for a Salpeter IMF \citep{Schaerer03}. Their spectra are approximated with a monochromatic spectrum with an energy of 21.6 eV at a constant luminosity. After living for 4 Myr, the stars begin to return supernova energies of 6.8 $\times$ 10$^{48}$ erg s$^{-1}$ M$_{\odot}^{-1}$ back to their surroundings.
 
 %====================================================================
-\subsection{\hh{} Self-Shielding}
+\subsection{\texorpdfstring{H$_2$} Self-Shielding}
 %====================================================================
 We use the Sobolev-like approximation from \citet{Wolcott11} to model \hh{} self-shielding. To determine the \hh{} shielding factor, the column density of \hh{} needs to be calculated:
 \begin{equation} \label{Nh2}
