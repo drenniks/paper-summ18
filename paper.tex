@@ -169,10 +169,9 @@ The utilized Pop III star formation model is the same as in \citet{Wise08_Gal} b
 
 	\item converging gas flow, $\nabla \cdot \mathbf{v_{gas}}$ < 0 
 
-	\item molecular hydrogen fraction, f$_{\rm H2}$ > 10$^{-3}$
+	\item molecular hydrogen \textbf{number} fraction, f$_{\rm H2}$ > 10$^{-3}$
 \end{enumerate}
-%
-\textbf{Our chosen threshold density corresponds to a value similar to a density that would trigger another mesh refinement past level 12.  At these scales, Jeans length refinement is the most common because of the cold temperatures in the cloud core.}
+\textbf{Our chosen threshold density are consistent with values found in previous simulations of Pop III star formation \citep[e.g.][]{Hirano15} at our resolution limit.  Additionally, it is similar to a density that would trigger another mesh refinement past level 12.  At these scales, Jeans length refinement is the most common because of the cold temperatures in the cloud core.  The molecular hydrogen criterion is also consistent with previous work in the ``loitering'' phase of molecule formation between $10^2$ and $10^8 \cubecm$ before three-body reactions become important \citep[e.g.][]{Omukai10}.}
 
 If within 1 pc, multiple cells meet this criteria, then a single Pop III star forms at the center of mass of these cells. The mass of the Pop III star is randomly sampled from an initial mass function (IMF) of the form:
 \begin{equation} \label{IMF}
