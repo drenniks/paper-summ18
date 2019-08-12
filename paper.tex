@@ -171,7 +171,7 @@ The utilized Pop III star formation model is the same as in \citet{Wise08_Gal} b
 
 	\item molecular hydrogen \textbf{number} fraction, f$_{\rm H2}$ > 10$^{-3}$
 \end{enumerate}
-\textbf{Our chosen threshold density are consistent with values found in previous simulations of Pop III star formation \citep[e.g.][]{Hirano15} at our resolution limit.  Additionally, it is similar to a density that would trigger another mesh refinement past level 12.  At these scales, Jeans length refinement is the most common because of the cold temperatures in the cloud core.  The molecular hydrogen criterion is also consistent with previous work in the ``loitering'' phase of molecule formation between $10^2$ and $10^8 \cubecm$ before three-body reactions become important \citep[e.g.][]{Omukai10}.}
+\textbf{The critical metallicity marks where dust cooling becomes efficient enough to cause fragmentation at high densities \citep[e.g.][]{Schneider06_Frag}.  In practice, we find about 10 per cent of Pop III star particles having a non-zero metallicity below this value.  This scenario occurs when a halo is externally enriched by a nearby supernova.  Because of uncertainties with turbulent mixing and collapse timescales, we choose not to predict the final metallicity at zero-age main sequence and assign the star particle the metallicity of the densest cell.  The chosen threshold density are consistent with values found in previous simulations of Pop III star formation \citep[e.g.][]{Hirano15} at our resolution limit.  Additionally, it is similar to a density that would trigger another mesh refinement past level 12.  At these scales, Jeans length refinement is the most common because of the cold temperatures in the cloud core.  The molecular hydrogen criterion is also consistent with previous work in the ``loitering'' phase of molecule formation between $10^2$ and $10^8 \cubecm$ before three-body reactions become important \citep[e.g.][]{Omukai10}.}
 
 If within 1 pc, multiple cells meet this criteria, then a single Pop III star forms at the center of mass of these cells. The mass of the Pop III star is randomly sampled from an initial mass function (IMF) of the form:
 \begin{equation} \label{IMF}
@@ -189,7 +189,7 @@ The Pop II star formation model is the same as \citet{Wise09}, which is equivale
 The lifetime of these particles is 20 Myr, during which they radiate 6000 hydrogen ionising photons per stellar baryon, or 1.13 $\times$ 10$^{46}$ photons s$^{-1}$ M$_{\odot}^{-1}$, which is appropriate for a Salpeter IMF \citep{Schaerer03}. Their spectra are approximated with a monochromatic spectrum with an energy of 21.6 eV at a constant luminosity. After living for 4 Myr, the stars begin to return supernova energies of 6.8 $\times$ 10$^{48}$ erg s$^{-1}$ M$_{\odot}^{-1}$ back to their surroundings.
 
 %====================================================================
-\subsection{\texorpdfstring{H$_2$} Self-Shielding}
+\subsection{\texorpdfstring{H$_2$}{H2} Self-Shielding}
 %====================================================================
 We use the Sobolev-like approximation from \citet{Wolcott11} to model \hh{} self-shielding. To determine the \hh{} shielding factor, the column density of \hh{} needs to be calculated:
 \begin{equation} \label{Nh2}
