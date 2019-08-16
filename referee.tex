@@ -69,8 +69,11 @@ Major comments:
 \end{referee}
 
 -Resolution testing
--Ran original sim to see if it worked, it did run, but only reached until z=22. The simulation stopped because of a stopping parameter, StopFirstTimeAtLevel. 
+-Need to update enzo to John's version with the bug fix. 
 
+-Restart from DD0029 after pulling it back down. "enzo.exe -r output"
+-At the last output, check to see how many stars are in the halo. 
+-"our results are insensitive to the star combine radius"
 
 
 \begin{referee}
@@ -82,12 +85,13 @@ In addition, the authors should state the fraction of haloes that have Pop III s
 \end{referee}
 
 -Added a bit about what Rockstar is. 
--Machacek halo definition - how should I quantify this difference? 
+-Machacek halo definition comparison - I have plotted the rockstar mass versus the calculated mass, looks like a solid group of halos lie in a 1:1 relationship, and others are fairly close, apart from a group where the calculated mass is much smaller than the rockstar mass. Need to determine why this is.
 
 -Exclusion of atomic cooling haloes - we excluded these because of a bug in our code... how to explain this without simply saying that?
 
--Fraction of halos that halo Pop III stars forming outside the halos: I'm not sure I will be able to tell exactly how many are not in halos. I need to look back at the data to see if I will be able to pick out which halos I artificially drew a halo around. 
--Shall I look at the baryon fraction as a function of time to see how much it varies? 
+-Fraction of halos that halo Pop III stars forming outside the halos: Turns out I was not able to get this data as easily as I thought. I am going to quickly run through my script and find the P3 stars in each dataset which are not in halos.
+
+-I am waiting to get this data!
 
 \begin{referee}
 Minor comments:
@@ -114,14 +118,14 @@ gas ionized.
 \begin{referee}
 The authors cite the well-known study from Machacek+01. However, a more recent result would be from the study by Visbal+14, giving a lower mass limit. Since the authors find a lower mass limit than Machacek+01, it would be interesting to see how this compares to the lower mass limit from the more modern paper.
 \end{referee}
--Visbal+14 provides an equation for Mcrit (eqn. 4), I have plotted this previously. This lines up fairly well with our data, with a bit of scatter.  (https://arxiv.org/pdf/1402.0882.pdf) 
+-Visbal+14 provides an equation for Mcrit (eqn. 4), I have plotted this previously. I have plotted this for z=20, and adjusted the trenti line for that redshift as well. May have to adjust the plot more. I will add detail about the line to the paper. (https://arxiv.org/pdf/1402.0882.pdf) 
 
 \begin{referee}
 Methods:
 
 In Wise+12, three different environment regions are picked. Please provide more description on the rare peak simulation here and discuss why this one is appropriate in this context.
 \end{referee}
--RP stands for radiation pressure in Wise+12 (correct?), not rare peak. The simulation is the same size as ours, and contains similar physics, including the radiation pressure and soft UV background, which is why we reference it here. The differences are the inclusion of H2 self-shielding and updated cosmo parameters.
+-RP stands for radiation pressure in Wise+12, not rare peak. The simulation is the same size as ours, and contains similar physics, including the radiation pressure and soft UV background, which is why we reference it here. The differences are the inclusion of H2 self-shielding and updated cosmo parameters.
  
 \begin{referee}
 The initialization at z=130 is very late. I am aware that it is impossible to repeat this simulation starting at an earlier redshift, but would advise for future work.
@@ -155,7 +159,8 @@ In our original formulation (Abel et al. 2007), we implemented this restriction 
 Do the authors set fixed mass limits to the IMF and if yes, which are they?  If not, which is the highest / lowest mass they find in their random sampling?  And which fraction of the Pop III stars in the simulation end up as type II SNe / BHs / PISN?
 \end{referee}
 -We do set fixed mass limits, between 1 and 300 Msol. I added this detail. 
--What is the best way to get this information? Shall I look at all the Pop III stars at the end of the simulation and look at their masses? I should be able to get a fraction of these endings from that, correct?
+
+-Plot IMF of P3 stars, find the fractional between each mass range. Watch units, will have to divide by M. Need to figure out how to plot this still.
 
 \begin{referee}
 One effect than can weaken the shielding is shifting out of the Lyman-Werner resonance lines (see Hartwig+15). I am wondering how much this would affect the study presented here.
@@ -170,15 +175,14 @@ In Figure 1, please mention in the caption or at the top / bottom of the left ax
 \begin{referee}
 The analytic calculation of the shielding factor is a nice property of the paper. However, assuming a constant H2 fraction seems not appropriate. Please repeat this exercise for a more realistic halo profile, which could be found in the simulations or in the literature, eg by Machacek+01 themselves.
 \end{referee}
--I will check out a more realistic H2 fraction for a halo and try to get a nice plot out of that.
--Any suggestions from John for a more realistic halo profile?
+-I have pulled data from O'Shea and Norman 07 from their Figure 14, where there is a LW background. 
 
 \begin{referee}
 Results:
 
 Figure 2 is quite empty, it would be useful to include the halo mass function of the earliest Pop III formation redshift with its analytic prediction. In addition, the authors could provide a line or an arrow to show their halo mass resolution limit.
 \end{referee}
--As far as the HMF of the earliest Pop III formation redshift, is this referring to the HMF at the time when Pop III stars first begin to form, so at about z=27, what is the HMF at that time and how does it compare with Sheth-Tormen? I will plot this up.
+-I have the data for the halo masses from the earliest dataset where star formation ahppens, but it does not line up well with the analytic formula....
 
 -Added a vertical line at $10^5 M_{\odot}$. Detail also added to caption.
 2-Tried plotting the HMF of the earliest Pop III formation redshift, but I need to collect the HMF of that dataset -- having troubles remembering how this was produced 
@@ -189,12 +193,12 @@ Figure 3 looks very nice. It would be helpful if an additional line that only
 provides the global LWBG (in units of J21) was included.
 \end{referee}
 -Woohoo! Figure 3 does look nice!
--I tried adding the global LWBG, but this makes our results seem funny, because we are getting the average J21 weighted by cell mass lying below the global LWBG. Thoughts about this?
+-I have added the background LW. I will add the detail that the JLW that is plotted for the whole plot is coming from only sources. 
 
 \begin{referee}
 The authors find no correlation between the host halo mass and the Lyman-Werner background intensity. However, they only look at the LWBG flux at the time of Pop III formation - is there maybe a correlation between the time integrated LW flux?
 \end{referee}
--Haven't thought about the time integrated LW flux. Would like some advice on this point. 
+This would be difficult to calculate. It would require constant tracking of halos through time to calculate the time integrated LW flux. 
 
 \begin{referee}
 Figures 7 and 8 show very nice histograms as an additional panel on the right.  I suggest to include a histogram on the spread of the creation time in Figure 9 similar to Figures 7 and 8.
