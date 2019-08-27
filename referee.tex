@@ -76,25 +76,29 @@ The 10 pc quoted above is a parameter called StarClusterCombineRadius, and contr
 
 \begin{referee}
 B -- 2) The authors select their haloes by the halo finding algorithm Rockstar. They should add a bit of information on that code (is it fof or subfind-like?). Also, one of their main points is to compare their work to Machacek+01. Machacek+01, however, use a different halo definition (spherical around the halo centre going out to a radius of 200 times the mean density of the Universe). How do these different halo masses compare?
-
-C -- Further, it is not entirely clear why atomic cooling haloes are excluded in this analysis and if they are excluded throughout the whole paper. The exclusion of atomic cooling haloes artificially shifts the average halo mass to lower values.
-
-D -- In addition, the authors should state the fraction of haloes that have Pop III stars forming outside the halo. The baryon fraction varies with redshift. Please give an estimate by how much this influences the halo masses used here.
 \end{referee}
 
 A short description of Rockstar has been added in section 3.1, where Rockstar is introduced.
 
-\jhw{The referee is asking how our halo mass calculation with $200\rho_c$ compares with the $200\rho_m$ definition in Machacek+01.  I think a better figure would show the halo masses with these two definitions in each axis.  To make the differences more clear, I would add a subpanel that shows the ratio between the two mass calculations.  I would also calculate the mean ratio of the masses to see how it differs to the analytical expectation if we consider an isothermal sphere, whose mass enclosed $M_{\rm enc} \propto r$ and density $\rho \propto r^{-2}$, i.e. the virial radius will be larger in the $200\rho_m$ definition and thus the virial masses will be larger in Machacek+01.}
+\jhw{The referee is asking how our halo mass calculation with Rockstar (with the $\Omega_{\rm DM} / \Omega_{\rm M}$ correction) compares with the $200\rho_m$ definition in Machacek+01.  I think a better figure would show the halo masses with these two definitions in each axis.  To make the differences more clear, I would add a subpanel that shows the ratio between the two mass calculations.  I would also calculate the mean ratio of the masses to see how it differs to the analytical expectation if we consider an isothermal sphere, whose mass enclosed $M_{\rm enc} \propto r$ and density $\rho \propto r^{-2}$, i.e. the virial radius will be larger in the $200\rho_m$ definition than the $200\rho_c$ one, and thus the virial masses will be larger in Machacek+01.}
 
-We have compared the mass calculations between Rockstar and Machacek+01 and have found the following results. Figure \ref{fig:compare_mass} below shows how the Rockstar halo masses and the Machacek+01 method of calculating halo masses compare. To do this calculation, we calculated the virial mass around the center of each halo given by Rockstar by determining the sphere that contains an average overdensity of 200 $\rho_{c}$. We see that the halos generally fall on a 1:1 relation, ensuring that the two methods are comparable. The halos that have larger calculated masses compared to Rockstar masses are those that are sub-halos. This results in a larger radius at the point where the average overdensity of 200 $\rho_{c}$ falls off, and thus a larger calculated mass. Within our calculations, we do not consider sub-halos, and take the most massive halo the sub-halo falls within for our analysis.
+We have compared the mass calculations between Rockstar and Machacek+01 and have found the following results. Figure \ref{fig:compare_mass} below shows how the Rockstar halo masses and the Machacek+01 method of calculating halo masses compare. To do this calculation, we calculated the virial mass around the center of each halo given by Rockstar by determining the sphere that contains an average overdensity of 200 $\rho_{c}$. We see that the halos generally fall on a 1:1 relation, ensuring that the two methods are comparable. The halos that have larger calculated masses compared to Rockstar masses are those that are subhalos. This results in a larger radius at the point where the average overdensity of 200 $\rho_{c}$ falls off, and thus a larger calculated mass. Within our calculations, we do not consider subhalos, and take the most massive halo the subhalo falls within for our analysis.
 
-\begin{figure}[H]
+\begin{figure}[ht!]
 	\centering
-	\includegraphics[keepaspectratio=true, scale=0.5]{images/compare_halo_mass.pdf}
-    \label{fig:compare_mass}
+	\includegraphics[keepaspectratio=true, scale=0.4]{images/compare_halo_mass.pdf}
+  \caption{\label{fig:compare_mass} \jhw{Include caption.}}
 \end{figure}
 
--Exclusion of atomic cooling haloes - we excluded these because of a bug in our code... how to explain this without simply saying that?
+\begin{referee}
+C -- Further, it is not entirely clear why atomic cooling haloes are excluded in this analysis and if they are excluded throughout the whole paper. The exclusion of atomic cooling haloes artificially shifts the average halo mass to lower values.
+\end{referee}
+
+We apologize for not being more clear on this point.  As seen in Figure \ref{fig:compare_mass}, there are seven stars that form in a halo with $M_{\rm halo} > 10^8 M_\odot$ but are actually hosted by a subhalo that hasn't been enriched yet.  This is an interesting case within itself.  We might follow up on this object in a later study because it's outside the scope of the paper.  Because we take the parent halo mass as the host halo mass, we did not include these stars in the analysis because the parent halo mass is not representative of the cooling processes inside of the subhalo.  Because this is a rare event in our simulation (7 out of 688 Pop III stars), it does not shift the average halo mass by a significant amount.  We have added some clarifying text to the first paragraph of the Section 3.1.
+
+\begin{referee}
+D -- In addition, the authors should state the fraction of haloes that have Pop III stars forming outside the halo. The baryon fraction varies with redshift. Please give an estimate by how much this influences the halo masses used here.
+\end{referee}
 
 -Fraction of halos that halo Pop III stars forming outside the halos: Turns out I was not able to get this data as easily as I thought. I am going to quickly run through my script and find the P3 stars in each dataset which are not in halos.
 
@@ -103,19 +107,21 @@ Minor comments:
 
 E -- The authors should state at one point in the paper for which properties they use comoving or physical units.
 \end{referee}
-This has been clarified at the end of the second paragraph in the Simulation Setup section.
+We have clarified this point at the end of the second paragraph in the Simulation Setup section.
 
 \begin{referee}
 Introduction:
 
 F -- The authors write that Pop III star formation is generally more massive. While a fraction of the community agrees with that, there is manifoldly cited work that finds low-mass Pop III progenitors, and the authors should not let that unmentioned, but also cite eg Stacy+16, Greif+11 and Clark+11.
 \end{referee}
-These studies have been mentioned and cited in the introcution.
+
+This is a good point about low-mass Pop III stars, and we have included these references in the introduction.
 
 \begin{referee}
 G -- The authors name a few processes for suppressing Pop III star formation. For completeness, they should also mention eg X-ray heating (citing eg Jeon+14).
 \end{referee}
-This study has been mentioned and cited in the introduction.
+
+We have mentioned X-ray heating in the introduction and cited Jeon+14.
 
 \begin{referee}
 H -- The authors cite the well-known study from Machacek+01. However, a more recent result would be from the study by Visbal+14, giving a lower mass limit. Since the authors find a lower mass limit than Machacek+01, it would be interesting to see how this compares to the lower mass limit from the more modern paper.
@@ -130,7 +136,7 @@ I -- In Wise+12, three different environment regions are picked. Please provide 
 
 \jhw{This is good.}
 
-RP stands for radiation pressure in Wise+12, not rare peak of the Renaissance Simulations (Xu et al. 2016). The simulation is the same size as ours, and contains similar physics, including the radiation pressure and soft UV background, which is why we reference it here. The differences are the inclusion of H2 self-shielding and updated cosmological parameters.
+RP stands for radiation pressure in Wise+12, not rare peak of the Renaissance Simulations (Xu+ 2016). The simulation is the same size as ours, and contains similar physics, including the radiation pressure and soft UV background, which is why we reference it here. The differences are the inclusion of H2 self-shielding and updated cosmological parameters.
  
 \begin{referee}
 J -- The initialization at z=130 is very late. I am aware that it is impossible to repeat this simulation starting at an earlier redshift, but would advise for future work.
@@ -226,7 +232,7 @@ This study has been added and cited in the Comparison section.
 \begin{referee}
 X -- In Figure 10, the result from Yoshida+03 is hard to see, maybe use a different symbol / colour.
 \end{referee}
-This has been adjusted. The point from Yoshida+03 is now a pentagon and is outlined in black, and all symbols have had their edges increased for visibility.
+We have modified Figure 10 to be more clear. The point from Yoshida+03 is now a pentagon and is outlined in black, and all symbols have had their edges increased for visibility.
 
 \begin{referee}
 Y -- Since the authors study star formation in minihaloes, it would be appropriate to also mention Kitayama+04 and Schauer+15 for the Lyman-Werner escape fractions from minihaloes.
