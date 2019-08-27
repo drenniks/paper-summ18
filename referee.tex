@@ -71,7 +71,7 @@ A -- 1) One of the main points of the paper is studying the multiplicity of Pop 
 
 There was an error in the original draft of our paper, stating that "If within 1 pc, multiple cells meet this criteria, then a single Pop III star forms at the center of mass of these cells." It should instead say "within 10 pc", not "within 1 pc". This error has been corrected.
 
-The 10 pc quoted above is a parameter called StarClusterCombineRadius, and controls how many stars form within a certain spatial range. Within our original simulation, this parameter was set to 10 pc, meaning that all stars younger than 10 kyr and within 10 pc of each other are merged into a single star. To make sure that this value does not affect our results, we have run simulations for a range of this parameter, namely from 0.625 pc to the original 10 pc. The simulations are a 1 comoving Mpc$^3$ box, zoomed-in on a single halo with a mass of $10^{7.7} M_{\odot}$ at the end of the run. The simulations run for a total of 10 Myr. We see the same number of Pop III stars form regardless of the chosen value for the merging parameter. Thus, our results are independent of this value. This detail has been added to section 2.2.1.
+The 10 pc quoted above is a parameter called StarClusterCombineRadius, and controls how many stars form within a certain spatial range. Within our original simulation, this parameter was set to 10 pc, meaning that all stars younger than 10 kyr and within 10 pc of each other are merged into a single star. To make sure that this value does not affect our results, we have run simulations for a range of this parameter, namely from 0.625 pc to the original 10 pc. The simulations are a 1 comoving Mpc$^3$ box, zoomed-in on a single halo with a mass of $10^{7.7} M_{\odot}$ at the end of the run. \jhw{Double check the mass. Looking at the projections of the halo, its virial radius is about 100 pc, which corresponds to a halo mass around $10^6 M_\odot$.} The simulations run for a total of 10 Myr. We see the same number of Pop III stars form regardless of the chosen value for the merging parameter. Thus, our results are independent of this value. This detail has been added to section 2.2.1.
 
 
 \begin{referee}
@@ -83,6 +83,8 @@ D -- In addition, the authors should state the fraction of haloes that have Pop 
 \end{referee}
 
 A short description of Rockstar has been added in section 3.1, where Rockstar is introduced.
+
+\jhw{The referee is asking how our halo mass calculation with $200\rho_c$ compares with the $200\rho_m$ definition in Machacek+01.  I think a better figure would show the halo masses with these two definitions in each axis.  To make the differences more clear, I would add a subpanel that shows the ratio between the two mass calculations.  I would also calculate the mean ratio of the masses to see how it differs to the analytical expectation if we consider an isothermal sphere, whose mass enclosed $M_{\rm enc} \propto r$ and density $\rho \propto r^{-2}$, i.e. the virial radius will be larger in the $200\rho_m$ definition and thus the virial masses will be larger in Machacek+01.}
 
 We have compared the mass calculations between Rockstar and Machacek+01 and have found the following results. Figure \ref{fig:compare_mass} below shows how the Rockstar halo masses and the Machacek+01 method of calculating halo masses compare. To do this calculation, we calculated the virial mass around the center of each halo given by Rockstar by determining the sphere that contains an average overdensity of 200 $\rho_{c}$. We see that the halos generally fall on a 1:1 relation, ensuring that the two methods are comparable. The halos that have larger calculated masses compared to Rockstar masses are those that are sub-halos. This results in a larger radius at the point where the average overdensity of 200 $\rho_{c}$ falls off, and thus a larger calculated mass. Within our calculations, we do not consider sub-halos, and take the most massive halo the sub-halo falls within for our analysis.
 
@@ -125,7 +127,10 @@ Methods:
 
 I -- In Wise+12, three different environment regions are picked. Please provide more description on the rare peak simulation here and discuss why this one is appropriate in this context.
 \end{referee}
-RP stands for radiation pressure in Wise+12, not rare peak. The simulation is the same size as ours, and contains similar physics, including the radiation pressure and soft UV background, which is why we reference it here. The differences are the inclusion of H2 self-shielding and updated cosmological parameters.
+
+\jhw{This is good.}
+
+RP stands for radiation pressure in Wise+12, not rare peak of the Renaissance Simulations (Xu et al. 2016). The simulation is the same size as ours, and contains similar physics, including the radiation pressure and soft UV background, which is why we reference it here. The differences are the inclusion of H2 self-shielding and updated cosmological parameters.
  
 \begin{referee}
 J -- The initialization at z=130 is very late. I am aware that it is impossible to repeat this simulation starting at an earlier redshift, but would advise for future work.
