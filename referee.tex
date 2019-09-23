@@ -80,6 +80,8 @@ B -- 2) The authors select their haloes by the halo finding algorithm Rockstar. 
 
 A short description of Rockstar has been added in section 3.1, where Rockstar is introduced.
 
+\jhw{Readdress this point, using that $\rho_c = \rho_m$ at high redshifts.}
+
 \jhw{The referee is asking how our halo mass calculation with Rockstar (with the $\Omega_{\rm DM} / \Omega_{\rm M}$ correction) compares with the $200\rho_m$ definition in Machacek+01.  I think a better figure would show the halo masses with these two definitions in each axis.  To make the differences more clear, I would add a subpanel that shows the ratio between the two mass calculations.  I would also calculate the mean ratio of the masses to see how it differs to the analytical expectation if we consider an isothermal sphere, whose mass enclosed $M_{\rm enc} \propto r$ and density $\rho \propto r^{-2}$, i.e. the virial radius will be larger in the $200\rho_m$ definition than the $200\rho_c$ one, and thus the virial masses will be larger in Machacek+01.}
 
 We have compared the mass calculations between Rockstar and Machacek+01 and have found the following results. Figure \ref{fig:compare_mass} below shows how the Rockstar halo masses and the Machacek+01 method of calculating halo masses compare. To do this calculation, we calculated the virial mass around the center of each halo given by Rockstar by determining the sphere that contains an average overdensity of 200 $\rho_{c}$. We see that the halos generally fall on a 1:1 relation, ensuring that the two methods are comparable. The halos that have larger calculated masses compared to Rockstar masses are those that are subhalos. This results in a larger radius at the point where the average overdensity of 200 $\rho_{c}$ falls off, and thus a larger calculated mass. Within our calculations, we do not consider subhalos, and take the most massive halo the subhalo falls within for our analysis.
@@ -186,6 +188,8 @@ O -- One effect than can weaken the shielding is shifting out of the Lyman-Werne
 \end{referee}
 -Would like to discuss this more in detail with John.
 
+\jhw{I can answer this point.}
+
 \begin{referee}
 P -- In Figure 1, please mention in the caption or at the top / bottom of the left axis that a shielding factor of 1 corresponds to no shielding and a shielding factor of 0 corresponds to high shielding, as these nomenclatures are not immediately understandable for the reader.
 \end{referee}
@@ -204,6 +208,8 @@ R -- Figure 2 is quite empty, it would be useful to include the halo mass functi
 We have added a vertical line at $10^5 M_{\odot}$ to show our halo mass resolution limit. This detail has also been added to the caption.
 
 -The HMF at z=20 is overshooting the analytic estimate. Need to get together with John to see why. 
+
+\jhw{We are still investigating this issue. Calculate the matter power spectrum and compare with the analytic expectation to see if the simulation was initialized with some odd mode.}
 
 \begin{referee}
 S -- Figure 3 looks very nice. It would be helpful if an additional line that only 
