@@ -80,17 +80,7 @@ B -- 2) The authors select their haloes by the halo finding algorithm Rockstar. 
 
 A short description of Rockstar has been added in section 3.1, where Rockstar is introduced.
 
-\jhw{Readdress this point, using that $\rho_c = \rho_m$ at high redshifts.}
-
-\jhw{The referee is asking how our halo mass calculation with Rockstar (with the $\Omega_{\rm DM} / \Omega_{\rm M}$ correction) compares with the $200\rho_m$ definition in Machacek+01.  I think a better figure would show the halo masses with these two definitions in each axis.  To make the differences more clear, I would add a subpanel that shows the ratio between the two mass calculations.  I would also calculate the mean ratio of the masses to see how it differs to the analytical expectation if we consider an isothermal sphere, whose mass enclosed $M_{\rm enc} \propto r$ and density $\rho \propto r^{-2}$, i.e. the virial radius will be larger in the $200\rho_m$ definition than the $200\rho_c$ one, and thus the virial masses will be larger in Machacek+01.}
-
-We have compared the mass calculations between Rockstar and Machacek+01 and have found the following results. Figure \ref{fig:compare_mass} below shows how the Rockstar halo masses and the Machacek+01 method of calculating halo masses compare. To do this calculation, we calculated the virial mass around the center of each halo given by Rockstar by determining the sphere that contains an average overdensity of 200 $\rho_{c}$. We see that the halos generally fall on a 1:1 relation, ensuring that the two methods are comparable. The halos that have larger calculated masses compared to Rockstar masses are those that are subhalos. This results in a larger radius at the point where the average overdensity of 200 $\rho_{c}$ falls off, and thus a larger calculated mass. Within our calculations, we do not consider subhalos, and take the most massive halo the subhalo falls within for our analysis.
-
-\begin{figure}[ht!]
-	\centering
-	\includegraphics[keepaspectratio=true, scale=0.4]{images/compare_mass_ratio.pdf}
-  \caption{\label{fig:compare_mass} The Rockstar mass multiplied by $\Omega_{\rm M} / \Omega_{\rm DM}$ versus the Machacek+01 method of calculating halo mass. The bottom panel is the ratio of the Rockstar mass to the calculated mass versus the calculated mass. The Rockstar mass tends to lie just above the 1:1 relation, implying that the halo masses are comparable. For the case where the calculated mass is much larger than the rockstar mass, this occurs when the halos are subhalos of a larger halo.}
-\end{figure}
+We have compared the mass calculations between Rockstar and Machacek+01 and have found that the masses are comparable. The difference between Rockstar halo masses and the Machacek+01 halo mass definition varies by a few percent. At high redshifts, when Pop III stars are forming, $\rho_c = \rho_m$, so our calculations are not affected by this difference, and allows the two mass definitions to be directly compared. 
 
 \begin{referee}
 C -- Further, it is not entirely clear why atomic cooling haloes are excluded in this analysis and if they are excluded throughout the whole paper. The exclusion of atomic cooling haloes artificially shifts the average halo mass to lower values.
@@ -102,9 +92,11 @@ We apologize for not being more clear on this point.  As seen in Figure \ref{fig
 D -- In addition, the authors should state the fraction of haloes that have Pop III stars forming outside the halo. The baryon fraction varies with redshift. Please give an estimate by how much this influences the halo masses used here.
 \end{referee}
 
-1\% of Pop III stars form outside the halo. This has been added to the Population III Host Halo Masses subsection. 
+1\% of Pop III stars form in a halo not identified by Rockstar. This has been added to the Population III Host Halo Masses subsection. To be clear, Pop III stars should not be forming outside of halos. This small percentage of Pop III stars are forming in halos, but in halos not identified by Rockstar. 
 
-Figure \ref{fig:avg_baryon_fraction} show the average baryon fraction for each halo as a function of the halo mass. The cosmic baryon fraction is shown as a solid black line.
+Figure \ref{fig:avg_baryon_fraction} shows the average baryon fraction for each halo as a function of the halo mass. The cosmic baryon fraction is shown as a solid black line.
+
+The baryon fraction varies with time at the lowest mass scales, just above the cosmological jeans mass, around $10^{4} M_{\odot}$. In our work, we are looking at halos above that value by about a factor of 20. At this point, the halos have had time to collect baryons. In general, the baryon fraction is dependent on redshift in our work due to feedback, not cosmological effects. This results in a range of average baryon fractions for halo masses throughout our simulation. In Figure \ref{fig:avg_baryon_fraction}, the halos with smaller masses tend to have low average baryon fractions due to resolution effects and feedback. 
 
 \begin{figure}[ht!]
   \centering
@@ -186,11 +178,10 @@ We do set fixed mass limits, between 1 and 300 $M_{\odot}$. We have added this d
 \begin{referee}
 O -- One effect than can weaken the shielding is shifting out of the Lyman-Werner resonance lines (see Hartwig+15). I am wondering how much this would affect the study presented here.
 \end{referee}
--Would like to discuss this more in detail with John.
 
--From Tilmans paper, they find that Jcrit, which corresponds to the point where if a halo is exposed to a flux above that value then it provides conditions for supermassive star formation, is almost half as small as the jeans length approach to calculating Jcrit. They use the Wolcott-Green shielding factor that we use, but they use a different method for calculating the column density. Figure 5 shows the differences. But since they are finding that even more halos would be allowed to form star formation, then (if I'm getting this correctly), we would be underestimating the amount of potential star formation sites.
+In Hartwig+15, they take into account the Doppler-shifting of spectral lines with an improved calculation of the column densities, but use the same shielding factor as we do. They find that shielding is generally less efficient at higher temperatures. In our work, because our halos are less massive, the temperatures are typically $10^{3}$ K, which looking at the Figure 5, lies close to the 1:1 line. The shielding factor as calculated in our work will therefore not vary significantly compared to the full treatment of the column density, so we do not expect this to be a problem. 
 
-\jhw{I can answer this point.}
+A brief desription of this has been added to the \hh{} Self-Shielding section. 
 
 \begin{referee}
 P -- In Figure 1, please mention in the caption or at the top / bottom of the left axis that a shielding factor of 1 corresponds to no shielding and a shielding factor of 0 corresponds to high shielding, as these nomenclatures are not immediately understandable for the reader.
