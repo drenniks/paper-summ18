@@ -69,9 +69,11 @@ Major comments:
 A -- 1) One of the main points of the paper is studying the multiplicity of Pop III stars in a halo. This multiplicity might be due to the fact that Pop III stars have collapsed to a BH after their lifetime and a second Pop III star could form in the same halo. This is very plausible. If several Pop III stars are found forming in the same halo at the same time, however, the employed star particle algorithm has a hard-coded length scale of 1pc in which only one star particle can be formed. I am wondering if this is an effect that is resolution dependent - do the same number of stars form if the resolution is increased and the maximum distance is decreased? Which is the motivation for the length scale of 1pc?
 \end{referee}
 
-There was an error in the original draft of our paper, stating that "If within 1 pc, multiple cells meet this criteria, then a single Pop III star forms at the center of mass of these cells." It should instead say "within 10 pc", not "within 1 pc". This error has been corrected.
+There was an error in the original draft of our paper, stating that ``If within 1 pc, multiple cells meet this criteria, then a single Pop III star forms at the center of mass of these cells." It should instead say ``within 10 pc", not ``within 1 pc". This error has been corrected.
 
-The 10 pc quoted above is a parameter called StarClusterCombineRadius, and controls how many stars form within a certain spatial range. Within our original simulation, this parameter was set to 10 pc, meaning that all stars younger than 10 kyr and within 10 pc of each other are merged into a single star. To make sure that this value does not affect our results, we have run simulations for a range of this parameter, namely from 0.625 pc to the original 10 pc. The simulations are a 1 comoving Mpc$^3$ box, zoomed-in on a single halo with a mass of $10^{5.8} M_{\odot}$ at the end of the run. The simulations run for a total of 10 Myr. We see the same number of Pop III stars form regardless of the chosen value for the merging parameter. Thus, our results are independent of this value. This detail has been added to section 2.2.1.
+The 10 pc quoted above is a parameter called StarClusterCombineRadius, and controls how many stars form within a certain spatial range. Within our original simulation, this parameter was set to 10 pc, meaning that all stars younger than 10 kyr and within 10 pc of each other are merged into a single star. To make sure that this value does not affect our results, we have run simulations for a range of this parameter, namely from 0.625 pc to the original 10 pc. The simulations are a 1 comoving Mpc$^3$ box, zoomed-in on a single halo with a mass of $10^{5.8} M_{\odot}$ at the end of the run. The simulations run for a total of 10 Myr. We see the same number of Pop III stars form regardless of the chosen value for the merging parameter. Thus, our results are independent of this value. This detail has been added to section 2.2.1. 
+
+--May still need to answer the questions ``Which is the motivation for the length scale of 1 pc?''
 
 
 \begin{referee}
@@ -86,7 +88,7 @@ We have compared the mass calculations between Rockstar and Machacek+01 and have
 C -- Further, it is not entirely clear why atomic cooling haloes are excluded in this analysis and if they are excluded throughout the whole paper. The exclusion of atomic cooling haloes artificially shifts the average halo mass to lower values.
 \end{referee}
 
-We apologize for not being more clear on this point.  As seen in Figure \ref{fig:compare_mass}, there are seven stars that form in a halo with $M_{\rm halo} > 10^8 M_\odot$ but are actually hosted by a subhalo that hasn't been enriched yet.  This is an interesting case within itself.  We might follow up on this object in a later study because it's outside the scope of the paper.  Because we take the parent halo mass as the host halo mass, we did not include these stars in the analysis because the parent halo mass is not representative of the cooling processes inside of the subhalo.  Because this is a rare event in our simulation (7 out of 688 Pop III stars), it does not shift the average halo mass by a significant amount.  We have added some clarifying text to the first paragraph of the Section 3.1.
+We apologize for not being more clear on this point.  \textbf{As seen in Figure \ref{fig:compare_mass}, there are seven stars that form in a halo with $M_{\rm halo} > 10^8 M_\odot$ but are actually hosted by a subhalo that hasn't been enriched yet. \textit{DS -- this figure was removed for simplicity}} This is an interesting case within itself.  We might follow up on this object in a later study because it's outside the scope of the paper.  Because we take the parent halo mass as the host halo mass, we did not include these stars in the analysis because the parent halo mass is not representative of the cooling processes inside of the subhalo.  Because this is a rare event in our simulation (7 out of 688 Pop III stars), it does not shift the average halo mass by a significant amount.  We have added some clarifying text to the first paragraph of the Section 3.1.
 
 \begin{referee}
 D -- In addition, the authors should state the fraction of haloes that have Pop III stars forming outside the halo. The baryon fraction varies with redshift. Please give an estimate by how much this influences the halo masses used here.
@@ -136,8 +138,6 @@ Methods:
 I -- In Wise+12, three different environment regions are picked. Please provide more description on the rare peak simulation here and discuss why this one is appropriate in this context.
 \end{referee}
 
-\jhw{This is good.}
-
 RP stands for radiation pressure in Wise+12, not rare peak of the Renaissance Simulations (Xu+ 2016). The simulation is the same size as ours, and contains similar physics, including the radiation pressure and soft UV background, which is why we reference it here. The differences are the inclusion of H2 self-shielding and updated cosmological parameters.
  
 \begin{referee}
@@ -179,7 +179,7 @@ We do set fixed mass limits, between 1 and 300 $M_{\odot}$. We have added this d
 O -- One effect than can weaken the shielding is shifting out of the Lyman-Werner resonance lines (see Hartwig+15). I am wondering how much this would affect the study presented here.
 \end{referee}
 
-In Hartwig+15, they take into account the Doppler-shifting of spectral lines with an improved calculation of the column densities, but use the same shielding factor as we do. They find that shielding is generally less efficient at higher temperatures. In our work, because our halos are less massive, the temperatures are typically $10^{3}$ K, which looking at the Figure 5, lies close to the 1:1 line. The shielding factor as calculated in our work will therefore not vary significantly compared to the full treatment of the column density, so we do not expect this to be a problem. 
+In Hartwig+15, they take into account the Doppler-shifting of spectral lines with an improved calculation of the column densities, but use the same shielding factor as we do. They find that shielding is generally less efficient at higher temperatures. In our work, because our halos are less massive, the temperatures are typically $10^{3}$ K, which looking at their Figure 5, lies close to the 1:1 line. The shielding factor as calculated in our work will therefore not vary significantly compared to the full treatment of the column density, so we do not expect this to be a problem. 
 
 A brief desription of this has been added to the \hh{} Self-Shielding section. 
 
@@ -234,7 +234,7 @@ The occurrence of BH formation and no metal enrichment depends on the chosen Pop
 W -- One of the most extensive studies on over 1000 minihaloes was performed by Hirano+15, who also include a Lyman-Werner background. Their work should be put in comparison as well.
 \end{referee}
 This study has been added and cited in the Comparison section.
--Should more be added?
+\textbf{-Should more be added?}
 
 \begin{referee}
 X -- In Figure 10, the result from Yoshida+03 is hard to see, maybe use a different symbol / colour.
