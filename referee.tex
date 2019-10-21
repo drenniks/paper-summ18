@@ -91,14 +91,12 @@ D -- In addition, the authors should state the fraction of haloes that have Pop 
 \end{referee}
 There are 1\% of Pop III stars that form in a halo not identified by Rockstar.  To be clear, Pop III stars should not be forming outside of halos. This small percentage of Pop III stars are forming in halos but in halos not identified by Rockstar.  We have added these details to the ``Population III Host Halo Masses" subsection.
 
-\jhw{Need to double-check baryon fraction figure.}
-
 Figure \ref{fig:avg_baryon_fraction} shows the average baryon fraction for each halo as a function of the halo mass at the final redshift. The cosmic baryon fraction is shown as a solid black line. The baryon fraction only should smoothly increase with time as it grows from the cosmological Jeans mass, around $10^{4} M_{\odot}$.  Our simulations do not resolve this mass scale, but the baryon fraction will be slightly lower than the cosmic value ($\Omega_b/\Omega_m$) in the smallest resolved halos ($2 \times 10^5 M_\odot$ are sampled with 100 particles).  However above this mass scale, the baryon fraction will greatly vary with time due to feedback, not cosmological effects. This results in a range of average baryon fractions for halo masses throughout our simulation. In Figure \ref{fig:avg_baryon_fraction}, the halos with smaller masses tend to have low average baryon fractions due to resolution at the very low-mass end and feedback once they have hosted star formation.
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[keepaspectratio=true, scale=0.4]{images/avg_baryon_fraction.pdf}
-  \caption{\label{fig:avg_baryon_fraction} Average baryon fraction within each halo versus the corresponding halo mass at the final redshift. The solid line indicates the cosmic baryon fraction of $\Omega_b / \Omega_m = 0.154$.}
+  \caption{\label{fig:avg_baryon_fraction} Average baryon fraction within each halo versus the corresponding halo mass at the final redshift. The solid line indicates the cosmic baryon fraction of $\Omega_b / \Omega_m = 0.154$. Halos with an average baryon fraction less than or equal to $10^{-3}$ are all set at $10^{-3}$.}
 \end{figure}
 
 \begin{referee}
