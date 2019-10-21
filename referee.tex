@@ -97,12 +97,12 @@ There are 1\% of Pop III stars that form in a halo not identified by Rockstar.  
 
 \jhw{Need to double-check baryon fraction figure.}
 
-Figure \ref{fig:avg_baryon_fraction} shows the average baryon fraction for each halo as a function of the halo mass. The cosmic baryon fraction is shown as a solid black line. The baryon fraction only should smoothly increase with time as it grows from the cosmological Jeans mass, around $10^{4} M_{\odot}$.  Our simulations do not resolve this mass scale, but the baryon fraction will be slightly lower than the cosmic value ($\Omega_b/\Omega_m$) in the smallest resolved halos ($2 \times 10^5 M_\odot$ are sampled with 100 particles).  However above this mass scale, the baryon fraction will greatly vary with time due to feedback, not cosmological effects. This results in a range of average baryon fractions for halo masses throughout our simulation. In Figure \ref{fig:avg_baryon_fraction}, the halos with smaller masses tend to have low average baryon fractions due to resolution at the very low-mass end and feedback once they have hosted star formation.
+Figure \ref{fig:avg_baryon_fraction} shows the average baryon fraction for each halo as a function of the halo mass at the final redshift. The cosmic baryon fraction is shown as a solid black line. The baryon fraction only should smoothly increase with time as it grows from the cosmological Jeans mass, around $10^{4} M_{\odot}$.  Our simulations do not resolve this mass scale, but the baryon fraction will be slightly lower than the cosmic value ($\Omega_b/\Omega_m$) in the smallest resolved halos ($2 \times 10^5 M_\odot$ are sampled with 100 particles).  However above this mass scale, the baryon fraction will greatly vary with time due to feedback, not cosmological effects. This results in a range of average baryon fractions for halo masses throughout our simulation. In Figure \ref{fig:avg_baryon_fraction}, the halos with smaller masses tend to have low average baryon fractions due to resolution at the very low-mass end and feedback once they have hosted star formation.
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[keepaspectratio=true, scale=0.4]{images/avg_baryon_fraction.pdf}
-  \caption{\label{fig:avg_baryon_fraction} Average baryon fraction within each halo versus the corresponding halo mass. The solid line indicates the cosmic baryon fraction of 0.154.}
+  \caption{\label{fig:avg_baryon_fraction} Average baryon fraction within each halo versus the corresponding halo mass at the final redshift. The solid line indicates the cosmic baryon fraction of $\Omega_b / \Omega_m = 0.154$.}
 \end{figure}
 
 \begin{referee}
@@ -124,12 +124,13 @@ This is a good point about low-mass Pop III stars, and we have included these re
 G -- The authors name a few processes for suppressing Pop III star formation. For completeness, they should also mention eg X-ray heating (citing eg Jeon+14).
 \end{referee}
 
-We have mentioned X-ray heating in the introduction and cited Jeon+14.
+We now include X-ray heating in the introduction and cited Jeon et al. (2014).
 
 \begin{referee}
 H -- The authors cite the well-known study from Machacek+01. However, a more recent result would be from the study by Visbal+14, giving a lower mass limit. Since the authors find a lower mass limit than Machacek+01, it would be interesting to see how this compares to the lower mass limit from the more modern paper.
 \end{referee}
-We have included the $M_{\rm crit}$ function that Visbal+14 use in their study (their Equation 4) for a redshift of 20 as a solid purple line in Figure 10. It appears the Visbal+14 find similar masses as Machacek+01, and when comparing the Machacek+01 for our LWBG and the relation from Visbal+14 at z=20, Visbal+14 find higher halo masses overall.
+
+We have included the $M_{\rm crit}$ function that Visbal et al. (2014) use in their study (their Equation 4) for $z=20$ as a solid purple line in Figure 10. The Visbal et al. relation give similar masses as Machacek et al. (2001).  But when we input the LW background utilized in our study, the Visbal et al. relation give higher halo masses overall when compared to Machacek et al.
 
 \begin{referee}
 Methods:
@@ -137,7 +138,7 @@ Methods:
 I -- In Wise+12, three different environment regions are picked. Please provide more description on the rare peak simulation here and discuss why this one is appropriate in this context.
 \end{referee}
 
-RP stands for radiation pressure in Wise+12, not rare peak of the Renaissance Simulations (Xu+ 2016). The simulation is the same size as ours, and contains similar physics, including the radiation pressure and soft UV background, which is why we reference it here. The differences are the inclusion of H2 self-shielding and updated cosmological parameters.
+RP stands for the ``radiation pressure" simulation from Wise et al. (2012), not rare peak of the Renaissance Simulations (Xu et al. 2016). The simulation is the same size as ours, and contains similar physics, including the radiation pressure and soft UV background, which is why we reference it here. The differences are the inclusion of H2 self-shielding and updated cosmological parameters.
  
 \begin{referee}
 J -- The initialization at z=130 is very late. I am aware that it is impossible to repeat this simulation starting at an earlier redshift, but would advise for future work.
@@ -155,7 +156,7 @@ We chose this metallicity threshold based on the work of Omukai et al. (2005), S
 L -- What is the physical motivation for a density threshold of 1.e6/cc? Is there convergence?
 \end{referee}
 
-Our choice was motivated by both previous work and our refinement strategy rather than convergence. Previous work (e.g. O'Shea et al. 2007; Yoshida et al. 2007) and later groups (e.g. Hirano et al. 2015) have shown that the number density is $\sim 10^6 \cubecm$ at our resolution limit of $0.09$ proper pc at $z=10$.  Secondly, we chose this threshold to be similar to the density that would trigger another level of AMR past our maximum level of 12 (dx = 0.09 proper pc at $z=10$).  At these scales, the grid is primarily refined from the Jeans length criterion, which is resolved by at least 8 cells.  Solving for the density in the Jeans length equation, given a typical temperature $T=300$~K with primordial cooling and a Jeans Length of $8 \times \textrm{dx}$, we obtain a number density $n = 5.7 \times 10^4 \cubecm$.  This number density does not exactly match the chosen density criterion because some oversight when setting up the simulation.  In the case where the density SF criterion is larger than $n$, the gas will continue to condense on a faster timescale than its surroundings.  Thus we are confident that this slight mismatch does not affect our results.
+Our choice was motivated by both previous work and our refinement strategy rather than convergence. Previous work (e.g. O'Shea et al. 2007; Yoshida et al. 2007) and later groups (e.g. Hirano et al. 2015) have shown that the number density is $\sim 10^6 \cubecm$ at our resolution limit of $0.09$ proper pc at $z=10$.  Secondly, we chose this threshold to be similar to the density that would trigger another level of AMR past our maximum level of 12 (dx = 0.09 proper pc at $z=10$).  At these scales, the grid is primarily refined from the Jeans length criterion, which is resolved by at least 8 cells.  Solving for the density in the Jeans length equation, given a typical temperature $T=300$~K with primordial cooling and a Jeans Length of $8 \times \textrm{dx}$, we obtain a number density $n = 5.7 \times 10^4~\cubecm$.  This number density does not exactly match the chosen density criterion because some oversight when setting up the simulation.  In the case where the density SF criterion is larger than $n$, the gas will continue to condense on a faster timescale than its surroundings.  Thus we are confident that this slight mismatch does not affect our results.
 
 We have added the AMR refinement criteria to Section 2.1 and our motivation to this threshold to Section 2.2.1.
 
@@ -163,34 +164,35 @@ We have added the AMR refinement criteria to Section 2.1 and our motivation to t
 M -- Similarly, why do the authors chose a H2 fraction of 1.e-3? (Is is a mass fraction or a number fraction?) How many Pop III stars do not form because of this threshold?
 \end{referee}
 
-We chose this critical H$_2$ fraction to match with the values found in previous work (e.g. Yoshida et al. 2007; Omukai et al. 2010) at the density threshold of $10^6 \cubecm$.  It is a number fraction.  We have added to Section 2.2.1 to reflect this detail.
+We chose this critical H$_2$ fraction to match with the values found in previous work (e.g. Yoshida et al. 2007; Omukai et al. 2010) at the density threshold of $10^6~\cubecm$.  It is a number fraction.  We have added this detail to Section 2.2.1 to reflect this detail.
 
-In our original formulation (Abel et al. 2007), we implemented this restriction to avoid spurious star particle formation in D-type ionization fronts that can meet all of the other criteria.  But in the presence of an extremely strong Lyman-Werner flux from a nearby ($\sim$1 pc) star, star formation is unlikely to occur in the shell because it is irradiated and not self-gravitating. The last question is an interesting question, but it is difficult to determine because these conditions (high density but low H$_2$ fractions) are short-lived just after star formation.  Thus we cannot give a definite answer to it, but from the original formulation, we would estimate that the number of Pop III stars would increase by a factor of several with multiple cells in the quasi-spherical ionization front triggering star particle formation.  Because of these uncertainties, we have not added any of these details to the manuscript.
+In our original formulation (Abel et al. 2007), we implemented this restriction to avoid spurious star particle formation in D-type ionization fronts that can meet all of the other criteria.  But in the presence of an extremely strong Lyman-Werner flux from a nearby ($\sim$1 pc) star, star formation is unlikely to occur in the shell because it is irradiated and not self-gravitating.
+
+The last question is an interesting question, but it is difficult to determine because these conditions (high density but low H$_2$ fractions) are short-lived just after star formation.  Thus we cannot give a definite answer to it, but from the original formulation, we would estimate that the number of Pop III stars would increase by a factor of several with multiple cells in the quasi-spherical ionization front triggering star particle formation.  Because of these uncertainties, we have not added any of these details to the manuscript.
 
 \begin{referee}
 N -- Do the authors set fixed mass limits to the IMF and if yes, which are they?  If not, which is the highest / lowest mass they find in their random sampling?  And which fraction of the Pop III stars in the simulation end up as type II SNe / BHs / PISN?
 \end{referee}
-We do set fixed mass limits, between 1 and 300 $M_{\odot}$. We have added this detail in section 2.2.1.  
 
-59, 36, and 5 per cent of Pop III stars become Type II SN, black holes with no SN, and PISNe respectively. This detail has been added in section 2.2.1.
+In our simulation, we consider a fixed mass limit between 1 and 300 $M_{\odot}$ of the IMF. We have added this detail in section 2.2.1.  Given this IMF, 59, 36, and 5 per cent of Pop III stars become Type II SN, black holes with no SN, and PISNe, respectively. We have added this detail to Section 2.2.1.
 
 \begin{referee}
 O -- One effect than can weaken the shielding is shifting out of the Lyman-Werner resonance lines (see Hartwig+15). I am wondering how much this would affect the study presented here.
 \end{referee}
 
-In Hartwig+15, they take into account the Doppler-shifting of spectral lines with an improved calculation of the column densities, but use the same shielding factor as we do. They find that shielding is generally less efficient at higher temperatures. In our work, because our halos are less massive, the temperatures are typically $10^{3}$ K, which looking at their Figure 5, lies close to the 1:1 line. The shielding factor as calculated in our work will therefore not vary significantly compared to the full treatment of the column density, so we do not expect this to be a problem. 
-
-A brief desription of this has been added to the \hh{} Self-Shielding section. 
+Hartwig et al. (2015) take into account the Doppler-shifting of spectral lines with an improved calculation of the column densities but use the same shielding factor as we do. They find that shielding is generally less efficient at higher temperatures. In our work, because our halos are less massive, the temperatures are typically around $10^{3}$ K, which looking at their Figure 5, lies close to the 1:1 line. The shielding factor as calculated in our work will therefore not vary significantly compared to the full treatment of the column density, so we do not expect this to be a problem.  We have added a brief desription of this effect to the \hh{} Self-Shielding section. 
 
 \begin{referee}
 P -- In Figure 1, please mention in the caption or at the top / bottom of the left axis that a shielding factor of 1 corresponds to no shielding and a shielding factor of 0 corresponds to high shielding, as these nomenclatures are not immediately understandable for the reader.
 \end{referee}
-This is a tricky detail, and has been added to the caption of Figure 1.
+
+We thank the referee for pointing out this tricky detail, and we have added it to the caption of Figure 1.
 
 \begin{referee}
 Q -- The analytic calculation of the shielding factor is a nice property of the paper. However, assuming a constant H2 fraction seems not appropriate. Please repeat this exercise for a more realistic halo profile, which could be found in the simulations or in the literature, eg by Machacek+01 themselves.
 \end{referee}
-This is a good point, and the plot has been adjusted accordingly. The halo profiles from O'Shea and Norman 2007 are now being used as the \hh{} fraction as a function of radius. The plot now shows that the shielding factor increases as a function of mass, since at larger radii, there is less \hh{}, resulting in a less effective \hh{} shield. The overall take away of the plot has not changed. 
+
+This is a good point, and the plot has been adjusted accordingly. We chose to use the \hh{} radial profiles from O'Shea and Norman (2007) because of the variety of halos and high resolution. The plot now shows that the shielding factor increases as a function of mass, since at larger radii, there is less \hh{}, resulting in a less effective \hh{} shield. The overall takeaway of the plot has not changed. 
 
 \begin{referee}
 Results:
