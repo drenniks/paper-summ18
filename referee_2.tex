@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+%\renewcommand\refname{ }
+
+\usepackage{fullpage}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{listings,color}
+\usepackage{mdframed}
+\usepackage{float}
+\parskip=10pt
+
+\input macros.tex
+
+\definecolor{quotegray}{gray}{0.9}
+% \lstnewenvironment{referee}{%
+%   \lstset{backgroundcolor=\color{quotegray},
+%   frame=single,
+%   framerule=0pt,
+%   basicstyle=\ttfamily,
+%   columns=fullflexible}}{}
+
+% https://tex.stackexchange.com/questions/111065/quoting-styles-technical-an-appreciation-questions
+\mdfdefinestyle{myquotestyle}{
+  leftmargin=15pt,
+  rightmargin=15pt,
+  backgroundcolor=quotegray,
+  linewidth=0pt,
+  skipbelow=\topskip,
+  skipabove=\topskip
+}
+\newenvironment{referee}[1][]{%
+    \ignorespaces%
+    \begin{mdframed}[style=myquotestyle,#1]%
+}{%
+    \end{mdframed}%
+    \ignorespacesafterend%
+}%
+
+% \newenvironment{referee}[1][]{
+%   \ignorespaces%
+%   \begin{mdframed}[style=myquotestyle,#1]%
+% }{%
+%   \end{mdframed}%
+%   \ignorespaceafterend%
+% }%
+
+
+
+\begin{document}
+
+\begin{center} 
+\bfseries{
+\begin{large}
+  Response to referee report for manuscript ref. MN-19-2054-MJ.R1
+\end{large}
+}
+\end{center}
+
+We thank the referee for their response to our recent revision. Their review is directly quoted below in the gray boxes with our responses below.  Any changes to the manuscript, as well as changes made previously, have been \textbf{bold-faced}.
+
+\begin{referee}
+    The authors have clarified most of the open questions in the revised manuscript. A few points need further discussion, they are listed below: 
+\end{referee}
+
+\begin{referee}
+    A -- In this paper, some very long paragraphs can be found, especially in Sections 3 and 4. Please break these long paragraphs down in smaller ones to increase the read flow. 
+\end{referee}
+    These paragraphs have been broken down. 
+
+\begin{referee}
+    To Major comment number 1) 
+
+    B -- The convergence study is a great addition to the paper. However, the lowest limit explored here (0.625pc) is a factor of roughly 100 larger than the scale on which fragmentation can be seen (compare eg the 1000AU regions, in which several Pop III stars form in work by Stacy+16). I recommend to explicitly state down to which resolution the convergence was tested in Section 2.2.1 and adding these limitations to the "Caveats" section. Instead of single Pop III stars, this paper is a study of the multiplicity of Pop III star formation regions. Please make this clear in the paper. 
+\end{referee}
+    The lowest limit has been added to section 2.2.1.
+
+    --need to add to Caveats
+    --adjust some wording about Pop III star formation regions?
+
+\begin{referee}
+    Minor points: 
+
+    C -- - Is the SFRD really in physical (and not comoving) units (Figure 4 / Section 3)? Please provide values for the comparison papers (Xu+13, Magg+16) and include a comparison to Jaacks+19. 
+\end{referee}
+
+\begin{referee}
+    D -- - The initialization at z=130 should be mentioned as a caveat. 
+\end{referee}
+
+\begin{referee}
+    E -- - The analytic calculation of the self-shielding of the halo now takes into account a realistic halo profile. However, there are three issues: 
+    E.1 -- -- In the first paragraph of Section 2.4, it still reads "with a constant H2 fraction". Please correct this. 
+    E.2 -- -- For completeness, please provide the readers with the H2 radial fit to the O'Shea & Normal 07 paper that was performed. 
+    E.3 -- -- Compared to the previous version with a constant profile, the shielding factor increases for higher halo masses (in the previous version of the paper, there was a slight decrease): leading to less shielding. I do not understand where this is coming from, a more massive halo has a larger overall gas mass, and therefore more H2 and more shielding. Maybe it has to do with the scaling of the H2 fraction?  It is important to know how the authors scale the H2 fraction as a function of radius for different halo masses (see point above). If this is not the reason, please explain what else is causing more massive haloes to be worse at self-shielding.  
+\end{referee}
+
+\begin{referee}
+    F -- - Thank you for adding the global LWBG as a dashed line in Figure 3. Please also mention at some point in the text or add a legend that this is again given in units of J21. 
+\end{referee}
+
+\begin{referee}
+    G -- - I see that retrospectively calculating the time-averaged LWBG is not possible without repeating the study. However, please mention the possibility for a correlation between the time-integrated LWBG and the host halo mass in Section 3.2 and summary and be more explicit that this is the LWBG at star formation (eg in the introduction and in Section 3.2 and in the second bullet point of the Conclusions).  
+\end{referee}
+
+\begin{referee}
+    H -- - The authors put their work in comparison to Schauer+19, ApJL 877, 5 who match the star formation efficiency in minihaloes to the observed 21cm signal. They should rather compare to Schauer+19 MNRAS, 484, 3510 who performed cosmological hydrodynamical simulations for the minimum and average halo mass in different streaming velocity regions. Please include their limits in your Figure 10, as done with the Naoz+13 results, and a short comparison to Hirano+18 (their Science paper). Please include these references also in the introduction. Also the sentence "Often in the literature, streaming velocities are only studied for a few haloes" seems outdated.
+\end{referee}
+    
+\end{referee}
