@@ -8,6 +8,8 @@
 \usepackage{mdframed}
 \usepackage{float}
 \parskip=10pt
+\setlength\parindent{0pt}
+
 
 \input macros.tex
 
@@ -72,19 +74,15 @@ We thank the referee for their response to our recent revision. Their review is 
 
     The convergence study is a great addition to the paper. However, the lowest limit explored here (0.625pc) is a factor of roughly 100 larger than the scale on which fragmentation can be seen (compare eg the 1000AU regions, in which several Pop III stars form in work by Stacy+16). I recommend to explicitly state down to which resolution the convergence was tested in Section 2.2.1 and adding these limitations to the "Caveats" section. Instead of single Pop III stars, this paper is a study of the multiplicity of Pop III star formation regions. Please make this clear in the paper. 
 \end{referee}
-    The lowest limit has been added to section 2.2.1.
-
-    --Added to the caveats
-
-    \jhw{I've add some wording in Sections 2.2.1 and 3.3 about fragmentation and our study being a lower limit on the multiplicity but nothing to the caveats section. I think with these statements, we can argue in the response that changes throughout the text are not needed. Make the changes to the caveats section, and I'll write the rebuttal here.}
-
+    In Section 2.2, we have expanded our description of the convergence study to include the smallest resolution and pointed out that the overdensity formation criterion is similar to a molecular core.  We explicitly state that our results are lower limits on the number of Pop III stars, massive and low-mass, in this section.  Furthermore, we remind the reader about this lower limit in Section 3.3, where we present our results on the stellar multiplicity.  Lastly, we have added a paragraph in the Caveats section (S4.3) about our simulation not resolving fragmentation below 0.625 pc and conclude that our work strengthens the case for multiple Pop III stars in each halo, especially considering this limitation.
+    
+    That being said, we decided to retain the naming of these star forming regions as ``stars'' throughout the paper because the phrase ``star forming regions'' or something similar would have been too wordy as it is mentioned many times throughout the manuscript and in the figures.  We feel that emphasizing that our results are lower limits on the number of massive Pop III stars throughout the paper is a good compromise.
 
 \begin{referee}
     Minor points: 
 
     - Is the SFRD really in physical (and not comoving) units (Figure 4 / Section 3)? Please provide values for the comparison papers (Xu+13, Magg+16) and include a comparison to Jaacks+19. 
 \end{referee}
-
     Upon review of these calculations, you are correct in questioning the units of the SFRD. The SFRD is in comoving units. This correction has been added to the caption of the SFRD and to the description above the plot. 
 
     These comparison values have been added to the beginning of the results section.
@@ -112,7 +110,9 @@ We thank the referee for their response to our recent revision. Their review is 
 \begin{referee}
     -- Compared to the previous version with a constant profile, the shielding factor increases for higher halo masses (in the previous version of the paper, there was a slight decrease): leading to less shielding. I do not understand where this is coming from, a more massive halo has a larger overall gas mass, and therefore more H2 and more shielding. Maybe it has to do with the scaling of the H2 fraction?  It is important to know how the authors scale the H2 fraction as a function of radius for different halo masses (see point above). If this is not the reason, please explain what else is causing more massive haloes to be worse at self-shielding.  
 \end{referee}
-    The shielding factor increases for more massive halos because these halos have larger virial radii, at which point there is significantly less \hh{} compared to smaller radii. So halos with smaller masses, and thus smaller virial radii, have more \hh{} built up at the edges compared to their larger counterparts, resulting in a more effective shield at the virial radius. We have clarified this point in the text.
+    The shielding factor increases for more massive halos because these halos have larger virial radii, at which point there is significantly less \hh{} compared to the halo's interior. So halos with smaller masses, and thus smaller virial radii, have a higher \hh{} fraction in their outer regions compared to their larger counterparts, resulting in a more effective H2 shield.
+
+    \jhw{Possibly revise after using piecewise fitting function.}
 
 \begin{referee}
     - Thank you for adding the global LWBG as a dashed line in Figure 3. Please also mention at some point in the text or add a legend that this is again given in units of J21. 
@@ -129,16 +129,14 @@ We thank the referee for their response to our recent revision. Their review is 
 \begin{referee}
     - The authors put their work in comparison to Schauer+19, ApJL 877, 5 who match the star formation efficiency in minihaloes to the observed 21cm signal. They should rather compare to Schauer+19 MNRAS, 484, 3510 who performed cosmological hydrodynamical simulations for the minimum and average halo mass in different streaming velocity regions. Please include their limits in your Figure 10, as done with the Naoz+13 results, and a short comparison to Hirano+18 (their Science paper). Please include these references also in the introduction. Also the sentence "Often in the literature, streaming velocities are only studied for a few haloes" seems outdated.
 \end{referee}
-    We have added a panel to the left of Figure 10 to de-clutter the main figure and to separate the halo mass ranges and minimums related to streaming velocitys. 
+    We have added a panel to the left of Figure 10 to de-clutter the main figure and to separate the halo mass ranges and minimums related to streaming velocities. 
     
     The limits from Schauer+19 have been added to the left panel of Figure 10, and the previous description regarding the 21cm signal has been removed. Their citation has been added to the list of citations investigating streaming velocities. 
 
-    We have added a short compariosn to Hirano+18 and have also added their citation to the list of citations mentioned previously. 
+    We have added a short comparison to Hirano+17 (Science) and have also added their citation to the list of citations mentioned previously. 
     
     These citations have also been added to the introduction.
 
 	The sentence "Often in the literature, streaming velocities are only studied for a few haloes" has been removed.
-
-
     
 \end{document}
